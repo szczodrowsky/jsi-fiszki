@@ -1,0 +1,37 @@
+FISZKI JSI NA TELEFONIE / GITHUB PAGES
+
+1. Rozpakuj Fiszki_JSI_GitHub_Pages.zip.
+2. Utwórz repozytorium GitHub przeznaczone na fiszki.
+   Darmowy wariant GitHub Free wymaga repozytorium publicznego.
+3. Wgraj zawartość paczki do głównego katalogu repozytorium:
+   index.html, .nojekyll i folder materialy (z zachowaniem struktury).
+   Nie wgrywaj samego ZIP-a jako strony.
+4. W repozytorium wejdź w Settings > Pages.
+5. Source: Deploy from a branch.
+   Branch: main. Folder: /(root). Kliknij Save.
+6. Po zakończeniu publikacji otwórz adres pokazany w Settings > Pages
+   w Safari lub Chrome na telefonie.
+
+Paczka zawiera obie wersje odpowiedzi i załączone materiały PDF/Markdown.
+Wszystko, co opublikujesz, będzie dostępne pod adresem strony.
+Kod, archiwum redakcji i inne foldery projektu nie są częścią paczki.
+
+Oceny Umiem/Powtórz są zapisane lokalnie w przeglądarce.
+Nie są częścią pliku HTML ani tej paczki. Telefon i komputer mają
+osobne postępy; także wersja lokalna i strona HTTPS mają osobne zapisy.
+Eksport nie zmienia ocen w dotychczasowym pliku na komputerze.
+
+Można także przesłać sam index.html na telefon. Obsługa lokalnych
+plików HTML zależy od systemu i aplikacji; podgląd pliku może nie
+uruchamiać JavaScript. Otwieranie linku HTTPS jest prostszą opcją.
+Lokalne fiszki nie potrzebują internetu, ale załączniki wymagają
+folderu materialy, a źródła internetowe połączenia z siecią.
+Wersja hostowana nie ma gwarantowanego działania offline.
+
+Po późniejszych zmianach ponownie uruchom z folderu main:
+python narzedzia/export_pages.py
+Następnie podmień opublikowane pliki.
+
+Instrukcja GitHub:
+https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site
+https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
