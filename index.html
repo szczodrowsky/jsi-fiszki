@@ -21,6 +21,7 @@
 .answer[data-variant="short"] code{padding:3px 7px;background:#eaf0e4}
 .answer[data-variant="short"]>:last-child{margin-bottom:0}
 @media(max-width:700px){.answer[data-variant="short"]{font-size:17px;line-height:1.7}.answer[data-variant="short"]>p:first-child{padding:14px 16px}.answer[data-variant="short"] li{padding-left:4px}.answer[data-variant="short"] table{font-size:14px}}
+.transfer{margin:0 0 24px;padding:18px;border:1px solid var(--line);border-radius:12px;background:#fffef9}.transfer summary{cursor:pointer;font-weight:650}.transfer p{font-size:14px}.transfer input{width:100%;min-height:46px;padding:10px;margin:8px 0 14px;font:inherit;border:1px solid var(--line);border-radius:8px}.transfer input:focus-visible{outline:3px solid #b85c27;outline-offset:3px}.transfer button{margin:4px 8px 4px 0}
 </style>
 </head>
 <body>
@@ -28,6 +29,7 @@
   <header class="top"><div class="brand"><span>JSI</span> PRACOWNIA POWTÓREK</div><span class="small">62 pytania · 11 działów<br>Jakość systemów informatycznych</span></header>
   <section class="hero"><div><div class="eyebrow">Przed egzaminem</div><h1>Sprawdź, ile pamiętasz.</h1><p>Odpowiedz z pamięci. Odkryj odpowiedź. Wróć do trudnych pytań.</p></div><div class="variants" role="group" aria-label="Wariant odpowiedzi"><button id="short" aria-pressed="true">W skrócie</button><button id="full" aria-pressed="false">Pełne odpowiedzi</button></div></section>
   <div class="stats" aria-label="Postęp we wszystkich działach"><div class="stat"><strong id="known-count">0</strong><span>Umiem</span></div><div class="stat"><strong id="repeat-count">0</strong><span>Do powtórki</span></div><div class="stat"><strong id="new-count">62</strong><span>Jeszcze bez oceny</span></div></div>
+  <section class="transfer" id="incoming-progress" aria-label="Przenoszenie ocen" hidden><p id="incoming-summary" role="status"></p><button id="apply-progress" class="primary">Zastosuj te oceny</button><button id="cancel-progress">Anuluj</button></section>
   <section class="filters" aria-label="Wybór materiału"><label>Dział<select id="section"><option value="all">Wszystkie działy</option></select></label><label>Pula pytań<select id="pool"><option value="all">Wszystkie pytania</option><option value="repeat">Do powtórki</option><option value="new">Jeszcze bez oceny</option><option value="known">Umiem</option></select></label><button id="shuffle" title="Rozpocznij nową rundę w losowej kolejności">↻ Nowe losowanie</button></section>
   <section class="card" aria-label="Fiszka">
     <div class="card-top"><span class="badge" id="topic"></span><span id="position" role="status" aria-live="polite"></span></div>
@@ -36,6 +38,7 @@
     <div class="card-bottom"><button id="previous">← Poprzednie</button><span class="small" id="round-info"></span><button id="next">Pomiń →</button></div><div class="progress" role="progressbar" aria-label="Postęp rundy" aria-valuemin="0" aria-valuemax="62" aria-valuenow="0" id="progress"><div id="bar"></div></div>
   </section>
   <div class="footer"><span><kbd>Spacja</kbd> odpowiedź &nbsp; <kbd>1</kbd> powtórz &nbsp; <kbd>2</kbd> umiem &nbsp; <kbd>←</kbd> <kbd>→</kbd> nawigacja</span><span id="storage" role="status">Oceny zapisują się w tej przeglądarce.</span></div>
+  <details class="transfer"><summary>Przenieś moje oceny na telefon lub stronę</summary><p>W przeglądarce, w której masz zapisane oceny, utwórz link. Otwórz go na telefonie lub tutaj i wybierz „Zastosuj te oceny”. Link zawiera Twój obecny podział pytań; późniejsze zmiany nie synchronizują się automatycznie.</p><button id="make-progress-link">Utwórz link z moimi ocenami</button><p id="transfer-status" role="status"></p><div id="progress-link-result" hidden><label for="progress-link">Skopiuj cały link i prześlij go na telefon</label><input id="progress-link" type="text" readonly><a id="open-progress-link" target="_blank" rel="noopener">Otwórz stronę z tym postępem ↗</a><p>Każdy, komu przekażesz link, może odczytać ten podział pytań. Oceny nie trafiają do publicznego repozytorium.</p></div></details>
   <details class="details"><summary>Jak korzystać i skąd pochodzi materiał?</summary><p>Każda runda losuje wybraną pulę bez powtórek. „Powtórz” i „Umiem” zapisują ocenę oraz przechodzą dalej. „Pomiń” nie zmienia oceny. Zmiana działu lub puli zaczyna nową rundę; oceny pozostają. Pula jest ustalana na początku rundy.</p><p>„W skrócie” zawiera odpowiedzi z <a href="materialy/Powtorka_przed_egzaminem.md">Powtorka_przed_egzaminem.md</a>, a „Pełne odpowiedzi” z <a href="materialy/Odpowiedzi_do_samosprawdzenia.md">Odpowiedzi_do_samosprawdzenia.md</a>. Możesz przełączać wariant na tym samym pytaniu. Obie wersje mają wspólne oceny. Wersja „W skrócie” zawiera gotowe odpowiedzi do zapisania na egzaminie. Pełne odpowiedzi zawierają dodatkowe wyjaśnienia, źródła i omówienie korekt.</p><p>Fiszki działają bez internetu. Odsyłacze do prezentacji korzystają z PDF-ów w folderze „materialy”; źródła internetowe wymagają połączenia. Oceny są zapisane lokalnie, bez synchronizacji między urządzeniami. Zmiana treści odpowiedzi rozpoczyna postęp dla nowej wersji od zera. Zmiany formatowania zachowują zapisane oceny. Przeniesienie pliku lub wyczyszczenie danych przeglądarki może spowodować brak dotychczasowych ocen.</p><button id="reset" class="reset">Wyzeruj wszystkie oceny…</button></details>
   <noscript><p>Włącz JavaScript w przeglądarce, aby korzystać z fiszek.</p></noscript>
 </main>
@@ -45,6 +48,8 @@
 const cards = JSON.parse(document.getElementById('cards-data').textContent);
 const $ = id => document.getElementById(id);
 const storageKey = 'jsi-flashcards-ec81d121c481edacc5693a7510050d7ed2b1d5762d33de9b83e23d0cb7f2b7e7';
+const hostedUrl = 'https://szczodrowsky.github.io/jsi-fiszki/';
+let incomingRatings = null;
 let ratings = {}, variant = 'short', deck = [], index = 0, revealed = false;
 try {
   const saved = JSON.parse(localStorage.getItem(storageKey) || '{}');
@@ -59,6 +64,63 @@ function storageUnavailable() {
 function save() {
   try { localStorage.setItem(storageKey, JSON.stringify(ratings)); }
   catch { storageUnavailable(); }
+}
+function progressLink() {
+  const marks = cards.map(card => ({known:'k', repeat:'r'}[ratings[card.id]] || '-')).join('');
+  return hostedUrl + '#postep=' + storageKey.slice('jsi-flashcards-'.length) + '.' + marks;
+}
+function readProgressLink(hash) {
+  const match = /^#postep=([a-f0-9]{64})\.([kr-]+)$/.exec(hash);
+  if (!match || 'jsi-flashcards-' + match[1] !== storageKey || match[2].length !== cards.length) {
+    throw Error('Link jest uszkodzony lub pochodzi z innej wersji pytań. Utwórz nowy link w aktualnym pliku fiszek.');
+  }
+  const imported = {};
+  cards.forEach((card, i) => {
+    if (match[2][i] !== '-') imported[card.id] = {k:'known', r:'repeat'}[match[2][i]];
+  });
+  if (!Object.keys(imported).length) throw Error('Ten link nie zawiera żadnych ocen.');
+  return imported;
+}
+$('make-progress-link').onclick = () => {
+  if (!Object.keys(ratings).length) {
+    $('progress-link-result').hidden = true;
+    $('transfer-status').textContent = 'Tutaj nie ma jeszcze ocen. Otwórz dotychczasowy plik w tej samej przeglądarce, w której oceniałeś pytania.';
+    return;
+  }
+  $('progress-link').value = progressLink();
+  $('open-progress-link').href = progressLink();
+  $('progress-link-result').hidden = false;
+  $('transfer-status').textContent = `Link zawiera oceny ${Object.keys(ratings).length} pytań.`;
+  $('progress-link').focus(); $('progress-link').select();
+};
+$('progress-link').onclick = () => $('progress-link').select();
+$('cancel-progress').onclick = () => { incomingRatings = null; $('incoming-progress').hidden = true; };
+$('apply-progress').onclick = () => {
+  if (!incomingRatings) return;
+  const merged = {...ratings, ...incomingRatings};
+  try { localStorage.setItem(storageKey, JSON.stringify(merged)); }
+  catch {
+    $('incoming-summary').textContent = 'Nie udało się zapisać ocen. Zezwól przeglądarce na zapis danych i spróbuj ponownie. Twoje dotychczasowe oceny pozostały bez zmian.';
+    return;
+  }
+  ratings = merged; incomingRatings = null;
+  $('incoming-progress').hidden = true;
+  $('transfer-status').textContent = 'Oceny zostały przeniesione i zapisane w tej przeglądarce.';
+  $('storage').textContent = 'Przeniesione oceny zapisano w tej przeglądarce.';
+  start();
+};
+if (location.hash.startsWith('#postep=')) {
+  $('incoming-progress').hidden = false;
+  try {
+    incomingRatings = readProgressLink(location.hash);
+    const values = Object.values(incomingRatings);
+    $('incoming-summary').textContent = `Przenieść ${values.length} ocen? Umiem: ${values.filter(v => v === 'known').length}, do powtórki: ${values.filter(v => v === 'repeat').length}. Zastąpią obecne oceny tych pytań. Pozostałe oceny zostaną zachowane.`;
+  } catch (error) {
+    $('incoming-summary').textContent = error.message;
+    $('apply-progress').disabled = true;
+  }
+  // Usunięcie fragmentu zapobiega ponownemu importowi po odświeżeniu strony.
+  try { history.replaceState(null, '', location.pathname + location.search); } catch {}
 }
 function shuffled(items) {
   const result = [...items];
