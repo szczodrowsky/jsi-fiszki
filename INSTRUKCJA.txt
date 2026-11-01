@@ -4,7 +4,7 @@ FISZKI JSI NA TELEFONIE / GITHUB PAGES
 2. Utwórz repozytorium GitHub przeznaczone na fiszki.
    Darmowy wariant GitHub Free wymaga repozytorium publicznego.
 3. Wgraj zawartość paczki do głównego katalogu repozytorium:
-   index.html, .nojekyll i folder materialy (z zachowaniem struktury).
+   index.html, przenies.html, .nojekyll i folder materialy (z zachowaniem struktury).
    Nie wgrywaj samego ZIP-a jako strony.
 4. W repozytorium wejdź w Settings > Pages.
 5. Source: Deploy from a branch.
@@ -20,6 +20,10 @@ Oceny Umiem/Powtórz są zapisane lokalnie w przeglądarce.
 Nie są częścią pliku HTML ani tej paczki. Telefon i komputer mają
 osobne postępy; także wersja lokalna i strona HTTPS mają osobne zapisy.
 Eksport nie zmienia ocen w dotychczasowym pliku na komputerze.
+Przycisk „Udostępnij mój postęp” tworzy link z aktualnymi ocenami.
+Na drugim urządzeniu otwórz link i wybierz „Zapisz ten postęp”.
+Po dalszej nauce utwórz nowy link; wcześniejszy nie aktualizuje się sam.
+Linki z lokalnego pliku kierują do https://szczodrowsky.github.io/jsi-fiszki/.
 
 Można także przesłać sam index.html na telefon. Obsługa lokalnych
 plików HTML zależy od systemu i aplikacji; podgląd pliku może nie

@@ -7,7 +7,7 @@
 <style>body{max-width:640px;margin:60px auto;padding:24px;font:18px/1.6 system-ui;background:#f4f3e9;color:#223c38}button,a{font:inherit}button{padding:14px 20px;border:0;border-radius:10px;background:#225e4a;color:white;cursor:pointer}button:disabled{opacity:.5}a{color:#225e4a}</style>
 <h1>Zapis ocen w tej przeglądarce</h1>
 <p id="status" role="status">Otwórz tę stronę przez link ze swoimi ocenami.</p>
-<button id="apply" hidden>Zapisz moje 62 oceny</button>
+<button id="apply" hidden>Zapisz ten postęp</button>
 <p>Zapis pozostanie po zamknięciu przeglądarki i restarcie komputera. Usunięcie danych strony go skasuje. Inne przeglądarki mają osobny postęp.</p>
 <p><a href="./">Przejdź do fiszek</a></p>
 <script>
@@ -15,24 +15,27 @@
 const key = 'jsi-flashcards-ec81d121c481edacc5693a7510050d7ed2b1d5762d33de9b83e23d0cb7f2b7e7';
 const status = document.getElementById('status');
 const button = document.getElementById('apply');
-const match = /^#postep=([a-f0-9]{64})\.([kr]{62})$/.exec(location.hash);
+const match = /^#postep=([a-f0-9]{64})\.([kr-]{62})$/.exec(location.hash);
 if (match && key === 'jsi-flashcards-' + match[1]) {
-  const values = Object.fromEntries([...match[2]].map((mark, i) => [i + 1, mark === 'k' ? 'known' : 'repeat']));
+  const values = Object.fromEntries([...match[2]].map((mark, i) => [i + 1, {k:'known', r:'repeat'}[mark]]).filter(([, value]) => value));
   const known = [...match[2]].filter(mark => mark === 'k').length;
-  status.textContent = `Zapiszesz ${known} „Umiem” i ${62-known} „Do powtórki”. Zastąpią dotychczasowy podział w tej przeglądarce.`;
+  const repeat = [...match[2]].filter(mark => mark === 'r').length;
+  status.textContent = `Zapiszesz ${known} „Umiem” i ${repeat} „Do powtórki”, ${62-known-repeat} bez oceny. Zastąpią dotychczasowy podział w tej przeglądarce.`;
   button.hidden = false;
   button.onclick = () => {
     try {
       const previous = localStorage.getItem(key);
       if (previous) localStorage.setItem(key + '-backup', previous);
       localStorage.setItem(key, JSON.stringify(values));
-      status.textContent = `Zapisano ${known} „Umiem” i ${62-known} „Do powtórki”. Możesz przejść do fiszek.`;
+      status.textContent = `Zapisano ${known} „Umiem” i ${repeat} „Do powtórki”, ${62-known-repeat} bez oceny. Możesz przejść do fiszek.`;
       button.disabled = true;
-      history.replaceState(null, '', location.pathname);
+      try { history.replaceState(null, '', location.pathname); } catch {}
     } catch {
       status.textContent = 'Przeglądarka nie pozwoliła zapisać danych. Oceny nie zostały przeniesione.';
     }
   };
+} else {
+  status.textContent = 'Link jest niepełny lub pochodzi z innej wersji pytań. Utwórz nowy link w fiszkach.';
 }
 </script>
 </html>

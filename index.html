@@ -21,6 +21,7 @@
 .answer[data-variant="short"] code{padding:3px 7px;background:#eaf0e4}
 .answer[data-variant="short"]>:last-child{margin-bottom:0}
 @media(max-width:700px){.answer[data-variant="short"]{font-size:17px;line-height:1.7}.answer[data-variant="short"]>p:first-child{padding:14px 16px}.answer[data-variant="short"] li{padding-left:4px}.answer[data-variant="short"] table{font-size:14px}}
+.share-progress{margin:0 0 22px}.share-progress input{width:100%;min-height:46px;padding:10px;border:1px solid var(--line);border-radius:8px;font:inherit;margin-top:8px}.share-progress p{margin:8px 0;font-size:13px;color:var(--muted)}.share-progress input:focus-visible{outline:3px solid #b85c27;outline-offset:3px}
 </style>
 </head>
 <body>
@@ -28,6 +29,7 @@
   <header class="top"><div class="brand"><span>JSI</span> PRACOWNIA POWTÓREK</div><span class="small">62 pytania · 11 działów<br>Jakość systemów informatycznych</span></header>
   <section class="hero"><div><div class="eyebrow">Przed egzaminem</div><h1>Sprawdź, ile pamiętasz.</h1><p>Odpowiedz z pamięci. Odkryj odpowiedź. Wróć do trudnych pytań.</p></div><div class="variants" role="group" aria-label="Wariant odpowiedzi"><button id="short" aria-pressed="true">W skrócie</button><button id="full" aria-pressed="false">Pełne odpowiedzi</button></div></section>
   <div class="stats" aria-label="Postęp we wszystkich działach"><div class="stat"><strong id="known-count">0</strong><span>Umiem</span></div><div class="stat"><strong id="repeat-count">0</strong><span>Do powtórki</span></div><div class="stat"><strong id="new-count">62</strong><span>Jeszcze bez oceny</span></div></div>
+  <div class="share-progress"><button id="share-progress">Udostępnij mój postęp</button><div id="share-result" hidden><label for="share-link">Link z aktualnym podziałem pytań</label><input id="share-link" type="text" readonly><p>Link zachowuje oceny z chwili utworzenia. Po dalszej nauce utwórz nowy. Odbiorca może zapisać ten podział u siebie; późniejsze zmiany są niezależne.</p></div><p id="share-status" role="status"></p></div>
   <section class="filters" aria-label="Wybór materiału"><label>Dział<select id="section"><option value="all">Wszystkie działy</option></select></label><label>Pula pytań<select id="pool"><option value="all">Wszystkie pytania</option><option value="repeat">Do powtórki</option><option value="new">Jeszcze bez oceny</option><option value="known">Umiem</option></select></label><button id="shuffle" title="Rozpocznij nową rundę w losowej kolejności">↻ Nowe losowanie</button></section>
   <section class="card" aria-label="Fiszka">
     <div class="card-top"><span class="badge" id="topic"></span><span id="position" role="status" aria-live="polite"></span></div>
@@ -68,6 +70,19 @@ function shuffled(items) {
   }
   return result;
 }
+$('share-progress').onclick = async () => {
+  const marks = cards.map(card => ({known:'k', repeat:'r'}[ratings[card.id]] || '-')).join('');
+  const link = 'https://szczodrowsky.github.io/jsi-fiszki/przenies.html#postep=' + storageKey.slice('jsi-flashcards-'.length) + '.' + marks;
+  $('share-link').value = link;
+  $('share-result').hidden = false;
+  $('share-status').textContent = 'Skopiuj cały link z pola powyżej i wyślij go na drugie urządzenie.';
+  $('share-link').focus(); $('share-link').select();
+  try {
+    await navigator.clipboard.writeText(link);
+    $('share-status').textContent = 'Link skopiowany. Otwórz go na drugim urządzeniu i kliknij „Zapisz ten postęp”.';
+  } catch {}
+};
+$('share-link').onclick = () => $('share-link').select();
 function matches(card) {
   return ($('section').value === 'all' || card.section === $('section').value) &&
     ($('pool').value === 'all' || ($('pool').value === 'new' ? !ratings[card.id] : ratings[card.id] === $('pool').value));
