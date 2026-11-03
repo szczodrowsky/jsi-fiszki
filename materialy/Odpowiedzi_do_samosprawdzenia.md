@@ -36,7 +36,7 @@ Prezentacja: [1.Wprowadzenie.pdf][W].
 
 *Według prezentacji:*
 
-Oprogramowanie współdziała ze sprzętem, ludźmi, procesami, procedurami oraz zasobami informacji, takimi jak zewnętrzne dane i bazy wiedzy. Każdy z tych elementów wpływa na działanie systemu. **Jakość systemu zależy od ich współdziałania.** Nawet poprawny program nie zapewni dobrych wyników przy błędnych danych, zawodnym sprzęcie lub niewłaściwych procedurach.
+Na jakość systemu wpływają oprogramowanie, sprzęt, ludzie, procesy, procedury oraz zasoby informacji, takie jak zewnętrzne dane i bazy wiedzy. **Jakość systemu zależy od współdziałania tych elementów.** Nawet poprawny program nie zapewni dobrych wyników przy błędnych danych, zawodnym sprzęcie lub niewłaściwych procedurach.
 
 *Uzupełnienie własne:*
 
@@ -50,11 +50,11 @@ Nie można podać uniwersalnego procentowego udziału oprogramowania w jakości 
 
 *Według prezentacji:*
 
-Nie. Awarię mogą spowodować błędy projektu, niesprawny sprzęt, nieprawidłowa obsługa, błędne dane lub niewłaściwa organizacja pracy. Często nakłada się na siebie kilka takich przyczyn. Slajd przedstawiający ciąg „pomyłka → defekt → błąd wykonania → awaria → wypadek → katastrofa” pokazuje możliwą drogę powstawania szkody, a nie jedyną przyczynę wszystkich awarii. Therac-25 ilustruje współudział wad programu, konstrukcji urządzenia i procedur organizacyjnych.
+Nie. Awarię mogą spowodować błędy projektu, niesprawny sprzęt, nieprawidłowa obsługa, błędne dane lub niewłaściwa organizacja pracy. Często nakłada się na siebie kilka takich przyczyn. Slajd przedstawiający ciąg „pomyłka → defekt → błąd wykonania → awaria → wypadek → katastrofa” pokazuje możliwą drogę powstawania szkody, a nie jedyną przyczynę wszystkich awarii. Przypadek Therac-25 pokazuje, jak wady programu, konstrukcji urządzenia i procedur organizacyjnych mogą wspólnie doprowadzić do awarii.
 
 *Uzupełnienie własne:*
 
-**Sam defekt nie musi spowodować awarii**. Muszą wystąpić warunki, które go ujawnią; niezależne zabezpieczenia mogą zatrzymać dalszy rozwój zdarzeń.
+**Sam defekt nie musi spowodować awarii.** Muszą wystąpić warunki, które go ujawnią, a niezależne zabezpieczenia mogą zatrzymać dalszy rozwój zdarzeń.
 
 *Źródło:* [W], s. 3, 6; [T], s. 5, 17-20.
 
@@ -94,7 +94,7 @@ Trzeba uwzględnić m.in. bezpieczeństwo, ochronę danych, użyteczność, wyda
 
 Przedstawiciel klienta może nie znać potrzeb wszystkich użytkowników, mieć ograniczoną wiedzę o pracy operacyjnej lub nie mieć odpowiednich uprawnień decyzyjnych. Może też pominąć wymagania, które uważa za oczywiste, albo nie wspomnieć o potrzebach, których sam jeszcze nie rozpoznał. Jego oczekiwania mogą różnić się od potrzeb osób faktycznie korzystających z systemu.
 
-Wymagania należy uzgadniać również z użytkownikami bezpośrednimi i pośrednimi, dostawcami danych oraz odbiorcami wyników. Pomagają prototypy, przeglądy z użytkownikami i sprawdzenie wymagań dotyczących zamierzonego użycia oraz wymagań obowiązkowych.
+Wymagania należy uzgadniać również z użytkownikami bezpośrednimi i pośrednimi, dostawcami danych oraz odbiorcami wyników. Pomocne są prototypy i przeglądy z udziałem użytkowników. Trzeba też sprawdzić wymagania związane z zamierzonym użyciem produktu oraz wymagania obowiązkowe.
 
 *Uzupełnienie własne:*
 
@@ -128,7 +128,7 @@ Atrybuty to cechy jakościowe produktu świadczące o jego wartości dla użytko
 
 *Uzupełnienie własne:*
 
-Atrybut jest ogólną cechą, a wymaganie określa oczekiwany poziom tej cechy w danych warunkach. „Wydajność” jest atrybutem; „95% odpowiedzi w czasie poniżej 2 sekund przy 100 równoczesnych użytkownikach” jest przykładowym wymaganiem. Metryka i procedura pomiaru pozwalają sprawdzić jego spełnienie.
+Atrybut jest ogólną cechą, a wymaganie określa oczekiwany poziom tej cechy w danych warunkach. „Wydajność” jest atrybutem. Przykładowe wymaganie to „95% odpowiedzi w czasie poniżej 2 sekund przy 100 równoczesnych użytkownikach”. Metryka i procedura pomiaru pozwalają sprawdzić jego spełnienie.
 
 *Źródło:* [W], s. 8-9, 21.
 
@@ -146,6 +146,12 @@ Dla wielu atrybutów można zaproponować wskaźnik pośredni, zestaw pomiarów 
 
 Przy cechach trudno mierzalnych trzeba jawnie określić, co dany wskaźnik obejmuje, czego nie obejmuje i w jakich warunkach jest wiarygodny.
 
+*Przykład własny: wydajność systemu.*
+
+Wydajność można oceniać przez czas odpowiedzi, przepustowość (liczbę żądań obsługiwanych w jednostce czasu) oraz zużycie zasobów, np. pamięci i procesora. Każda z tych metryk opisuje inny aspekt wydajności. Trzeba też określić warunki pomiaru, w tym liczbę jednoczesnych użytkowników, ponieważ od obciążenia zależą uzyskane wyniki.
+
+Wydajność jest cechą mierzalną, choć jej ocena może wymagać zestawu metryk. Trudniej jednoznacznie ocenić np. satysfakcję użytkownika, ponieważ jej ocena może zależeć od osoby i kontekstu. Można ją badać za pomocą ankiet, lecz wyrażenie odpowiedzi liczbą nie usuwa ich subiektywności.
+
 *Źródło:* [W], s. 21-25; [P], s. 3, 22; [ISO], s. 6, 20.
 
 <a id="pytanie-11"></a>
@@ -160,7 +166,7 @@ Slajd 23 używa rozróżnienia „metryka: to, co się mierzy” i „miara: jak
 
 Przy 90 zrealizowanych funkcjach ze 100 wymaganych otrzymujemy wskaźnik `90/100 = 0,9`, czyli 90%. Liczby funkcji są danymi pomiarowymi, iloraz jest regułą obliczania wskaźnika, a 0,9 jest wynikiem oceny według tej reguły.
 
-> **Komentarz własny.** Terminologia prezentacji nie jest całkowicie konsekwentna. W „Pomiarach” rozmiar kodu jest nazwany metryką bezpośrednią, a ISO 9126 dopuszcza metryki wyrażone czasem. Nie należy więc przyjmować, że każda metryka musi należeć do przedziału `[0,1]`, a każda miara mieć jednostkę fizyczną.
+> **Komentarz własny.** Terminologia prezentacji nie jest całkowicie konsekwentna. W „Pomiarach” rozmiar kodu jest nazwany metryką bezpośrednią, a ISO 9126 dopuszcza metryki wyrażone czasem. Nie należy więc przyjmować, że wartość każdej metryki musi mieścić się w przedziale `[0,1]`, a każda miara musi mieć jednostkę fizyczną.
 >
 > Aby uniknąć nieporozumień, warto osobno wskazać ocenianą cechę, definicję wskaźnika, procedurę pomiaru i uzyskany wynik.
 
@@ -212,7 +218,7 @@ Nie ma obowiązku liniowego przeliczania. Materiał wskazuje problem normalizacj
 
 *Uzupełnienie własne:*
 
-Przeliczenie wyniku pomiaru na ocenę powinno odpowiadać wymaganiom. Może być liniowe, progowe albo odcinkowe. Jeśli dopuszczalny czas reakcji wynosi maksymalnie 100 ms, przekroczenie tego progu może oznaczać niespełnienie wymagania, nawet gdy wzrost czasu był niewielki. Należy też określić kierunek skali: większa kompletność jest korzystna, większa liczba błędów na godzinę zwykle nie.
+Przeliczenie wyniku pomiaru na ocenę powinno odpowiadać wymaganiom. Może być liniowe, progowe albo odcinkowe. Jeśli dopuszczalny czas reakcji wynosi maksymalnie 100 ms, przekroczenie tego progu może oznaczać niespełnienie wymagania, nawet gdy wzrost czasu był niewielki. Należy też określić kierunek skali. Większa kompletność jest korzystna, natomiast większa liczba błędów na godzinę zwykle oznacza gorszy wynik.
 
 *Źródło podstawy:* [W], s. 23-25; [ISO], s. 3-7, 20. Funkcje progowe i odcinkowe są uzupełnieniem własnym.
 
@@ -286,11 +292,11 @@ Wybór języka interfejsu, ustawienie dostępnych opcji lub dostosowanie skrót�
 - Łatwość testowania oznacza łatwość przygotowania i wykonania sprawdzeń poprawności działania oraz wykrywania błędów.
 - Łatwość śledzenia pomaga zrozumieć działanie systemu i ustalić, co się w nim wydarzyło. W przykładach służą temu logi oraz dokumenty pośrednie.
 
-> **Doprecyzowanie.** Materiały używają *traceability* w dwóch znaczeniach. W klasycznym opisie McCalla są to powiązania od wymagań do implementacji; w późniejszych przykładach przede wszystkim obserwowalność działania programu. Oba zastosowania mogą wspierać testowanie, lecz nie zastępują testów.
+> **Doprecyzowanie.** Materiały używają *traceability* w dwóch znaczeniach. W klasycznym opisie McCalla chodzi o powiązania wymagań z implementacją. W późniejszych przykładach termin ten odnosi się przede wszystkim do obserwowalności działania programu. Oba zastosowania mogą wspierać testowanie, lecz nie zastępują testów.
 
 *Przykład własny:*
 
-Log wyjaśnia, jak wyliczono cenę; test porównuje cenę z oczekiwanym wynikiem; powiązanie testu z wymaganiem pokazuje, jaką regułę biznesową sprawdzono.
+Log wyjaśnia, jak wyliczono cenę, a test porównuje ją z oczekiwanym wynikiem. Powiązanie testu z wymaganiem pokazuje, jaką regułę biznesową sprawdzono.
 
 *Źródło:* [W], s. 11, 13, 15; [M], s. 4, 7, 16; [C], s. 26.
 
@@ -318,7 +324,7 @@ Wypadki wynikały ze splotu błędów technicznych i organizacyjnych, a nie z je
 
 Pomyłka operatora lub szybka korekta danych mogły uruchomić wadliwy scenariusz. System powinien jednak bezpiecznie obsługiwać przewidywalne pomyłki i nie dopuszczać do niebezpiecznej emisji. Przypisanie winy wyłącznie użytkownikowi pomija źródłowe wady projektu.
 
-> **Korekta.** Slajd 16 sprowadza przypadek Yakima z 1987 r. do wyścigu procedur. Opis Leveson wskazuje także konkretny mechanizm: jednobajtowa zmienna `Class3` była zwiększana i co 256 przebiegów przyjmowała wartość zero. Mogło to pominąć sprawdzenie położenia kolimatora. Zależność czasowa była istotna, ale bez informacji o przepełnieniu wyjaśnienie jest niepełne. Źródło zewnętrzne: [Nancy Leveson, opis Therac-25, część o zmiennej Class3](https://www.cse.msu.edu/~cse435/Handouts/Therac25-Leveson.pdf).
+> **Korekta.** Slajd 16 sprowadza przypadek Yakima z 1987 r. do wyścigu procedur. Opis Leveson wskazuje także konkretny mechanizm: jednobajtowa zmienna `Class3` była zwiększana i co 256 przebiegów przyjmowała wartość zero. Mogło to prowadzić do pominięcia sprawdzenia położenia kolimatora. Zależność czasowa była istotna, ale bez informacji o przepełnieniu wyjaśnienie jest niepełne. Źródło zewnętrzne: [Nancy Leveson, opis Therac-25, część o zmiennej Class3](https://www.cse.msu.edu/~cse435/Handouts/Therac25-Leveson.pdf).
 
 *Źródło prezentacji:* [T], s. 3-5, 8-9, 11-14, 16-21.
 
@@ -346,13 +352,13 @@ Wczesne przeglądy wymagań i projektu, uzgodnienia z użytkownikami oraz zaplan
 
 *Według prezentacji:*
 
-Względny koszt zmiany rośnie od definiowania przez opracowywanie do utrzymywania. Wykres podaje odpowiednio wartości `1 : 10 : 100`.
+Względny koszt zmiany rośnie wraz z przechodzeniem od definiowania, przez opracowywanie, do utrzymywania oprogramowania. Wykres podaje odpowiednio wartości `1 : 10 : 100`.
 
 *Uzupełnienie własne:*
 
-Zmiana wymagania na początku może wymagać głównie poprawienia opisu i uzgodnień. Po implementacji może obejmować kod, testy, dokumentację i integrację. Po wdrożeniu dochodzą np. migracja danych, aktualizacja instalacji i usuwanie skutków u użytkowników.
+Zmiana wymagania na początku projektu może sprowadzać się głównie do poprawienia opisu i ponownego uzgodnienia szczegółów. Po implementacji może obejmować kod, testy, dokumentację i integrację. Po wdrożeniu dochodzą np. migracja danych, aktualizacja instalacji i usuwanie skutków u użytkowników.
 
-> **Komentarz własny.** Proporcje 1:10:100 są ilustracją z wykładu, a nie prawem obowiązującym w każdym projekcie. Koszt zależy od rodzaju zmiany, architektury, automatyzacji i skutków wdrożenia. Wniosek egzaminacyjny pozostaje ten sam: opłaca się wcześnie wykrywać błędne decyzje.
+> **Komentarz własny.** Proporcje 1:10:100 są ilustracją z wykładu, a nie prawem obowiązującym w każdym projekcie. Koszt zależy od rodzaju zmiany, architektury, automatyzacji i skutków wdrożenia. Wczesne wykrywanie błędnych decyzji pozwala ograniczać koszty ich skutków.
 
 *Źródło:* [PR], s. 2, 6.
 
@@ -418,7 +424,7 @@ Działania SQA obejmują ocenę produktu z perspektywy klienta oraz sprawdzanie,
 - wspiera i nadzoruje przeglądy, testowanie, kontrolę zmian oraz pomiary;
 - zapisuje i raportuje wyniki oraz niezgodności.
 
-Prezentacja CMM dopowiada, że ocena powinna być obiektywna. Zainteresowane osoby muszą otrzymywać informacje o wynikach, a problemy, których zespół projektowy nie może rozwiązać, należy przekazywać wyższemu kierownictwu.
+W prezentacji CMM podkreślono, że ocena powinna być obiektywna. Zainteresowane osoby muszą otrzymywać informacje o wynikach, a problemy, których zespół projektowy nie może rozwiązać, należy przekazywać wyższemu kierownictwu.
 
 > **Komentarz własny.** Zespół SQA nie musi osobiście wykonywać wszystkich testów i przeglądów. Odpowiedzialność za jakość pozostaje również po stronie wykonawców i kierownictwa.
 
@@ -428,7 +434,9 @@ Prezentacja CMM dopowiada, że ocena powinna być obiektywna. Zainteresowane oso
 
 ### 26. Jakie formy przeglądów technicznych produktów programowych stosuje się w projekcie?
 
-*Według prezentacji podstawowe formy FTR (*Formal Technical Review*) to:*
+*Według prezentacji:*
+
+Podstawowe formy przeglądów technicznych FTR (*Formal Technical Review*) to:
 
 - *walkthrough*: przejście przez dokument lub inny produkt pracy w jego logicznej kolejności, np. omówienie kolejnych fragmentów;
 - inspekcja: systematyczne sprawdzanie według listy kontrolnej.
@@ -451,7 +459,7 @@ TQM (*Total Quality Management*) angażuje **całą organizację** w rozumienie 
 
 Obejmuje zarządzanie procesami, zapobieganie problemom, mierzenie jakości, planowanie usprawnień i ciągłe doskonalenie. Dotyczy całego cyklu życia produktu, łącznie z utrzymaniem, oraz relacji między wewnętrznymi klientami i dostawcami.
 
-> **Komentarz własny.** Slajdowe hasło o standardzie wolnym od defektów należy rozumieć jako kierunek działania i oczekiwanie zapobiegania błędom, nie jako dowód, że każdy produkt organizacji jest bezbłędny.
+> **Komentarz własny.** Hasło ze slajdu o standardzie wolnym od defektów wyraża cel: zapobieganie błędom. Nie dowodzi, że każdy produkt organizacji jest bezbłędny.
 
 *Źródło:* [PR], s. 21-24.
 
@@ -473,7 +481,7 @@ SQA skupia się na planowych działaniach zapewniających jakość oprogramowani
 
 *Według prezentacji:*
 
-Kierownictwo odpowiada za organizowanie działań jakościowych i aktywne przewodzenie ich realizacji. Ustanawia politykę i cele, określa odpowiedzialności i uprawnienia, zapewnia ludzi, czas i środki oraz organizuje doskonalenie procesów.
+Kierownictwo organizuje działania jakościowe i kieruje ich realizacją. Ustanawia politykę i cele, określa odpowiedzialności i uprawnienia, zapewnia ludzi, czas i środki oraz organizuje doskonalenie procesów.
 
 Powinno też okresowo przeglądać działanie systemu jakości i reagować na problemy przekraczające możliwości pojedynczego zespołu. Odpowiedzialność obejmuje decyzje organizacyjne wpływające na jakość w całym cyklu życia produktu.
 
@@ -525,7 +533,7 @@ Dobór mechanizmów należy sprawdzać na rzeczywistych zadaniach użytkowników
 
 *Według prezentacji:*
 
-Naukę programu ułatwiają interfejs zgodny ze znanymi standardami oraz przewidywalne zachowanie. Nowy użytkownik powinien otrzymać informacje o podstawowych możliwościach i mieć dostęp do pomocy oraz podpowiedzi. Przydatne są również szablony, dokumenty przykładowe, demonstracje i samouczek. Sposób obsługi warto dostosować do umiejętności użytkownika.
+Naukę programu ułatwiają interfejs zgodny ze znanymi standardami oraz przewidywalne działanie programu. Nowy użytkownik powinien otrzymać informacje o podstawowych możliwościach i mieć dostęp do pomocy oraz podpowiedzi. Przydatne są również szablony, dokumenty przykładowe, demonstracje i samouczek. Sposób obsługi warto dostosować do umiejętności użytkownika.
 
 Chodzi o zmniejszenie wysiłku potrzebnego do przejścia od pierwszego kontaktu z programem do sprawnego wykonywania zadań. Materiał ISO 9126 pokazuje, że można to sprawdzać np. przez pomiar czasu nauki funkcji.
 
@@ -537,7 +545,7 @@ Chodzi o zmniejszenie wysiłku potrzebnego do przejścia od pierwszego kontaktu 
 
 *Według prezentacji:*
 
-Operatywność ułatwia bieżące wykonywanie pracy i sterowanie programem. Służą jej odpowiednio krótkie sekwencje kroków, menu kontekstowe, przyciski narzędziowe, skróty klawiszowe oraz możliwość dostosowania menu, przycisków i skrótów. Znaczenie mają również podpowiedzi przy wprowadzaniu danych, powtarzanie i grupowanie operacji oraz automatyzacja pracy.
+Operatywność ułatwia bieżące wykonywanie pracy i sterowanie programem. Wspierają ją krótka sekwencja kroków potrzebnych do wykonania zadania, menu kontekstowe, przyciski narzędziowe i skróty klawiszowe. Znaczenie ma także możliwość dostosowania menu, przycisków i skrótów. Pracę usprawniają również podpowiedzi przy wprowadzaniu danych, powtarzanie i grupowanie operacji oraz automatyzacja.
 
 *Przykład własny:*
 
@@ -551,7 +559,7 @@ Doświadczony użytkownik może zaznaczyć wiele rekordów i wykonać na nich je
 
 *Według prezentacji:*
 
-Rozszerzanie funkcji wspierają rejestrowanie sekwencji działań do ponownego użycia, własne funkcje i skrypty, dodawanie ich wywołań do interfejsu, dodatki (*add-ins*) oraz osadzanie obiektów obsługiwanych przez inne aplikacje. Elastyczność wspierają także modularność, ogólność rozwiązań i możliwość ponownego wykorzystania komponentów.
+Funkcje programu można rozszerzać dzięki rejestrowaniu sekwencji działań do ponownego użycia, tworzeniu własnych funkcji i skryptów oraz dodawaniu ich wywołań do interfejsu. Służą temu również dodatki (*add-ins*) i osadzanie obiektów obsługiwanych przez inne aplikacje. Elastyczność wspierają modularność, ogólność rozwiązań i możliwość ponownego wykorzystania komponentów.
 
 *Uzupełnienie własne:*
 
@@ -571,12 +579,12 @@ Prezentacja: [4.Pomiary.pdf][P].
 
 *Synteza prezentacji:*
 
-Najpierw trzeba określić, czemu mają służyć pomiary, jakie wskaźniki będą potrzebne i jak zbierać dane. Następnie należy przygotować system wspomagający pomiary i sprawdzić go w próbie. Dopiero na tej podstawie można rozpocząć regularne zbieranie, przechowywanie i analizowanie wyników. Dane mogą obejmować pracochłonność, koszty, liczbę defektów, rozmiar produktów pracy i wyniki przeglądów lub testów. Dokumentacja procesu powinna zachowywać raporty problemów, zmian, audytów, inspekcji i testowania.
+Najpierw trzeba określić, czemu mają służyć pomiary, jakie wskaźniki będą potrzebne i jak zbierać dane. Następnie należy przygotować system wspomagający pomiary i sprawdzić jego działanie podczas pomiarów próbnych. Dopiero na tej podstawie można rozpocząć regularne zbieranie, przechowywanie i analizowanie wyników. Dane mogą obejmować pracochłonność, koszty, liczbę defektów, rozmiar produktów pracy i wyniki przeglądów lub testów. W dokumentacji procesu należy przechowywać raporty dotyczące problemów, zmian, audytów, inspekcji i testowania.
 
 *Uzupełnienie własne, praktyczna realizacja:*
 
 1. Zdefiniować zdarzenia i jednostki, np. co oznacza „defekt usunięty” oraz od kiedy liczymy czas jego obsługi.
-2. Przypisać odpowiedzialność i miejsce rejestracji danych.
+2. Określić osoby odpowiedzialne za rejestrowanie danych oraz miejsce ich zapisu.
 3. Wykorzystywać historię zgłoszeń, system kontroli wersji, wyniki automatycznych testów i ewidencję pracy.
 4. Powiązać dane z wersją produktu, etapem procesu i warunkami pomiaru.
 5. Kontrolować kompletność i porównywalność danych przed wyciągnięciem wniosków.
@@ -589,11 +597,11 @@ Najpierw trzeba określić, czemu mają służyć pomiary, jakie wskaźniki będ
 
 *Według prezentacji:*
 
-Są użyteczne, ale mają ograniczenia. Liczbę linii kodu, wyrażoną jako LOC lub tysiące linii KLOC, można stosunkowo łatwo ustalić. Miary te występują w modelach szacowania, a zależności między rozmiarem kodu i innymi cechami były przedmiotem badań. Można obliczać np. liczbę defektów na KLOC, koszt na KLOC lub liczbę KLOC na osobomiesiąc.
+Są użyteczne, ale mają ograniczenia. Liczbę linii kodu (LOC) lub tysięcy linii kodu (KLOC) można stosunkowo łatwo ustalić. Miary te występują w modelach szacowania, a zależności między rozmiarem kodu i innymi cechami były przedmiotem badań. Można obliczać np. liczbę defektów na KLOC, koszt na KLOC lub liczbę KLOC na osobomiesiąc.
 
-Rozmiar zależy jednak od języka i sposobu zapisu. Zwięzły program może otrzymać gorszy wskaźnik „produktywności” niż rozwlekły. Przed rozpoczęciem kodowania LOC trzeba oszacować. Slajdy wskazują też niedopasowanie tych metryk do języków nieproceduralnych.
+Rozmiar zależy jednak od języka i sposobu zapisu. Zwięzły kod może prowadzić do niższej oceny „produktywności” niż rozwlekły, jeśli wskaźnik opiera się na liczbie napisanych linii. Przed rozpoczęciem kodowania LOC trzeba oszacować. Slajdy wskazują też niedopasowanie tych metryk do języków nieproceduralnych.
 
-> **Komentarz własny.** Wiarygodność samego zliczenia linii nie oznacza trafności oceny jakości lub pracy człowieka. Porównanie wymaga wspólnej definicji linii i podobnego kontekstu, w tym zasad traktowania kodu wygenerowanego.
+> **Komentarz własny.** Wiarygodność samego zliczenia linii nie oznacza trafności oceny jakości lub pracy człowieka. Porównanie wymaga wspólnej definicji linii i podobnych warunków oceny. Trzeba też ustalić zasady uwzględniania kodu wygenerowanego.
 >
 > Liczba defektów na KLOC opisuje gęstość wykrytych defektów; nie jest tym samym co częstość awarii podczas eksploatacji, choć slajd 6 nazywa ją „awaryjnością”.
 
@@ -610,7 +618,7 @@ Mierzą umowny rozmiar systemu na podstawie elementów związanych z funkcjami, 
 - punkty funkcyjne (*Function Points*): ważone wejścia, wyjścia, zapytania, pliki i interfejsy zewnętrzne, z pokazanym współczynnikiem korekcyjnym;
 - punkty funkcjonalne (*Feature Points*): podobne zliczanie z dodatkowym uwzględnieniem algorytmów.
 
-Punkty są mniej zależne od języka programowania niż LOC. Można je również wyznaczać przed napisaniem kodu. Dobór klasy złożoności i wag może jednak zawierać element subiektywny, a zebranie danych bywa trudne.
+Punkty są mniej zależne od języka programowania niż LOC. Można je również wyznaczać przed napisaniem kodu. Dobór klas złożoności i wag może być jednak subiektywny, a zebranie danych bywa trudne.
 
 > **Komentarz własny.** FP nie odpowiadają na pytania, czy funkcje są poprawne, kompletne względem potrzeb, łatwe w obsłudze lub przydatne użytkownikowi. Dwa systemy z podobną liczbą punktów mogą różnić się pod tymi względami. Punkty opisują rozmiar funkcjonalny według przyjętej metody, ale nie stanowią pełnej oceny atrybutu „funkcjonalność”. Nazwy obu odmian zachowano zgodnie ze slajdami.
 
@@ -622,7 +630,7 @@ Punkty są mniej zależne od języka programowania niż LOC. Można je również
 
 *Według prezentacji:*
 
-Pozwalają ilościowo opisywać strukturę kodu i wspierać ocenę trudności implementacji oraz utrzymania. Materiał omawia metryki Halsteada, oparte na liczbach operatorów i operandów, oraz złożoność cyklomatyczną McCabe'a, opartą na grafie przepływu sterowania. Podaje też indeks utrzymywalności łączący objętość Halsteada, złożoność cyklomatyczną i LOC.
+Metryki złożoności ilościowo opisują strukturę kodu i wspomagają ocenę trudności implementacji oraz utrzymania. Materiał omawia metryki Halsteada, oparte na liczbach operatorów i operandów, oraz złożoność cyklomatyczną McCabe'a, opartą na grafie przepływu sterowania. Podaje też indeks utrzymywalności łączący objętość Halsteada, złożoność cyklomatyczną i LOC.
 
 *Uzupełnienie własne:*
 
@@ -654,7 +662,7 @@ Prezentacja: [4a.ISO-9126.pdf][ISO].
 | Jakość zewnętrzna | Zachowanie działającego produktu, oceniane m.in. przez testy | Czas odpowiedzi, poprawność obliczeń, zachowanie po awarii |
 | Jakość użytkowa, czyli jakość w użyciu | Wyniki pracy użytkownika w określonym kontekście | Skuteczność wykonania zadania, czas pracy, satysfakcja i ryzyko szkody |
 
-Potrzeby użytkownika służą określeniu wymagań zewnętrznych, a te są podstawą wymagań wewnętrznych. Jakość wewnętrzna wpływa na zewnętrzną, a zewnętrzna na użytkową. To zależność między perspektywami, a nie automatyczna gwarancja: dobra struktura kodu nie dowodzi jeszcze, że użytkownik osiągnie swój cel.
+Na podstawie potrzeb użytkownika określa się wymagania zewnętrzne, a z nich wyprowadza wymagania wewnętrzne. Jakość wewnętrzna wpływa na jakość zewnętrzną, która z kolei wpływa na jakość użytkową. Sama dobra struktura kodu nie gwarantuje jednak, że użytkownik osiągnie swój cel.
 
 *Źródło:* [ISO], s. 2-3, 8, 15-19. Przykłady w tabeli są własną ilustracją tych kategorii.
 
@@ -706,7 +714,7 @@ Prezentacja: [5.CMM-CMMI.pdf][C]. Odpowiedzi odnoszą się do historycznych mode
 
 *Według prezentacji:*
 
-Dojrzałość oznacza, że proces jest coraz lepiej zdefiniowany, powtarzalny i konsekwentnie stosowany w organizacji. Polityka organizacji, standardy, procedury, szkolenia i przypisane odpowiedzialności utrwalają ten sposób pracy. Sposób pracy przestaje zależeć wyłącznie od konkretnych osób i może być zachowany po ich odejściu.
+Dojrzałość oznacza, że proces jest coraz lepiej zdefiniowany, powtarzalny i konsekwentnie stosowany w organizacji. Polityka organizacji, standardy, procedury, szkolenia i określony podział odpowiedzialności utrwalają ten sposób pracy. Dzięki temu nie zależy on wyłącznie od konkretnych osób i może być zachowany po ich odejściu.
 
 Na kolejnych poziomach przechodzi się od działań doraźnych, przez zarządzanie i wspólne standardy, do zarządzania ilościowego i ciągłego doskonalenia. Dzięki temu łatwiej przewidywać koszty, harmonogram i wyniki jakościowe.
 
@@ -720,7 +728,7 @@ Na kolejnych poziomach przechodzi się od działań doraźnych, przez zarządzan
 
 *Według prezentacji:*
 
-Jest to **poziom 3, „zdefiniowany” (*Defined*)**. Organizacja dokumentuje i standaryzuje procesy zarządcze i inżynierskie oraz integruje je we wspólny proces organizacyjny. Projekty stosują zatwierdzone wersje tego procesu dopasowane do swoich potrzeb, czyli poddane *tailoringowi*.
+Jest to **poziom 3, „zdefiniowany” (*Defined*)**. Organizacja dokumentuje i standaryzuje procesy zarządcze i inżynierskie oraz integruje je we wspólny proces organizacyjny. Zespoły projektowe stosują zatwierdzone wersje tego procesu, dostosowane do potrzeb projektu. Takie dostosowanie nazywa się *tailoringiem*.
 
 Obejmuje to m.in. wspólne zasady pracy, szkolenia, koordynację między zespołami i przeglądy wzajemne. Na poziomie 2 nacisk pada na zarządzanie poszczególnymi projektami. Poziom 3 wprowadza dodatkowo spójny standard procesów dla całej organizacji.
 
@@ -736,7 +744,7 @@ Proces zdefiniowany musi być rzeczywiście stosowany i utrzymywany. Samo napisa
 
 *Według prezentacji, s. 20:*
 
-Reprezentacja stopniowana wyznacza kolejne poziomy obejmujące z góry ustalone wymagania dla organizacji. Reprezentacja ciągła pozwala wybierać obszary procesu i poziomy, do których organizacja chce je doprowadzić, zgodnie ze swoimi potrzebami.
+Reprezentacja stopniowana wyznacza kolejne poziomy obejmujące z góry ustalone wymagania dla organizacji. Reprezentacja ciągła pozwala organizacji wybierać obszary procesu oraz docelowe poziomy ich zdolności zgodnie z własnymi potrzebami.
 
 > **Korekta.** Slajdy 21 i 22 mają zamienione przyporządkowanie list poziomów do reprezentacji. Dla CMMI 1.1 właściwe rozróżnienie jest następujące:
 >
@@ -745,7 +753,7 @@ Reprezentacja stopniowana wyznacza kolejne poziomy obejmujące z góry ustalone 
 > | Stopniowana (*staged*) | Dojrzałość organizacji w określonym zakresie oceny, względem wymaganych zestawów obszarów procesowych | 1 Initial, 2 Managed, 3 Defined, 4 Quantitatively Managed, 5 Optimizing |
 > | Ciągła (*continuous*) | Zdolność poszczególnych obszarów procesowych; wynik tworzy profil | 0 Incomplete, 1 Performed, 2 Managed, 3 Defined, 4 Quantitatively Managed, 5 Optimizing |
 >
-> Nie należy zapamiętywać poziomu 0 i poziomu 1 „wykonywanego” jako skali dojrzałości stopniowanej CMMI 1.1. Nie należy też przenosić tych historycznych skal bez sprawdzenia do innych wydań CMMI. Źródła zewnętrzne: [CMMI Product Team, model 1.1 Continuous Representation](https://doi.org/10.1184/R1/6572141) oraz [Sandra L. Cepeda, CMMI: Staged or Continuous?, 2005, s. 5, 8-9](https://www.sei.cmu.edu/documents/2948/2005_017_001_22691.pdf).
+> Poziom 0 oraz poziom 1 „wykonywany” należą do skali zdolności w reprezentacji ciągłej, a nie do skali dojrzałości w reprezentacji stopniowanej CMMI 1.1. Tych historycznych skal nie należy przenosić do innych wydań CMMI bez sprawdzenia różnic. Źródła zewnętrzne: [CMMI Product Team, model 1.1 Continuous Representation](https://doi.org/10.1184/R1/6572141) oraz [Sandra L. Cepeda, CMMI: Staged or Continuous?, 2005, s. 5, 8-9](https://www.sei.cmu.edu/documents/2948/2005_017_001_22691.pdf).
 
 *Przykład własny:*
 
@@ -785,7 +793,7 @@ Kierownictwo określa i dokumentuje kierunek działania w sprawach jakości, cel
 
 *Uzupełnienie własne:*
 
-Praktyczne wdrożenie oznacza przełożenie deklaracji na działania. Jeśli celem jest ograniczenie defektów trafiających do użytkowników, trzeba ustalić sposób ich pomiaru, zakres przeglądów i testów, odpowiedzialnych oraz zasoby. Sam podpisany dokument nie zmienia sposobu pracy.
+Praktyczne wdrożenie oznacza przełożenie deklaracji na działania. Jeśli celem jest ograniczenie defektów trafiających do użytkowników, trzeba ustalić sposób ich pomiaru oraz zakres przeglądów i testów. Należy też wskazać osoby odpowiedzialne za te działania i zapewnić potrzebne zasoby. Sam podpisany dokument nie zmienia sposobu pracy.
 
 > **Doprecyzowanie.** „ISO 9000” bywa na slajdach nazwą całej rodziny norm. W wydaniach 2015 norma ISO 9000 opisuje podstawy i terminologię, a ISO 9001 wymagania systemu zarządzania jakością. Źródło zewnętrzne: [ISO/TC 176/SC2, informacje o ISO 9000:2015 i ISO 9001:2015](https://committee.iso.org/sites/tc176sc2/home/projects/published/iso-9001-2015.html).
 
@@ -842,9 +850,9 @@ Prezentacja: [7a.GQM.pdf][G].
 
 *Według prezentacji:*
 
-**GQM zaczyna od celów konkretnego przedsięwzięcia**. Następnie formułuje pytania pozwalające ocenić te cele i dobiera metryki, które dostarczą odpowiedzi. Obejmuje planowanie, definiowanie, zbieranie danych oraz interpretację wyników i ocenę kosztów oraz korzyści.
+W metodzie **GQM najpierw określa się cele konkretnego przedsięwzięcia**. Następnie formułuje się pytania pozwalające ocenić realizację tych celów i dobiera metryki, które dostarczą odpowiedzi. Metoda obejmuje planowanie, definiowanie, zbieranie danych, interpretację wyników oraz ocenę kosztów i korzyści.
 
-W porównaniu z korzystaniem z szerokiego katalogu cech i miar przewagą jest jawne uzasadnienie każdego pomiaru: wiadomo, jakiej decyzji lub jakiemu usprawnieniu ma służyć. Ogranicza to zbieranie danych tylko dlatego, że łatwo je uzyskać. ISO 9126 w przedstawionej ocenie ma m.in. problem dużej liczby trudnych do zebrania miar.
+Przewagą nad korzystaniem z szerokiego katalogu cech i miar jest uzasadnienie każdego pomiaru. Wiadomo, jakiej decyzji lub jakiemu usprawnieniu ma on służyć. Ogranicza to zbieranie danych tylko dlatego, że łatwo je uzyskać. W ocenie przedstawionej na wykładzie jednym z problemów ISO 9126 jest duża liczba miar, do których trudno zebrać dane.
 
 *Przykład własny:*
 
@@ -868,15 +876,25 @@ Prezentacja: [7b.AHP.pdf][A].
 
 *Według prezentacji:*
 
-AHP jest przydatne przy wyborze spośród kilku alternatyw według wielu kryteriów, zwłaszcza gdy trudno zastosować skalę bezwzględną. Łatwiej ocenić, który z dwóch wariantów jest lepszy pod danym względem lub które kryterium jest ważniejsze, niż od razu nadać oceny wszystkim wariantom.
+**AHP warto stosować, gdy trzeba porównać kilka systemów lub rozwiązań pod względem jakości, a wybór zależy od wielu kryteriów o różnym znaczeniu.** Metoda jest szczególnie przydatna, gdy:
 
-Tworzy się hierarchię kryteriów, **porównuje je parami** i wyznacza wagi. Następnie porównuje się warianty względem kryteriów i oblicza ocenę łączną. Slajdy używają ocen 1, 3, 5, 7, 9 oraz ich odwrotności; pokazują normalizację kolumn macierzy i uśrednianie wierszy.
+- trudno ocenić jakość w skali bezwzględnej, ale łatwiej wskazać, który z dwóch wariantów jest lepszy pod danym względem;
+- trzeba ustalić, które cechy jakości są ważniejsze przy podejmowaniu konkretnej decyzji;
+- potrzebna jest łączna ocena lub ranking wariantów uwzględniający zarówno oceny poszczególnych cech, jak i ich wagi.
+
+Tworzy się hierarchię kryteriów, **porównuje ich znaczenie parami** i wyznacza wagi. Następnie porównuje się warianty względem każdego kryterium i oblicza ocenę łączną. Pozwala to uzasadnić wybór przyjętymi priorytetami.
+
+Na slajdach stosuje się oceny 1, 3, 5, 7, 9 oraz ich odwrotności. Pokazano też normalizację kolumn macierzy i uśrednianie wierszy.
 
 Prezentacja zwraca uwagę na subiektywność ocen i możliwość nieprzechodnich porównań. Przyjęta skala liczbowa może też nie odpowiadać temu, jak oceniający intuicyjnie rozumie różnicę między wariantami.
 
 *Uzupełnienie własne:*
 
 Wynik należy rozumieć jako ranking przy przyjętych kryteriach i preferencjach. Warto sprawdzić, czy niewielka zmiana wag zmienia zwycięzcę i czy oceny parami nie są sprzeczne. Warunki obowiązkowe, np. minimalny wymagany poziom bezpieczeństwa, powinny zostać sprawdzone osobno.
+
+*Przykład własny:*
+
+Przy wyborze jednego z trzech systemów można oceniać funkcjonalność, łatwość obsługi i niezawodność. Jeden system może być wygodniejszy, a inny bardziej niezawodny. AHP pozwala określić znaczenie tych kryteriów, porównać systemy parami pod każdym względem i uzyskać ranking odpowiadający ustalonym priorytetom.
 
 > **Korekta rachunkowa.** Na slajdzie 9 macierz wynosi `[[1, 0,2], [5, 1]]`. Zgodnie z pokazaną metodą:
 >
@@ -901,7 +919,7 @@ Prezentacja: [8.Jakość w Agile.pdf][AG]. Znaczna część przykładów dotyczy
 
 Autor wskazuje duży nakład pracy nad dokumentacją i późne dostarczanie działających rezultatów. Problemem była również trudność pełnego określenia wymagań na początku projektu. Podczas implementacji zespół mógł stracić kontakt z klientem, a rozbudowany proces nadal nie dawał pewności co do końcowej jakości.
 
-Proponowaną odpowiedzią były częste dostawy działającego oprogramowania, bliska współpraca z klientem, reagowanie na zmiany, krótkie cykle informacji zwrotnej i doskonalenie sposobu pracy.
+W odpowiedzi zaproponowano częste dostarczanie działającego oprogramowania, bliską współpracę z klientem, reagowanie na zmiany, szybkie uzyskiwanie informacji zwrotnej i doskonalenie sposobu pracy.
 
 > **Korekta.** Słowo „odrzucili” jest zbyt mocne. Manifest nadaje większą wartość ludziom, działającemu oprogramowaniu, współpracy i reagowaniu na zmiany, ale nadal uznaje wartość procesów, narzędzi, dokumentacji, umów i planu. Źródło zewnętrzne: [Manifest programowania zwinnego](https://agilemanifesto.org/iso/pl/manifesto.html).
 
@@ -913,7 +931,7 @@ Proponowaną odpowiedzią były częste dostawy działającego oprogramowania, b
 
 *Odpowiedź wynikająca z prezentacji:*
 
-Nie. Motywacja i zaufanie wymagają uzupełnienia o kompetencje, odpowiednie środowisko pracy, współpracę z klientem, przepływ informacji, standardy inżynierskie, projektowanie i testowanie. Zespół może być zaangażowany, a mimo to realizować błędnie rozpoznane potrzeby albo nie zauważyć istotnego ryzyka.
+Nie. Oprócz motywacji i zaufania zespół potrzebuje kompetencji, odpowiedniego środowiska pracy, współpracy z klientem i sprawnego przepływu informacji. Konieczne są również standardy inżynierskie, projektowanie i testowanie. Zespół może być zaangażowany, a mimo to realizować błędnie rozpoznane potrzeby albo nie zauważyć istotnego ryzyka.
 
 Materiał wskazuje problemy wynikające z braków wiedzy, rotacji personelu i braku dokumentacji. Potrzebne są szkolenia oraz utrwalanie wiedzy i zasad pracy.
 
@@ -952,7 +970,7 @@ Materiał wskazuje ponadto praktyki wspierające te warunki: standardy kodowania
 
 *Uzupełnienie zewnętrzne:*
 
-W Scrumie wymagania jakościowe przyrostu ujmuje Definition of Done. Niespełniający jej element nie jest ukończonym przyrostem. Źródło: [Schwaber i Sutherland, Scrum Guide 2020, Definition of Done](https://scrumguides.org/scrum-guide.html#commitment-definition-of-done).
+W Scrumie Definition of Done określa wymagania jakościowe, które musi spełnić przyrost. Element, który ich nie spełnia, nie jest częścią ukończonego przyrostu. Źródło: [Schwaber i Sutherland, Scrum Guide 2020, Definition of Done](https://scrumguides.org/scrum-guide.html#commitment-definition-of-done).
 
 *Źródło prezentacji:* [AG], s. 9, 24.
 
@@ -962,11 +980,11 @@ W Scrumie wymagania jakościowe przyrostu ujmuje Definition of Done. Niespełnia
 
 *Według prezentacji:*
 
-Brak kontaktu i zaangażowania utrudnia zbieranie wymagań, wyjaśnianie szczegółów i ustalanie priorytetów. Brak informacji zwrotnej po wydaniu opóźnia wykrycie rozbieżności. Zespół może czekać na decyzje albo realizować niepotwierdzone założenia, co obniża wydajność i zwiększa ryzyko niepowodzenia.
+Brak kontaktu z klientem i jego zaangażowania utrudnia zbieranie wymagań, wyjaśnianie szczegółów i ustalanie priorytetów. Jeśli po wydaniu nie ma informacji zwrotnej, rozbieżności są wykrywane z opóźnieniem. Zespół może czekać na decyzje albo realizować niepotwierdzone założenia, co obniża wydajność i zwiększa ryzyko niepowodzenia.
 
 *Synteza własna:*
 
-W takich warunkach zespół może zbudować niewłaściwe funkcje lub pominąć ważne scenariusze. Kiedy rozbieżności zostaną w końcu zauważone, poprawki mogą wymagać pracy pod presją czasu. Brak udziału użytkowników w akceptacji może pozwolić, by błędy zastosowania ujawniły się dopiero po wdrożeniu.
+W takich warunkach zespół może zbudować niewłaściwe funkcje lub pominąć ważne scenariusze. Kiedy rozbieżności zostaną w końcu zauważone, poprawki mogą wymagać pracy pod presją czasu. Bez udziału użytkowników w akceptacji problemy związane z rzeczywistym zastosowaniem produktu mogą ujawnić się dopiero po wdrożeniu.
 
 *Źródło:* [AG], s. 10-14, 23-24.
 
@@ -979,11 +997,11 @@ W takich warunkach zespół może zbudować niewłaściwe funkcje lub pominąć 
 - niezrozumienie roli klienta w pracy zwinnej i sceptycyzm wobec tego sposobu pracy;
 - odległość, różne strefy czasowe i trudności komunikacyjne;
 - niski priorytet projektu po stronie klienta oraz brak czasu i zaangażowania;
-- przywiązanie dużej organizacji do tradycyjnego trybu pracy i kontraktowania;
+- przywiązanie dużej organizacji do tradycyjnego sposobu pracy i zawierania umów;
 - niedostateczna wiedza lub brak uprawnień decyzyjnych przedstawiciela;
 - rozbieżność między oczekiwaniami przedstawiciela a potrzebami użytkowników końcowych.
 
-> **Komentarz własny.** Slajd 10 sugeruje, że z góry ustalone wynagrodzenie odbiera klientowi motywację finansową do współpracy. To możliwy problem konstrukcji umowy, ale nie reguła. Także przy stałej cenie klient ponosi skutki opóźnienia lub otrzymania nieprzydatnego produktu.
+> **Komentarz własny.** Slajd 10 sugeruje, że z góry ustalone wynagrodzenie odbiera klientowi motywację finansową do współpracy. Taki problem może wynikać z warunków umowy, ale nie jest regułą. Także przy stałej cenie klient ponosi skutki opóźnienia lub otrzymania nieprzydatnego produktu.
 
 *Źródło:* [AG], s. 10, 13, 15.
 
@@ -991,14 +1009,16 @@ W takich warunkach zespół może zbudować niewłaściwe funkcje lub pominąć 
 
 ### 56. Jak firmy stosujące metodyki zwinne sobie radzą przy problemach z klientem?
 
-*Według prezentacji stosują m.in.:*
+*Według prezentacji:*
+
+Firmy stosują m.in. następujące rozwiązania:
 
 - wyjaśnianie klientowi sposobu współpracy i korzyści z częstej informacji zwrotnej;
 - różne opcje kontraktowe, np. finansowanie kolejnych wydań i możliwość zmiany zakresu;
 - margines czasowy oraz wcześniejszą ocenę ryzyka braku zaangażowania;
 - odkładanie opowieści czekających na wyjaśnienia i sprawdzanie ich gotowości do implementacji;
 - przypisywanie właścicieli konkretnym opowieściom;
-- zastępczego przedstawiciela klienta, np. analityka biznesowego;
+- wyznaczenie zastępczego przedstawiciela klienta, np. analityka biznesowego;
 - regularne demonstracje działającego produktu.
 
 Slajd wymienia również ukrywanie zwinnego sposobu pracy przed klientem.
@@ -1019,7 +1039,7 @@ Opowieści użytkownika są z założenia niepełne i wymagają doprecyzowania. 
 
 *Uzupełnienie własne:*
 
-Przed realizacją trzeba ustalić wynik biznesowy, zainteresowane grupy użytkowników, reguły działania, ograniczenia, przypadki błędne oraz sprawdzalne kryteria akceptacji. Opowieść jest początkiem rozmowy o wymaganiach, a nie dowodem ich kompletności.
+Przed realizacją trzeba ustalić oczekiwany wynik biznesowy, grupy użytkowników, których dotyczy rozwiązanie, reguły działania i ograniczenia. Należy też rozpoznać przypadki błędne i ustalić sprawdzalne kryteria akceptacji. Opowieść jest początkiem rozmowy o wymaganiach, a nie dowodem ich kompletności.
 
 *Przykład własny:*
 
@@ -1037,7 +1057,7 @@ Nie wolno zakładać, że wysokie wynagrodzenie lub doświadczenie części zesp
 
 *Uzupełnienie własne:*
 
-Standardy powinny być konkretne, dostępne i sprawdzane w codziennej pracy. Można wykorzystać przykłady dobrego kodu, wdrożenie nowych osób, mentoring, przeglądy zmian oraz automatyczne kontrole formatowania, analizy statycznej i testów.
+Standardy powinny być konkretne i dostępne, a ich stosowanie należy sprawdzać w codziennej pracy. Pomagają w tym przykłady dobrego kodu, wdrażanie nowych osób do zespołu, mentoring i przeglądy zmian. Można też automatycznie sprawdzać formatowanie, prowadzić analizę statyczną i uruchamiać testy.
 
 Warto też utrwalać decyzje projektowe, aby wiedza nie znikała wraz z pracownikiem.
 
@@ -1051,11 +1071,11 @@ Warto też utrwalać decyzje projektowe, aby wiedza nie znikała wraz z pracowni
 
 *Według prezentacji:*
 
-Nie. Testy mogą sprawdzać niepełne lub błędnie rozpoznane wymagania. Program może przechodzić testy i nadal nie odpowiadać potrzebom użytkownika. Trudno też sprawdzić wszystkie możliwe przebiegi programu i warunki użycia. Potrzebne są analiza wymagań i wyjątków, projektowanie, przeglądy, standardy oraz udział użytkowników w akceptacji.
+Nie. Testy mogą sprawdzać niepełne lub błędnie rozpoznane wymagania. Program może pomyślnie przechodzić testy, a mimo to nie odpowiadać potrzebom użytkownika. Trudno też sprawdzić wszystkie możliwe przebiegi programu i warunki użycia. Potrzebne są analiza wymagań i wyjątków, projektowanie, przeglądy, standardy oraz udział użytkowników w akceptacji.
 
 > **Korekta i komentarz własny.** Slajd 21 przedstawia możliwość napisania bezbłędnego kodu dzięki TDD jako założenie, a slajd 22 łączy pokrycie kodu z pokryciem wszystkich ścieżek. Należy rozdzielić trzy kwestie:
 >
-> - spełnienie napisanych testów nie dowodzi spełnienia wszystkich potrzeb i warunków;
+> - pomyślne przejście napisanych testów nie dowodzi, że program spełnia wszystkie potrzeby i działa poprawnie we wszystkich warunkach;
 > - 100% pokrycia instrukcji albo gałęzi może być osiągalne w określonym kodzie, ale nie oznacza sprawdzenia wszystkich danych i przebiegów;
 > - niezależna ocena testów może ujawnić przeoczenia autora, lecz z tego nie wynika, że każdy test jednostkowy musi być pisany lub uruchamiany przez inną osobę.
 >
@@ -1075,7 +1095,7 @@ W praktyce opisanej na slajdach testy bywają przygotowywane, wykonywane i oceni
 
 *Uzupełnienie własne:*
 
-Należy odróżnić techniczne wykonanie testów od decyzji o akceptacji. Testerzy mogą przygotować i zautomatyzować testy, ale kryteria i ocenę przydatności trzeba uzgodnić z uprawnionym przedstawicielem klienta oraz reprezentatywnymi użytkownikami. Regresję powinien systematycznie zapewniać proces wytwarzania, a nie przypadkowe sprawdzanie przez klienta.
+Należy odróżnić techniczne wykonanie testów od decyzji o akceptacji. Testerzy mogą przygotować i zautomatyzować testy, ale kryteria i ocenę przydatności trzeba uzgodnić z uprawnionym przedstawicielem klienta oraz reprezentatywnymi użytkownikami. Testy regresyjne powinny być systematyczną częścią procesu wytwarzania. Nie można zastępować ich okazjonalnym sprawdzaniem programu przez klienta.
 
 *Źródło:* [AG], s. 9, 23-24; [PR], s. 24.
 
@@ -1091,7 +1111,7 @@ Autor wiąże metodyki zwinne przede wszystkim z prostymi projektami, małymi i 
 
 - sterowanie aparatem do radioterapii lub funkcjami krytycznymi samolotu, jeśli sposób pracy nie zapewnia analizy zagrożeń, wymaganej weryfikacji i dowodów bezpieczeństwa;
 - oprogramowanie sondy kosmicznej z bardzo ograniczoną możliwością aktualizacji po uruchomieniu;
-- projekt dla niedostępnego decyzyjnie klienta, gdy zespół ma wyłącznie ogólne opowieści i nie może wyjaśniać wymagań;
+- projekt, w którym nie ma dostępu do osoby podejmującej decyzje po stronie klienta, a zespół dysponuje jedynie ogólnymi opowieściami i nie może wyjaśnić wymagań;
 - system utrzymywany przez wiele lat przez zmieniające się zespoły, jeśli wiedza pozostaje wyłącznie w głowach autorów.
 
 > **Komentarz własny.** Nie zgadzam się z ogólnym wnioskiem, że sama zwinność wyklucza projekty duże lub krytyczne. Powyższe przykłady pokazują niewystarczalność procesu pozbawionego potrzebnych zabezpieczeń i dokumentacji. Można łączyć iteracyjny rozwój z formalną analizą, kontrolą zmian, dokumentacją i niezależną weryfikacją.
@@ -1119,7 +1139,7 @@ Autor wiąże metodyki zwinne przede wszystkim z prostymi projektami, małymi i 
 
 *Uzupełnienie własne:*
 
-Ryzyko ograniczają utrwalanie potrzebnej wiedzy, sprawdzalne wymagania jakościowe, kontrola zmian, utrzymywanie testów regresyjnych i planowanie prac technicznych obok funkcjonalnych.
+Ryzyko można ograniczać przez utrwalanie potrzebnej wiedzy, określanie sprawdzalnych wymagań jakościowych, kontrolę zmian i utrzymywanie testów regresyjnych. W planie prac trzeba też uwzględniać zadania techniczne obok rozwoju funkcji.
 
 *Źródło prezentacji:* [AG], s. 10-16, 19-26.
 

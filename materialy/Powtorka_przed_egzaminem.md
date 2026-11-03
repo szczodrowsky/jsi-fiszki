@@ -31,28 +31,28 @@ Główne źródło: [1.Wprowadzenie.pdf](1.Wprowadzenie.pdf).
 Jakość systemu informatycznego zależy od **współdziałania** oprogramowania, sprzętu, ludzi, procesów, procedur i danych.
 
 - Nawet poprawny program może dawać niewłaściwe wyniki przy **błędnych danych**, niesprawnym sprzęcie lub złej organizacji pracy.
-- Znaczenie poszczególnych elementów **zależy od zastosowania** systemu; nie można przypisać im stałych udziałów procentowych.
+- Znaczenie poszczególnych elementów **zależy od zastosowania** systemu. Nie można przypisać im stałych udziałów procentowych.
 
 <a id="pytanie-2"></a>
 
 ### 2. Czy u źródeł każdej awarii systemu informatycznego stoi błąd programistów?
 
-**Nie.**
+**Nie każda awaria wynika z błędu programisty.**
 
-- **Awarię** mogą spowodować błędne wymagania, wadliwy projekt, niesprawny sprzęt, nieprawidłowe dane, błędy obsługi lub organizacji pracy.
-- Często nakłada się kilka przyczyn.
+- Jej przyczyną mogą być błędne wymagania, wadliwy projekt, niesprawny sprzęt, nieprawidłowe dane, błędy obsługi lub niewłaściwa organizacja pracy.
+- Często kilka takich przyczyn występuje jednocześnie.
 
-**Sam defekt** nie musi prowadzić do awarii: musi ujawnić się w określonych warunkach, a zabezpieczenia mogą zatrzymać jego skutki.
+**Sam defekt** nie musi prowadzić do awarii. Ujawnia się dopiero w określonych warunkach, a zabezpieczenia mogą powstrzymać jego skutki.
 
 <a id="pytanie-3"></a>
 
 ### 3. Dlaczego wytwórcy oprogramowania nie mogą zagwarantować 100% bezbłędności swojego produktu?
 
-- Złożoność oprogramowania uniemożliwia praktyczne sprawdzenie **wszystkich kombinacji** danych, stanów i warunków działania.
-- Ponadto wymagania i **specyfikacja** mogą zawierać błędy.
+- Ze względu na złożoność oprogramowania nie da się w praktyce sprawdzić **wszystkich kombinacji** danych, stanów i warunków działania.
+- Błędy mogą też występować w wymaganiach i **specyfikacji**.
 - Testy potwierdzają poprawność **tylko w sprawdzonych przypadkach**.
 
-**Dowody formalne** mogą wykazać określone własności programu, ale obowiązują przy przyjętych założeniach i nie dają bezwarunkowej gwarancji poprawności całego systemu.
+**Dowody formalne** mogą potwierdzić określone własności programu przy przyjętych założeniach. Nie dają jednak bezwarunkowej gwarancji poprawności całego systemu.
 
 <a id="pytanie-5"></a>
 
@@ -81,7 +81,7 @@ Program może więc spełniać zapisane wymagania, a mimo to nie rozwiązywać w
 - Niżej znajdują się **główne atrybuty**, ich szczegółowe cechy oraz metryki i pomiary służące do oceny.
 - Przykładowe główne atrybuty to funkcjonalność, wydajność, wiarygodność, satysfakcja i elastyczność.
 
-**Wagi** określają znaczenie składowych; ocenę można obliczyć jako `A = Σ(w·M)/Σw`, przy dodatniej sumie wag.
+**Wagi** określają znaczenie poszczególnych składowych. Ocenę można obliczyć ze wzoru `A = Σ(w·M)/Σw`, pod warunkiem że suma wag jest dodatnia.
 
 Podział na atrybuty zależy od przyjętego modelu jakości.
 
@@ -93,26 +93,31 @@ Podział na atrybuty zależy od przyjętego modelu jakości.
 
 Wymagania funkcjonalne wiążą się z funkcjonalnością, czasowe z wydajnością, niezawodnościowe z wiarygodnością, a ograniczenia mogą dotyczyć elastyczności.
 
-**Przykładowo** wydajność jest atrybutem, a „95% odpowiedzi poniżej 2 s przy 100 użytkownikach” jest wymaganiem, którego spełnienie można sprawdzić pomiarem.
+Przykładowo wydajność jest atrybutem, a „95% odpowiedzi poniżej 2 s przy 100 użytkownikach” to wymaganie. Jego spełnienie można sprawdzić za pomocą pomiaru.
 
 <a id="pytanie-10"></a>
 
 ### 10. Czy dla każdego atrybutu jakości można wyznaczyć metrykę?
 
-**Nie zawsze** można wyznaczyć jedną obiektywną metrykę, która w pełni opisuje dany atrybut.
+Dla wielu atrybutów jakości można wyznaczyć metryki, ale **nie zawsze istnieje jedna obiektywna metryka, która w pełni opisuje daną cechę**.
 
-- Cechy trudno mierzalne można oceniać za pomocą **wskaźników pośrednich**, zestawu metryk lub ocen eksperckich.
-- Trzeba określić, co mierzy dany wskaźnik, w jakich warunkach jest przydatny i jakie ma **ograniczenia**.
+Przykładowo **wydajność systemu** można oceniać przez:
 
-Subiektywna ocena liczbowa nie staje się przez to pomiarem obiektywnym.
+- **czas odpowiedzi**, czyli czas oczekiwania na wynik;
+- **przepustowość**, czyli liczbę żądań obsługiwanych w jednostce czasu;
+- **zużycie zasobów**, np. pamięci i procesora.
+
+Przy każdym pomiarze trzeba określić warunki, np. liczbę jednoczesnych użytkowników. Do oceny wydajności może więc być potrzebny zestaw metryk.
+
+Cechy trudniejsze do zmierzenia, np. satysfakcję użytkownika, można oceniać za pomocą wskaźników pośrednich, ankiet lub ocen eksperckich. Trzeba jednak znać ograniczenia tych metod. **Wyrażenie subiektywnej oceny liczbą nie czyni jej obiektywną**.
 
 <a id="pytanie-11"></a>
 
 ### 11. Czym różnią się metryki jakościowe od miar?
 
-**Metryka** określa, co oceniamy i jak wyrażamy ocenę cechy jakościowej, a **miara** wiąże ją ze sposobem pomiaru, skalą lub jednostką.
+**Metryka** określa, jaką cechę jakości oceniamy i jak wyrażamy jej ocenę. **Miara** wiąże tę ocenę ze sposobem pomiaru, skalą lub jednostką.
 
-**Przykładowo** kompletność można oceniać jako stosunek liczby zrealizowanych funkcji do liczby funkcji wymaganych.
+Przykładowo kompletność można ocenić, dzieląc liczbę zrealizowanych funkcji przez liczbę funkcji wymaganych.
 
 - Należy odróżniać samą cechę, definicję wskaźnika, procedurę pomiaru i otrzymany wynik.
 - Metryki nie muszą mieć skali `[0,1]`; mogą być wyrażone np. czasem.
@@ -122,7 +127,7 @@ Subiektywna ocena liczbowa nie staje się przez to pomiarem obiektywnym.
 ### 12. Jakie problemy występują przy pomiarach jakości?
 
 - Jakość obejmuje **wiele cech**, które trudno sprowadzić do jednej liczby.
-- Pomiary utrudniają **subiektywność ocen**, brak punktu odniesienia, problemy normalizacji, arbitralne wagi oraz koszt zbierania danych.
+- Pomiary utrudniają **subiektywność ocen**, brak punktu odniesienia, problemy z normalizacją wyników, arbitralny dobór wag oraz koszt zbierania danych.
 - Wyniki mogą być trudne do **interpretacji**.
 - Długie ankiety obniżają **rzetelność odpowiedzi**, a pytania tak/nie ułatwiają obliczenia, lecz nie zapewniają obiektywności oceny.
 
@@ -130,7 +135,7 @@ Subiektywna ocena liczbowa nie staje się przez to pomiarem obiektywnym.
 
 ### 13. Czy zawsze wyniki pomiarów uśrednia się wg średniej arytmetycznej?
 
-**Nie.**
+**Nie zawsze stosuje się zwykłą średnią arytmetyczną.**
 
 - Sposób łączenia wyników zależy od rodzaju danych i celu oceny.
 - Można stosować **średnią ważoną**, a przy czasach odpowiedzi także medianę i percentyle.
@@ -141,12 +146,12 @@ Przy łączeniu odsetków trzeba uwzględniać **liczbę prób**: wyniki `1/1` i
 
 ### 14. Czy zawsze miary się przelicza na metryki wg skali liniowej?
 
-**Nie.**
+**Przeliczenie nie musi być liniowe.**
 
 - Sposób przeliczenia wyniku pomiaru na ocenę jakości powinien odpowiadać wymaganiom.
 - Zależność może być **liniowa, progowa lub odcinkowa**.
 
-**Na przykład** przekroczenie dopuszczalnego czasu reakcji może oznaczać niespełnienie wymagania niezależnie od dobrych wyników innych cech.
+Na przykład przekroczenie dopuszczalnego czasu reakcji może oznaczać niespełnienie wymagania, nawet jeśli pozostałe cechy uzyskały dobre oceny.
 
 Trzeba również ustalić, czy lepsza jest większa, czy mniejsza wartość wskaźnika.
 
@@ -154,7 +159,7 @@ Trzeba również ustalić, czy lepsza jest większa, czy mniejsza wartość wska
 
 ### 15. Co daje ocena jakości z użyciem modelu drzewa?
 
-Model drzewa rozkłada ogólną jakość na **konkretne cechy** i wiąże je z pomiarami.
+Model drzewa dzieli ogólne pojęcie jakości na **konkretne cechy** i wiąże je z pomiarami.
 
 - Umożliwia **ustalanie wag**, porównywanie produktów według wspólnych kryteriów oraz wskazywanie słabych stron.
 - Wynik zależy jednak od modelu i wag.
@@ -168,16 +173,16 @@ Ocena łączna może ukryć **krytyczną słabość**, dlatego należy zachować
 - **Wiarygodność** (dependability) oznacza stopień zaufania do systemu. Obejmuje niezawodność, odporność na błędy, bezpieczeństwo, ochronę i testowalność.
 - **Niezawodność** (reliability) dotyczy działania bez awarii i zachowania ciągłości usług.
 
-Jest więc częścią wiarygodności: system działający nieprzerwanie może nadal być niebezpieczny lub ujawniać dane osobom nieuprawnionym.
+Niezawodność jest więc częścią wiarygodności. System może działać nieprzerwanie, a mimo to być niebezpieczny lub ujawniać dane osobom nieuprawnionym.
 
 <a id="pytanie-17"></a>
 
 ### 17. Czym różni się bezpieczeństwo systemu informatycznego od jego ochrony?
 
 - **Bezpieczeństwo** (safety) oznacza zapobieganie szkodom, które system może wyrządzić ludziom i otoczeniu.
-- **Ochrona** (security) zabezpiecza system i informacje przed nieuprawnionym dostępem i działaniem, z zachowaniem dostępu uprawnionych osób.
+- **Ochrona** (security) dotyczy zabezpieczenia systemu i informacji przed nieuprawnionym dostępem i działaniem, przy zachowaniu dostępu dla osób uprawnionych.
 
-**Przykładem** bezpieczeństwa jest niedopuszczenie do nadmiernej dawki promieniowania, a ochrony zablokowanie nieuprawnionej zmiany tej dawki.
+Niedopuszczenie do podania nadmiernej dawki promieniowania jest przykładem bezpieczeństwa. Zablokowanie nieuprawnionej zmiany tej dawki jest przykładem ochrony.
 
 Kontrola dostępu jest tylko jednym z mechanizmów ochrony.
 
@@ -188,14 +193,14 @@ Kontrola dostępu jest tylko jednym z mechanizmów ochrony.
 - **Konfigurowalność** oznacza łatwość dostosowania istniejących możliwości systemu bez zmiany jego funkcji.
 - **Modyfikowalność** to łatwość zmieniania lub dodawania funkcji.
 
-**Wybór języka** interfejsu jest konfiguracją, natomiast dodanie nowego algorytmu naliczania opłat wymaga modyfikacji systemu.
+Wybór języka interfejsu jest konfiguracją, natomiast dodanie nowego algorytmu naliczania opłat wymaga modyfikacji systemu.
 
 <a id="pytanie-19"></a>
 
 ### 19. Czym różni się łatwość testowania systemu informatycznego od łatwości śledzenia?
 
 - **Łatwość testowania** oznacza łatwość przygotowania i wykonania sprawdzeń poprawności oraz wykrywania błędów.
-- **Łatwość śledzenia** pozwala odtworzyć i zrozumieć działanie systemu, np. na podstawie logów.
+- **Łatwość śledzenia** oznacza, że działanie systemu można łatwo odtworzyć i zrozumieć, np. na podstawie logów.
 
 W modelu McCalla **traceability** oznacza także możliwość powiązania wymagań z implementacją.
 
@@ -211,11 +216,11 @@ Główne źródło: [1a.StudiumPrzypadku.pdf](1a.StudiumPrzypadku.pdf).
 
 ### 4. Jakie były źródłowe przyczyny wypadków z systemem do radioterapii Therac-25 w połowie lat ’80 XX wieku w USA i Kanadzie (błędy użytkowników, programistów, konstruktorów, projektantów)?
 
-Wypadki Therac-25 wynikały ze współdziałania błędów konstrukcji, oprogramowania i organizacji.
+Wypadki Therac-25 wynikały z połączenia błędów konstrukcyjnych, programistycznych i organizacyjnych.
 
 - Usunięto część niezależnych **blokad sprzętowych** i nadmiernie zaufano programowi.
-- Występowały błędy **współbieżności i synchronizacji** oraz przepełnienie zmiennej `Class3`, które co 256 przebiegów mogło pozwolić na pominięcie kontroli kolimatora.
-- Ryzyko zwiększały **niejasne komunikaty**, mylące wskazania dawki, możliwość ponawiania zabiegu, niedostateczne testy i analiza bezpieczeństwa oraz niewłaściwa reakcja na wypadki.
+- Występowały błędy **współbieżności i synchronizacji**. Dodatkowo przepełnienie zmiennej `Class3` co 256 przebiegów mogło pozwolić na pominięcie kontroli kolimatora.
+- Ryzyko zwiększały **niejasne komunikaty**, mylące wskazania dawki i możliwość ponawiania zabiegu. Testy i analiza bezpieczeństwa były niewystarczające, a reakcje na wcześniejsze wypadki niewłaściwe.
 
 Działanie operatora mogło uruchomić wadliwy scenariusz, lecz **przyczyny były systemowe**.
 
@@ -238,22 +243,22 @@ Główne źródło: [2.JakoscWProcesie.pdf](2.JakoscWProcesie.pdf).
 
 ### 21. Jak wygląda kosztowność zmian w różnych fazach cyklu życia oprogramowania?
 
-**Koszt zmian** zwykle rośnie od definiowania, przez opracowywanie, do utrzymywania oprogramowania.
+**Koszt zmian** zwykle rośnie wraz z przechodzeniem od definiowania, przez opracowywanie, do utrzymywania oprogramowania.
 
 Przykładowa **proporcja względnych kosztów** to `1 : 10 : 100`.
 
-- **Późna zmiana** wymaga poprawienia większej liczby zależnych elementów, testów regresyjnych, wdrożenia, a czasem migracji danych.
+- **Późna zmiana** wymaga poprawienia większej liczby zależnych elementów. Konieczne są też testy regresyjne, wdrożenie poprawki, a czasem migracja danych.
 - Dokładne proporcje zależą od projektu i rodzaju zmiany.
 
 <a id="pytanie-22"></a>
 
 ### 22. Co to jest i co daje model wzmocnienia defektów?
 
-**Model wzmocnienia defektów** opisuje ich przepływ między etapami: defekty odziedziczone bez zmian, defekty powodujące kolejne błędy, defekty nowe oraz usuwane dzięki kontroli.
+**Model wzmocnienia defektów** opisuje, jak defekty przechodzą między etapami wytwarzania. Uwzględnia defekty odziedziczone bez zmian, defekty powodujące kolejne błędy, defekty nowo wprowadzone oraz te usuwane dzięki kontroli.
 
 Pozwala porównywać **skuteczność i koszty** kontroli prowadzonej na różnych etapach.
 
-**W przykładowym obliczeniu** kontrola dopiero podczas testów pozostawia 12 błędów przy koszcie 2177, a kontrola całego procesu 3 błędy przy koszcie 693.
+W przykładowym obliczeniu kontrola dopiero podczas testów pozostawia 12 błędów przy koszcie 2177. Kontrola prowadzona w całym procesie pozostawia 3 błędy przy koszcie 693.
 
 Wczesne wykrywanie ogranicza wzmocnienie defektów i koszt ich usuwania.
 
@@ -264,17 +269,17 @@ Wczesne wykrywanie ogranicza wzmocnienie defektów i koszt ich usuwania.
 - Kontrola gotowego produktu **wykrywa błędy późno**, gdy wadliwe wymagania i decyzje projektowe wpłynęły już na wiele elementów.
 - W oprogramowaniu defekt jest **powielany w kolejnych kopiach**, więc odrzucenie wadliwej kopii nie usuwa jego przyczyny.
 
-Trzeba poprawić wymagania, projekt lub kod.
+Usunięcie przyczyny wymaga poprawienia wymagań, projektu lub kodu.
 
-Zapewnianie jakości powinno obejmować **cały proces wytwarzania**, a testy końcowe stanowić jedną z jego części.
+Zapewnianie jakości powinno obejmować **cały proces wytwarzania**, a testy końcowe powinny być jednym z działań jakościowych.
 
 <a id="pytanie-24"></a>
 
 ### 24. Na czym polega polityka zapewniania jakości oprogramowania (SQA) w organizacji?
 
-**SQA** (Software Quality Assurance) obejmuje planowe i systematyczne działania zapewniania jakości w całym procesie wytwarzania.
+**SQA** (Software Quality Assurance) obejmuje planowe i systematyczne działania służące zapewnieniu jakości w całym procesie wytwarzania.
 
-- Organizacja ustala **standardy**, metody pracy, przeglądy, testy, kontrolę zmian, pomiary i raportowanie.
+- Organizacja ustala **standardy** i metody pracy oraz zasady prowadzenia przeglądów, testów, kontroli zmian, pomiarów i raportowania.
 - Sprawdza zarówno **jakość produktu**, jak i zgodność pracy z ustalonym procesem.
 
 SQA ogranicza ryzyko defektów, lecz **nie gwarantuje** całkowitej bezbłędności.
@@ -283,7 +288,7 @@ SQA ogranicza ryzyko defektów, lecz **nie gwarantuje** całkowitej bezbłędno�
 
 ### 25. Jakie są zadania zespołu zapewniania jakości (SQA) w organizacji?
 
-- Zespół SQA **ocenia produkt** z perspektywy klienta, sprawdza zgodność pracy ze standardami i wymaganiami oraz nadzoruje wykonanie zadań jakościowych. Obejmuje to przeglądy, testy i pomiary.
+- Zespół SQA **ocenia produkt** z perspektywy klienta i sprawdza zgodność pracy ze standardami oraz wymaganiami. Nadzoruje też wykonanie zadań jakościowych, w tym przeglądów, testów i pomiarów.
 - Zespół zapisuje i **raportuje niezgodności**, a nierozwiązane problemy przekazuje wyższemu kierownictwu.
 
 **Odpowiedzialność** za jakość nadal spoczywa także na wykonawcach i kierownictwie.
@@ -292,9 +297,11 @@ SQA ogranicza ryzyko defektów, lecz **nie gwarantuje** całkowitej bezbłędno�
 
 ### 26. Jakie formy przeglądów technicznych produktów programowych stosuje się w projekcie?
 
-- Stosuje się przeglądy typu **walkthrough**, podczas których uczestnicy przechodzą przez produkt pracy w logicznej kolejności, oraz **inspekcje** oparte na systematycznym sprawdzaniu według list kontrolnych.
-- Przeglądy obejmują wymagania, projekt, kod i testy.
-- **Peer review** oznacza ocenę przez współpracowników i może przyjąć formę inspekcji lub walkthrough.
+- Podczas przeglądu typu **walkthrough** uczestnicy przechodzą przez dokument lub inny produkt pracy w logicznej kolejności.
+- **Inspekcja** polega na systematycznym sprawdzaniu według listy kontrolnej.
+- **Peer review** oznacza ocenę prowadzoną przez współpracowników. Może mieć formę inspekcji lub walkthrough.
+
+Przeglądy mogą obejmować wymagania, projekt, kod i testy.
 
 <a id="pytanie-27"></a>
 
@@ -316,13 +323,13 @@ Dążenie do zera defektów jest celem, a nie gwarancją bezbłędnego produktu.
 
 **SQA może realizować zasady TQM** w obszarze oprogramowania.
 
-Skuteczność obu podejść wymaga stosowania przyjętych zasad i wsparcia kierownictwa; samo ustanowienie procedur nie wystarcza.
+Skuteczność obu podejść zależy od stosowania przyjętych zasad i wsparcia kierownictwa. Samo ustanowienie procedur nie wystarcza.
 
 <a id="pytanie-29"></a>
 
 ### 29. Co oznacza odpowiedzialność kierownictwa za kompleksowe zarządzanie jakością (TQM) w organizacji?
 
-- Kierownictwo ustala **politykę i cele jakościowe**, przydziela odpowiedzialności oraz uprawnienia i zapewnia ludzi, czas oraz środki do realizacji tych celów.
+- Kierownictwo ustala **politykę i cele jakościowe** oraz określa, kto za co odpowiada i jakie ma uprawnienia. Zapewnia też ludzi, czas i środki potrzebne do realizacji tych celów.
 - Organizuje **doskonalenie procesów**, przegląda wyniki i usuwa problemy systemowe.
 
 Odpowiada za **stworzenie warunków**, w których pracownicy mogą osiągać wymaganą jakość.
@@ -331,9 +338,9 @@ Odpowiada za **stworzenie warunków**, w których pracownicy mogą osiągać wym
 
 ### 30. Czy kierownictwo organizacji może przenieść odpowiedzialność za kompleksowe zarządzanie jakością (TQM) na niższy szczebel zarządzania?
 
-**Nie.**
+**Kierownictwo nie może przenieść swojej nadrzędnej odpowiedzialności za jakość na niższy szczebel.**
 
-- Kierownictwo może **delegować zadania i uprawnienia**, ale zachowuje **nadrzędną odpowiedzialność** za jakość.
+- Może jednak **delegować zadania i uprawnienia**.
 - Nadal odpowiada za politykę, cele, zasoby, nadzór i **skuteczność** systemu zarządzania jakością.
 
 Przekazanie zadań na niższy szczebel nie zwalnia go z oceny wyników i organizowania doskonalenia.
@@ -349,7 +356,7 @@ Główne źródło: [3.ModelMcCalla.pdf](3.ModelMcCalla.pdf).
 ### 32. Jakie mechanizmy w oprogramowaniu się stosuje dla zapewnienia łatwości użycia?
 
 - Łatwość użycia zapewniają **prosty i spójny interfejs**, zrozumiałe etykiety i komunikaty oraz odpowiednie formaty i jednostki danych.
-- Pomagają **podpowiedzi**, informacja o stanie i postępie operacji oraz podgląd wyników.
+- Pomagają **podpowiedzi**, informowanie o stanie programu i postępie operacji oraz możliwość podglądu wyników.
 - **Walidacja danych**, cofanie zmian i odzyskiwanie po błędach ułatwiają radzenie sobie z pomyłkami.
 
 Skuteczność tych rozwiązań należy sprawdzać podczas wykonywania rzeczywistych zadań przez użytkowników.
@@ -359,7 +366,7 @@ Skuteczność tych rozwiązań należy sprawdzać podczas wykonywania rzeczywist
 ### 33. Jakie mechanizmy w oprogramowaniu się stosuje dla zapewnienia łatwości nauki?
 
 - Naukę programu ułatwiają **znane konwencje interfejsu**, spójne nazewnictwo i przewidywalne zachowanie.
-- Pomagają dostępna **pomoc**, podpowiedzi, szablony, przykłady, demonstracje i samouczki.
+- Naukę wspierają również **pomoc w programie**, podpowiedzi, szablony, przykłady, demonstracje i samouczki.
 - Interfejs i objaśnienia należy dostosować do **umiejętności użytkownika**.
 
 Łatwość nauki można oceniać przez czas potrzebny do opanowania funkcji.
@@ -373,7 +380,7 @@ Operatywność zwiększa **ograniczenie liczby kroków** potrzebnych do wykonani
 - Służą temu menu kontekstowe, paski narzędzi, **skróty klawiszowe** i możliwość ich dostosowania.
 - Pracę usprawniają podpowiedzi, powtarzanie, grupowanie oraz **automatyzacja operacji**.
 
-Operatywność dotyczy sprawnego wykonywania pracy, a łatwość nauki wysiłku potrzebnego do jej opanowania.
+Operatywność dotyczy sprawnego wykonywania pracy, a łatwość nauki określa wysiłek potrzebny do opanowania obsługi programu.
 
 <a id="pytanie-35"></a>
 
@@ -395,18 +402,18 @@ Główne źródło: [4.Pomiary.pdf](4.Pomiary.pdf).
 
 ### 38. W jaki sposób zapewnić dane do pomiaru procesów w inżynierii oprogramowania?
 
-- Trzeba ustalić **cel pomiarów**, metryki, sposób zbierania danych i osoby odpowiedzialne, a następnie sprawdzić przyjętą metodę w próbie.
+- Trzeba ustalić **cel pomiarów**, wybrać metryki oraz określić sposób zbierania danych i odpowiedzialne za to osoby. Następnie należy przeprowadzić pomiary próbne.
 - Dane o kosztach, pracochłonności, defektach, testach i przeglądach należy **regularnie rejestrować**, przechowywać i analizować.
 
 Źródłem mogą być systemy zgłoszeń, repozytoria i automatyczne raporty.
 
-Wyniki muszą być **kompletne** i zbierane według porównywalnych zasad.
+Należy zadbać o **kompletność danych** oraz porównywalne zasady ich zbierania.
 
 <a id="pytanie-39"></a>
 
 ### 39. Czy metryki zorientowane na rozmiar kodu są wiarygodne?
 
-**Metryki LOC/KLOC** są przydatne przy jednakowych zasadach liczenia i porównywaniu podobnych projektów.
+**Metryki LOC/KLOC** są przydatne, gdy porównuje się podobne projekty i stosuje jednakowe zasady liczenia linii kodu.
 
 - Ich wyniki zależą jednak od **języka i stylu** kodowania, a przed implementacją rozmiar trzeba szacować.
 - **Krótszy kod** nie oznacza mniejszej produktywności ani gorszej jakości.
@@ -419,9 +426,9 @@ Wskaźnik defekty/KLOC opisuje **gęstość wykrytych defektów**, a nie często
 
 Punkty mierzą umowny **rozmiar funkcjonalny**, lecz nie stanowią pełnej oceny funkcjonalności systemu.
 
-**Function Points** uwzględniają wejścia, wyjścia, zapytania, pliki i interfejsy zewnętrzne, a **Feature Points** dodatkowo algorytmy.
+**Function Points** uwzględniają wejścia, wyjścia, zapytania, pliki i interfejsy zewnętrzne, a **Feature Points** dodatkowo uwzględniają algorytmy.
 
-- Można je wyznaczać przed napisaniem kodu; są mniej zależne od języka programowania niż LOC.
+- Punkty można wyznaczać przed napisaniem kodu. Są mniej zależne od języka programowania niż LOC.
 - Dobór wag i klas złożoności bywa subiektywny.
 
 Liczba punktów **nie dowodzi poprawności** funkcji, ich kompletności względem potrzeb ani użyteczności.
@@ -432,9 +439,9 @@ Liczba punktów **nie dowodzi poprawności** funkcji, ich kompletności względe
 
 **Metryki złożoności** opisują strukturę kodu i pomagają ocenić trudność implementacji, testowania oraz utrzymania.
 
-**Halstead** wykorzystuje liczby operatorów i operandów, a **McCabe** liczbę liniowo niezależnych ścieżek w grafie przepływu sterowania.
+**Metryki Halsteada** opierają się na liczbach operatorów i operandów. **Złożoność McCabe’a** odpowiada liczbie liniowo niezależnych ścieżek w grafie przepływu sterowania.
 
-Dla pojedynczego połączonego grafu z jednym wejściem i wyjściem `V(G)=E-N+2`, gdzie E oznacza liczbę krawędzi, a N liczbę węzłów.
+Dla pojedynczego połączonego grafu z jednym wejściem i wyjściem stosuje się wzór `V(G)=E-N+2`, gdzie E oznacza liczbę krawędzi, a N liczbę węzłów.
 
 **Indeks utrzymywalności** łączy te miary z LOC.
 
@@ -450,11 +457,11 @@ Główne źródło: [4a.ISO-9126.pdf](4a.ISO-9126.pdf).
 
 ### 7. Czym różni się jakość wewnętrzna oprogramowania od zewnętrznej i użytkowej?
 
-- **Jakość wewnętrzna** dotyczy własności kodu, projektu i dokumentacji, które można ocenić **bez uruchamiania programu**.
-- **Jakość zewnętrzna** dotyczy zachowania **działającego produktu**, np. poprawności wyników i czasu odpowiedzi.
-- **Jakość użytkowa** opisuje **wyniki pracy użytkownika** w określonym kontekście: skuteczność, produktywność, bezpieczeństwo i satysfakcję.
+- **Jakość wewnętrzna** dotyczy cech kodu, projektu i dokumentacji. Można ją ocenić bez uruchamiania programu.
+- **Jakość zewnętrzna** opisuje zachowanie uruchomionego programu, np. poprawność uzyskiwanych wyników i czas odpowiedzi.
+- **Jakość użytkowa** odnosi się do efektów korzystania z systemu w określonych warunkach. Obejmuje skuteczność i produktywność pracy użytkownika, jego bezpieczeństwo oraz satysfakcję.
 
-Potrzeby użytkowników przekłada się na wymagania zewnętrzne, a następnie wewnętrzne; dobra struktura kodu sama nie gwarantuje użyteczności systemu.
+Na podstawie potrzeb użytkowników określa się wymagania zewnętrzne, a następnie wynikające z nich wymagania wewnętrzne. Sama dobra struktura kodu nie gwarantuje, że system będzie użyteczny.
 
 <a id="pytanie-36"></a>
 
@@ -464,7 +471,7 @@ Potrzeby użytkowników przekłada się na wymagania zewnętrzne, a następnie w
 
 Rozróżnia **jakość wewnętrzną, zewnętrzną i użytkową**.
 
-- Dla dwóch pierwszych wyróżnia funkcjonalność, niezawodność, użyteczność, efektywność, utrzymywalność i przenośność.
+- W ocenie jakości wewnętrznej i zewnętrznej wyróżnia funkcjonalność, niezawodność, użyteczność, efektywność, utrzymywalność i przenośność.
 - **Jakość użytkowa** obejmuje skuteczność, produktywność, bezpieczeństwo i satysfakcję.
 
 Stosowanie modelu utrudniają duża liczba miar, koszt zbierania danych i konieczność ustalenia skal oceny.
@@ -475,9 +482,9 @@ Jest to **model historyczny**; ISO/IEC 9126-1:2001 zastąpiono przez ISO/IEC 250
 
 ### 37. Skąd zdobyć dane pomiarowe dla metryk wewnętrznych, zewnętrznych i użytkowych w modelu ISO/IEC 9126?
 
-- Dane do **metryk wewnętrznych** pochodzą ze **specyfikacji, projektu, dokumentacji i kodu**.
-- **Metryki zewnętrzne** wykorzystują **obserwację działającego programu**, wyniki testów, raporty i kwestionariusze.
-- Dane do **metryk użytkowych** zbiera się przez **obserwację wykonywania zadań**, monitoring użycia i badanie satysfakcji użytkowników.
+- Dane do **metryk wewnętrznych** pochodzą ze specyfikacji, projektu, dokumentacji i kodu.
+- Dane do **metryk zewnętrznych** uzyskuje się z obserwacji działającego programu, wyników testów, raportów i kwestionariuszy.
+- Dane do **metryk użytkowych** zbiera się przez obserwację wykonywania zadań, monitorowanie użycia i badanie satysfakcji użytkowników.
 
 Przy każdym pomiarze trzeba określić wersję produktu, warunki i kontekst oceny.
 
@@ -493,8 +500,8 @@ Główne źródło: [5.CMM-CMMI.pdf](5.CMM-CMMI.pdf). Poniższe skale dotyczą h
 
 Dojrzałość określa **stopień uporządkowania i utrwalenia** procesu wytwarzania w organizacji.
 
-- Wraz z jej wzrostem proces staje się bardziej zdefiniowany, **powtarzalny**, konsekwentnie stosowany i doskonalony.
-- **Standardy**, szkolenia, polityka i przypisane odpowiedzialności pozwalają zachować sposób pracy mimo zmian personelu.
+- Wraz z jej wzrostem proces jest lepiej zdefiniowany, **powtarzalny**, konsekwentnie stosowany i doskonalony.
+- **Standardy**, szkolenia, polityka organizacji i określony podział odpowiedzialności pozwalają zachować sposób pracy mimo zmian personelu.
 
 Ułatwia to przewidywanie wyników projektów, lecz nie gwarantuje bezbłędności każdego produktu.
 
@@ -502,19 +509,19 @@ Ułatwia to przewidywanie wyników projektów, lecz nie gwarantuje bezbłędnoś
 
 ### 45. Który poziom dojrzałości w CMM/CMMI oznacza wprowadzenie procesu zdefiniowanego i na czym to polega?
 
-Proces zdefiniowany oznacza **poziom 3**, **Defined**.
+Proces zdefiniowany wprowadza się na **poziomie 3, Defined**.
 
 - Organizacja ma **wspólny, udokumentowany standard** procesów zarządczych i inżynierskich, który jest rzeczywiście stosowany.
 - Poszczególne projekty dostosowują go według ustalonych zasad (**tailoring**).
 
-Wdrożenie wymaga szkoleń, koordynacji i przeglądów; samo zapisanie procesu w dokumentacji nie wystarcza.
+Wdrożenie wymaga szkoleń, koordynacji i przeglądów. Samo opisanie procesu w dokumentacji nie wystarcza.
 
 <a id="pytanie-46"></a>
 
 ### 46. Czym różni się reprezentacja stopniowana CMMI od reprezentacji ciągłej?
 
 - **Reprezentacja stopniowana** ocenia dojrzałość organizacji względem wymaganych zestawów obszarów procesowych.
-- **Reprezentacja ciągła** ocenia zdolność poszczególnych obszarów osobno, tworząc profil i pozwalając wybierać własne priorytety doskonalenia.
+- **Reprezentacja ciągła** pozwala osobno oceniać zdolność poszczególnych obszarów procesowych. Wyniki tworzą profil, a organizacja może ustalać własne priorytety doskonalenia.
 
 W **CMMI 1.1** obowiązują następujące poziomy:
 
@@ -541,17 +548,17 @@ Główne źródło: [6.ISO_9001.pdf](6.ISO_9001.pdf).
 2. Na tej podstawie **wybiera się usprawnienie**, a po jego wdrożeniu ponawia pomiary i ocenia skutki.
 3. Dane, wyniki i decyzje trzeba **dokumentować**.
 
-Sama **korelacja nie dowodzi przyczyny**: dłuższe inspekcje mogą wykrywać więcej błędów, ale większa liczba błędów może też wydłużać inspekcję.
+Sama **korelacja nie dowodzi związku przyczynowego**. Dłuższe inspekcje mogą prowadzić do wykrycia większej liczby błędów, ale większa liczba błędów może też wydłużać inspekcję.
 
 <a id="pytanie-47"></a>
 
 ### 47. Co oznacza wprowadzenie polityki jakościowej w organizacji wg ISO 9000?
 
-Wprowadzenie **polityki jakościowej** polega na ustaleniu przez kierownictwo celów i zasad zarządzania jakością, ich udokumentowaniu oraz wdrożeniu w codziennej pracy.
+Aby wprowadzić **politykę jakościową**, kierownictwo ustala cele i zasady zarządzania jakością. Następnie dokumentuje je i wdraża w codziennej pracy.
 
 Trzeba określić **odpowiedzialności i uprawnienia**, zapewnić zasoby oraz regularnie oceniać wyniki i doskonalić procesy.
 
-W wydaniach z 2015 r. **ISO 9000** określa podstawy i terminologię, a **ISO 9001** wymagania systemu zarządzania jakością.
+W wydaniach z 2015 r. **ISO 9000** określa podstawy i terminologię, natomiast **ISO 9001** zawiera wymagania dotyczące systemu zarządzania jakością.
 
 <a id="pytanie-48"></a>
 
@@ -562,18 +569,18 @@ W wydaniach z 2015 r. **ISO 9000** określa podstawy i terminologię, a **ISO 90
 - Obejmuje **zakres systemu**, politykę i cele, odpowiedzialności, zasoby, dokumentację, realizację wyrobu, pomiary, postępowanie z niezgodnościami i doskonalenie.
 - Może odsyłać do szczegółowych procedur i rejestrów.
 
-Była wymagana w starszych wydaniach ISO 9001; **wydanie z 2015 r.** wymaga udokumentowanych informacji, ale nie odrębnej księgi jakości.
+Księga jakości była wymagana w starszych wydaniach ISO 9001. **Wydanie z 2015 r.** wymaga udokumentowanych informacji, ale nie odrębnej księgi jakości.
 
 <a id="pytanie-49"></a>
 
 ### 49. Czy wprowadzenie ISO 9001 zapewnia zauważalną poprawę jakości produktów?
 
-**Nie automatycznie.**
+**Samo wdrożenie ISO 9001 nie gwarantuje poprawy jakości produktów.**
 
 - ISO 9001 porządkuje system zarządzania jakością i może zwiększyć **powtarzalność wyników**.
-- Poprawa jakości produktów zależy od rzeczywistego **stosowania i doskonalenia procesów**, a jej efekty trzeba potwierdzić pomiarami produktów i wyników użytkowania.
+- Poprawa jakości produktów zależy od rzeczywistego **stosowania i doskonalenia procesów**. Trzeba ją potwierdzić pomiarami cech produktu oraz wyników jego użytkowania.
 
-Sam certyfikat ani zgodna dokumentacja **nie gwarantują** wysokiej jakości lub bezbłędności produktu.
+Sam certyfikat ani dokumentacja zgodna z normą **nie gwarantują** wysokiej jakości lub bezbłędności produktu.
 
 <a id="gqm"></a>
 
@@ -585,7 +592,7 @@ Główne źródło: [7a.GQM.pdf](7a.GQM.pdf).
 
 ### 42. Jaka jest przewaga metody pomiaru jakości Goal-Question-Metrics w porównaniu do metod klasycznych opartych o drzewo jakości (jak ISO/IEC 9126)?
 
-GQM rozpoczyna się od **celu oceny**, następnie formułuje **pytania**, a na końcu dobiera **metryki** potrzebne do udzielenia odpowiedzi.
+W metodzie GQM najpierw określa się **cel oceny**, następnie formułuje **pytania**, a na końcu dobiera **metryki** potrzebne do udzielenia odpowiedzi.
 
 Każdy pomiar służy więc konkretnej potrzebie i decyzji, co ogranicza zbieranie nieprzydatnych danych z rozbudowanego katalogu miar.
 
@@ -603,13 +610,11 @@ Główne źródło: [7b.AHP.pdf](7b.AHP.pdf).
 
 ### 43. Kiedy warto stosować metodę Saaty’ego (Analytic Hierarchy Process) do oceny jakości?
 
-AHP warto stosować przy wyborze spośród kilku wariantów według **wielu kryteriów**, zwłaszcza gdy trudno ustalić oceny bezwzględne.
+Metodę Saaty’ego (AHP) warto stosować do porównywania jakości kilku systemów według **wielu kryteriów o różnym znaczeniu**. Przydaje się szczególnie wtedy, gdy trudno nadać systemom oceny bezwzględne, ale łatwiej wskazać, który z dwóch jest lepszy pod określonym względem.
 
-Buduje się hierarchię kryteriów, **porównuje je parami** i wyznacza wagi, a następnie porównuje warianty względem kryteriów i oblicza ocenę łączną.
+W AHP porządkuje się kryteria w hierarchię, **porównuje je parami i ustala ich wagi**. Następnie porównuje się systemy względem każdego kryterium. Połączenie ocen cząstkowych z wagami pozwala uzyskać ranking systemów zgodny z przyjętymi priorytetami.
 
-W porównaniach można używać ocen 1, 3, 5, 7, 9 i ich odwrotności.
-
-Wynik zależy od wag i subiektywnych ocen, dlatego trzeba sprawdzać **spójność porównań** oraz osobno oceniać warunki obowiązkowe.
+AHP porządkuje ocenę, ale wynik nadal zależy od subiektywnych porównań. Należy sprawdzać **spójność ocen**, a wymagania obowiązkowe oceniać osobno.
 
 <a id="agile"></a>
 
@@ -621,19 +626,19 @@ Główne źródło: [8.Jakość w Agile.pdf](<8.Jakość w Agile.pdf>). Wiele pr
 
 ### 50. Z jakich powodów sygnatariusze manifestu zwinności odrzucili klasyczne metodyki wytwarzania?
 
-Podejścia zwinne powstały w odpowiedzi na **nadmiar dokumentacji**, późne uzyskiwanie działających rezultatów, trudność ustalenia wszystkich wymagań z góry, słaby kontakt z klientem i niepewność końcowej jakości.
+Podejścia zwinne powstały w odpowiedzi na **nadmiar dokumentacji** i późne uzyskiwanie działających rezultatów. Problemami były też trudność ustalenia wszystkich wymagań z góry, słaby kontakt z klientem i niepewność co do końcowej jakości.
 
 Dlatego większe znaczenie przyznano **działającemu oprogramowaniu**, współpracy i reagowaniu na zmiany.
 
-Manifest **nie odrzuca całkowicie** dokumentacji, procesów, narzędzi, umów ani planowania; zmienia ich priorytet względem pozostałych wartości.
+Manifest nadal uznaje wartość dokumentacji, procesów, narzędzi, umów i planowania, choć **nadaje im niższy priorytet** niż pozostałym wartościom.
 
 <a id="pytanie-51"></a>
 
 ### 51. Czy motywacje ludzi i zaufanie do nich są wystarczające dla sukcesu projektu informatycznego?
 
-**Nie.**
+**Sama motywacja i zaufanie nie wystarczają do osiągnięcia sukcesu projektu.**
 
-- Motywacja i zaufanie muszą być wsparte **kompetencjami**, zasobami, współpracą z klientem i dobrym przepływem informacji.
+- Zespół potrzebuje również odpowiednich **kompetencji**, zasobów, współpracy z klientem i dobrego przepływu informacji.
 - Potrzebne są także **standardy pracy**, odpowiednie projektowanie, testowanie, utrwalanie wiedzy i doskonalenie procesu.
 
 Nawet zaangażowany zespół może **błędnie rozpoznać wymagania** lub przeoczyć ryzyko.
@@ -642,7 +647,7 @@ Nawet zaangażowany zespół może **błędnie rozpoznać wymagania** lub przeoc
 
 ### 52. Czy utożsamianie jakości oprogramowania z zadowoleniem klienta w metodykach zwinnych jest słuszne?
 
-**Nie.**
+**Nie można utożsamiać jakości wyłącznie z zadowoleniem klienta.**
 
 - Satysfakcja klienta jest **jednym z aspektów jakości**.
 - Klient może być zadowolony z produktu, który nie spełnia **wymagań bezpieczeństwa**, obowiązkowych ograniczeń albo potrzeb użytkowników końcowych.
@@ -672,7 +677,7 @@ W Scrumie ukończony przyrost musi spełniać uzgodnione kryteria **Definition o
 - Zespół może czekać na decyzje albo realizować **niepotwierdzone założenia**.
 - Bez regularnej informacji zwrotnej rozbieżności **wykrywa się późno**.
 
-**Skutkiem** są niewłaściwe funkcje, pominięte scenariusze, opóźnienia oraz kosztowne poprawki, a część błędów ujawnia się dopiero u użytkowników.
+Skutkiem są niewłaściwe funkcje, pominięte scenariusze, opóźnienia oraz kosztowne poprawki. Część błędów ujawnia się dopiero u użytkowników.
 
 <a id="pytanie-55"></a>
 
@@ -680,7 +685,7 @@ W Scrumie ukończony przyrost musi spełniać uzgodnione kryteria **Definition o
 
 - Problemy mogą wynikać z **niezrozumienia roli klienta** w pracy zwinnej, sceptycyzmu, braku czasu i zaangażowania lub niskiego priorytetu projektu.
 - Współpracę utrudniają **odległość**, różne strefy czasowe oraz tradycyjne procedury i warunki umowy.
-- Przedstawiciel może mieć zbyt małą wiedzę, **brak uprawnień decyzyjnych** albo oczekiwania odmienne od potrzeb użytkowników.
+- Przedstawiciel może mieć zbyt małą wiedzę lub oczekiwania odmienne od potrzeb użytkowników. Może też **nie mieć uprawnień do podejmowania decyzji**.
 
 Stała cena sama nie przesądza o braku motywacji do współpracy.
 
@@ -688,12 +693,12 @@ Stała cena sama nie przesądza o braku motywacji do współpracy.
 
 ### 56. Jak firmy stosujące metodyki zwinne sobie radzą przy problemach z klientem?
 
-- Firmy **wyjaśniają klientowi zasady współpracy**, dopasowują umowy, organizują regularne demonstracje i wyznaczają zastępczego przedstawiciela mającego dostęp do potrzebnej wiedzy i decyzji.
+- Firmy **wyjaśniają klientowi zasady współpracy**, dopasowują umowy i organizują regularne demonstracje. Mogą też wyznaczyć zastępczego przedstawiciela, który ma dostęp do potrzebnej wiedzy i decyzji klienta.
 - **Oceniają ryzyko** braku zaangażowania, planują rezerwy czasu, przypisują właścicieli opowieściom użytkownika i odkładają te, które wymagają wyjaśnienia.
 
 Zasady podejmowania decyzji, odbioru i zmian zakresu **powinny być jawne**.
 
-W Scrumie **Product Owner** odpowiada za wartość i Product Backlog, ale nie musi być klientem kontraktowym.
+W Scrumie **Product Owner** odpowiada za wartość produktu i zarządzanie Product Backlogiem, ale nie musi być klientem kontraktowym.
 
 <a id="pytanie-57"></a>
 
@@ -710,8 +715,8 @@ Dzięki temu można ocenić, czy wydanie zaspokaja rzeczywistą potrzebę, a nie
 
 ### 58. Jak zapewnić znajomość i stosowanie odpowiednich standardów pracy inżynierskiej w zespole zwinnym?
 
-- Należy ustalić dostępne i zrozumiałe **standardy kodowania**, projektowania, integracji i testowania oraz przygotować zespół przez szkolenia, mentoring i przykłady.
-- Ich stosowanie trzeba sprawdzać w **przeglądach kodu**, podczas integracji i testów oraz przez automatyczną analizę.
+- Należy ustalić zrozumiałe **standardy kodowania**, projektowania, integracji i testowania oraz zapewnić zespołowi dostęp do nich. W ich poznaniu pomagają szkolenia, mentoring i przykłady.
+- Stosowanie standardów trzeba sprawdzać podczas **przeglądów kodu**, integracji i testów, a także za pomocą automatycznej analizy.
 - Decyzje projektowe należy **dokumentować**, aby wiedza nie znikała przy zmianach personelu.
 
 Przydatność praktyk, np. programowania w parach, trzeba oceniać na podstawie ich wyników i kosztów w konkretnym zespole.
@@ -720,7 +725,7 @@ Przydatność praktyk, np. programowania w parach, trzeba oceniać na podstawie 
 
 ### 59. Czy rygorystyczne testowanie w metodykach zwinnych jest wystarczające dla zapewnienia jakości oprogramowania?
 
-**Nie.**
+**Samo rygorystyczne testowanie nie wystarcza do zapewnienia jakości.**
 
 - Testy mogą opierać się na **niepełnych wymaganiach** i pomijać istotne dane oraz scenariusze.
 - Nawet **100% pokrycia** instrukcji lub gałęzi nie oznacza sprawdzenia wszystkich przebiegów, a TDD **nie gwarantuje bezbłędności**.
@@ -733,23 +738,21 @@ Niezależna ocena testów pomaga wykryć przeoczenia, ale nie oznacza konieczno�
 
 ### 60. Kto powinien przeprowadzać testy akceptacyjne w metodykach zwinnych i jak się to ma do realiów?
 
-- **Klient** powinien ustalać warunki akceptacji i odpowiadać za ocenę przydatności produktu, a reprezentatywni użytkownicy uczestniczyć w testach wydań.
+- **Klient** powinien ustalać warunki akceptacji i odpowiadać za ocenę przydatności produktu. W testach wydań powinni uczestniczyć reprezentatywni użytkownicy.
 - **Testerzy** mogą przygotować i technicznie wykonać testy.
 
-**W praktyce** zdarza się, że całość wykonują testerzy dostawcy, a użytkownicy sprawdzają wybrane funkcje nieregularnie.
+W praktyce zdarza się, że wszystkie testy wykonują testerzy dostawcy, a użytkownicy jedynie nieregularnie sprawdzają wybrane funkcje. Zwiększa to ryzyko wykrycia problemów dopiero po wdrożeniu.
 
-Zwiększa to ryzyko wykrycia problemów dopiero po wdrożeniu.
-
-**Testy regresyjne** powinien zapewniać proces wytwarzania, a decyzję o akceptacji trzeba uzgodnić z klientem.
+**Testy regresyjne** powinny być stałą częścią procesu wytwarzania. Decyzję o akceptacji trzeba uzgodnić z klientem.
 
 <a id="pytanie-61"></a>
 
 ### 61. Dla jakich projektów informatycznych metodyki zwinne się nie nadają (przykłady)?
 
-- Podejście wymagające częstej informacji zwrotnej i możliwości kolejnych aktualizacji jest trudne do zastosowania przy **niedostępnym kliencie** lub produkcie, którego nie można łatwo zmieniać, np. oprogramowaniu **sondy kosmicznej**.
-- W systemach radioterapii i sterowaniu samolotem konieczne są **analiza zagrożeń i rygorystyczna weryfikacja**, a przy wieloletnim utrzymaniu także trwała dokumentacja.
+- Podejście oparte na częstej informacji zwrotnej i kolejnych aktualizacjach trudno stosować, gdy **klient jest niedostępny** lub produktu nie można łatwo zmieniać. Przykładem takiego produktu jest oprogramowanie **sondy kosmicznej**.
+- W systemach radioterapii i systemach sterowania samolotem konieczne są **analiza zagrożeń i rygorystyczna weryfikacja**. Wieloletnie utrzymywanie systemu wymaga także trwałej dokumentacji.
 
-Zwinność można łączyć z tymi praktykami; sama wielkość lub krytyczność projektu **nie wyklucza** iteracyjnego rozwoju.
+Zwinność można łączyć z tymi praktykami. Sama wielkość lub krytyczność projektu **nie wyklucza** iteracyjnego rozwoju.
 
 <a id="pytanie-62"></a>
 
@@ -759,7 +762,7 @@ Zwinność można łączyć z tymi praktykami; sama wielkość lub krytyczność
 - **Słaby kontakt** z klientem i trudności komunikacyjne utrudniają weryfikację potrzeb.
 - Presja kolejnych wydań może zwiększać **dług techniczny**, koszty zmian i ryzyko niedostatecznych testów.
 
-Są to ryzyka realizacji projektu: Agile nie wymaga braku dokumentacji, a w Scrumie jakość nie powinna spadać podczas Sprintu i ukończony przyrost musi spełniać **Definition of Done**.
+Są to zagrożenia związane z realizacją projektu, a nie konieczne cechy Agile. Podejścia zwinne nie wymagają rezygnacji z dokumentacji. W Scrumie jakość nie powinna spadać podczas Sprintu, a ukończony przyrost musi spełniać **Definition of Done**.
 
 ## Źródła uzupełniające
 
