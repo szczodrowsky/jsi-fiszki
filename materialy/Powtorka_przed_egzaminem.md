@@ -99,7 +99,7 @@ Przykładowo wydajność jest atrybutem, a „95% odpowiedzi poniżej 2 s przy 1
 
 ### 10. Czy dla każdego atrybutu jakości można wyznaczyć metrykę?
 
-Dla wielu atrybutów jakości można wyznaczyć metryki, ale **nie zawsze istnieje jedna obiektywna metryka, która w pełni opisuje daną cechę**.
+**Nie dla każdego atrybutu da się wskazać bezpośrednią i obiektywną metrykę.** Jedna metryka może też nie wystarczać do opisania całej cechy.
 
 Przykładowo **wydajność systemu** można oceniać przez:
 
@@ -115,9 +115,9 @@ Cechy trudniejsze do zmierzenia, np. satysfakcję użytkownika, można oceniać 
 
 ### 11. Czym różnią się metryki jakościowe od miar?
 
-**Metryka** określa, jaką cechę jakości oceniamy i jak wyrażamy jej ocenę. **Miara** wiąże tę ocenę ze sposobem pomiaru, skalą lub jednostką.
+**Metryka** określa, **co oceniamy**, a **miara** określa, **jak wyznaczamy tę ocenę**: sposób obliczenia, skalę lub jednostkę.
 
-Przykładowo kompletność można ocenić, dzieląc liczbę zrealizowanych funkcji przez liczbę funkcji wymaganych.
+Przykładowo oceniamy kompletność funkcjonalną, a jej miarą jest iloraz liczby zrealizowanych funkcji i liczby funkcji wymaganych. Wynik można wyrazić jako ułamek lub procent.
 
 - Należy odróżniać samą cechę, definicję wskaźnika, procedurę pomiaru i otrzymany wynik.
 - Metryki nie muszą mieć skali `[0,1]`; mogą być wyrażone np. czasem.
@@ -297,6 +297,8 @@ SQA ogranicza ryzyko defektów, lecz **nie gwarantuje** całkowitej bezbłędno�
 
 ### 26. Jakie formy przeglądów technicznych produktów programowych stosuje się w projekcie?
 
+Podstawowe formy **formalnych przeglądów technicznych (FTR)** to walkthrough i inspekcje.
+
 - Podczas przeglądu typu **walkthrough** uczestnicy przechodzą przez dokument lub inny produkt pracy w logicznej kolejności.
 - **Inspekcja** polega na systematycznym sprawdzaniu według listy kontrolnej.
 - **Peer review** oznacza ocenę prowadzoną przez współpracowników. Może mieć formę inspekcji lub walkthrough.
@@ -318,8 +320,8 @@ Dążenie do zera defektów jest celem, a nie gwarancją bezbłędnego produktu.
 
 ### 28. Jak się ma zapewnianie jakości oprogramowania (SQA) do kompleksowego zarządzania jakością (TQM) w organizacji?
 
-- **SQA** dotyczy zapewniania jakości oprogramowania i procesu jego wytwarzania.
-- **TQM** obejmuje zarządzanie jakością w całej organizacji, w tym ludzi, procesy, dostawców i relacje z klientami.
+- **SQA** obejmuje planowe działania zapewniające jakość oprogramowania, w tym wielokrotne przeglądy i kontrole produktów na każdym etapie wytwarzania.
+- **TQM** obejmuje zarządzanie jakością procesów w całej organizacji i całym cyklu życia produktu, również podczas utrzymania. Angażuje kierownictwo, pracowników, dostawców i klientów.
 
 **SQA może realizować zasady TQM** w obszarze oprogramowania.
 
@@ -405,18 +407,19 @@ Główne źródło: [4.Pomiary.pdf](4.Pomiary.pdf).
 - Trzeba ustalić **cel pomiarów**, wybrać metryki oraz określić sposób zbierania danych i odpowiedzialne za to osoby. Następnie należy przeprowadzić pomiary próbne.
 - Dane o kosztach, pracochłonności, defektach, testach i przeglądach należy **regularnie rejestrować**, przechowywać i analizować.
 
-Źródłem mogą być systemy zgłoszeń, repozytoria i automatyczne raporty.
+Źródłem są m.in. **wyniki testów, raporty problemowe, żądania zmian oraz raporty z audytów, przeglądów i inspekcji**. W zbieraniu danych pomagają systemy zgłoszeń, repozytoria i automatyczne raporty.
 
-Należy zadbać o **kompletność danych** oraz porównywalne zasady ich zbierania.
+Należy zadbać o **kompletność danych**, porównywalne zasady ich zbierania oraz trwałość, możliwość odczytu i ochronę zapisów.
 
 <a id="pytanie-39"></a>
 
 ### 39. Czy metryki zorientowane na rozmiar kodu są wiarygodne?
 
-**Metryki LOC/KLOC** są przydatne, gdy porównuje się podobne projekty i stosuje jednakowe zasady liczenia linii kodu.
+**Metryki LOC/KLOC** są przydatne, gdy porównuje się podobne projekty i stosuje jednakowe zasady liczenia linii kodu. Rozmiar kodu łatwo policzyć po implementacji i wykorzystuje się go w modelach szacowania.
 
 - Ich wyniki zależą jednak od **języka i stylu** kodowania, a przed implementacją rozmiar trzeba szacować.
-- **Krótszy kod** nie oznacza mniejszej produktywności ani gorszej jakości.
+- Zwięzły kod może uzyskiwać gorsze wskaźniki oparte na liczbie linii. Same te wartości **nie świadczą o niższej produktywności ani jakości**.
+- Metryki te słabo nadają się do porównywania programów zapisanych w językach nieproceduralnych.
 
 Wskaźnik defekty/KLOC opisuje **gęstość wykrytych defektów**, a nie częstość awarii podczas użytkowania.
 
@@ -426,10 +429,10 @@ Wskaźnik defekty/KLOC opisuje **gęstość wykrytych defektów**, a nie często
 
 Punkty mierzą umowny **rozmiar funkcjonalny**, lecz nie stanowią pełnej oceny funkcjonalności systemu.
 
-**Function Points** uwzględniają wejścia, wyjścia, zapytania, pliki i interfejsy zewnętrzne, a **Feature Points** dodatkowo uwzględniają algorytmy.
+**Punkty funkcyjne (Function Points)** uwzględniają wejścia, wyjścia, zapytania, pliki i interfejsy zewnętrzne, a **punkty funkcjonalne (Feature Points)** dodatkowo uwzględniają algorytmy.
 
 - Punkty można wyznaczać przed napisaniem kodu. Są mniej zależne od języka programowania niż LOC.
-- Dobór wag i klas złożoności bywa subiektywny.
+- Dobór wag i klas złożoności bywa subiektywny, a dane trudniejsze do zebrania niż liczba linii kodu. Punkty nie mają bezpośredniego znaczenia fizycznego.
 
 Liczba punktów **nie dowodzi poprawności** funkcji, ich kompletności względem potrzeb ani użyteczności.
 
@@ -459,7 +462,7 @@ Główne źródło: [4a.ISO-9126.pdf](4a.ISO-9126.pdf).
 
 - **Jakość wewnętrzna** dotyczy cech kodu, projektu i dokumentacji. Można ją ocenić bez uruchamiania programu.
 - **Jakość zewnętrzna** opisuje zachowanie uruchomionego programu, np. poprawność uzyskiwanych wyników i czas odpowiedzi.
-- **Jakość użytkowa** odnosi się do efektów korzystania z systemu w określonych warunkach. Obejmuje skuteczność i produktywność pracy użytkownika, jego bezpieczeństwo oraz satysfakcję.
+- **Jakość użytkowa** odnosi się do efektów korzystania z systemu w określonych warunkach. Obejmuje skuteczność i produktywność pracy, bezpieczeństwo użytkowników i otoczenia oraz satysfakcję użytkownika.
 
 Na podstawie potrzeb użytkowników określa się wymagania zewnętrzne, a następnie wynikające z nich wymagania wewnętrzne. Sama dobra struktura kodu nie gwarantuje, że system będzie użyteczny.
 
@@ -469,9 +472,9 @@ Na podstawie potrzeb użytkowników określa się wymagania zewnętrzne, a nast�
 
 **ISO/IEC 9126** porządkuje wymagania i pomiary jakości oraz pozwala porównywać produkty według wspólnych kryteriów.
 
-Rozróżnia **jakość wewnętrzną, zewnętrzną i użytkową**.
+Rozróżnia **jakość wewnętrzną, zewnętrzną i użytkową**, dzięki czemu uwzględnia punkt widzenia projektanta, osoby oceniającej produkt i użytkownika. Dostarcza też konkretnych sposobów pomiaru.
 
-- W ocenie jakości wewnętrznej i zewnętrznej wyróżnia funkcjonalność, niezawodność, użyteczność, efektywność, utrzymywalność i przenośność.
+- W ocenie jakości wewnętrznej i zewnętrznej wyróżnia funkcjonalność, wiarygodność (reliability, czyli niezawodność), użyteczność, efektywność, utrzymywalność i przenośność.
 - **Jakość użytkowa** obejmuje skuteczność, produktywność, bezpieczeństwo i satysfakcję.
 
 Stosowanie modelu utrudniają duża liczba miar, koszt zbierania danych i konieczność ustalenia skal oceny.
@@ -482,9 +485,9 @@ Jest to **model historyczny**; ISO/IEC 9126-1:2001 zastąpiono przez ISO/IEC 250
 
 ### 37. Skąd zdobyć dane pomiarowe dla metryk wewnętrznych, zewnętrznych i użytkowych w modelu ISO/IEC 9126?
 
-- Dane do **metryk wewnętrznych** pochodzą ze specyfikacji, projektu, dokumentacji i kodu.
-- Dane do **metryk zewnętrznych** uzyskuje się z obserwacji działającego programu, wyników testów, raportów i kwestionariuszy.
-- Dane do **metryk użytkowych** zbiera się przez obserwację wykonywania zadań, monitorowanie użycia i badanie satysfakcji użytkowników.
+- Dane do **metryk wewnętrznych** pochodzą ze specyfikacji wymagań, kodu źródłowego i dokumentacji. Pomocniczo można korzystać z zapisanych wyników testów; ocena dotyczy własności produktu.
+- Dane do **metryk zewnętrznych** pochodzą ze specyfikacji wymagań, dokumentacji i raportów z testów. Opisują zachowanie działającego programu w określonych warunkach.
+- Dane do **metryk użytkowych** pochodzą z raportów z obserwacji użytkowników, monitorowania użycia i kwestionariuszy. Opisują wykonywanie zadań oraz satysfakcję użytkowników.
 
 Przy każdym pomiarze trzeba określić wersję produktu, warunki i kontekst oceny.
 
@@ -501,7 +504,7 @@ Główne źródło: [5.CMM-CMMI.pdf](5.CMM-CMMI.pdf). Poniższe skale dotyczą h
 Dojrzałość określa **stopień uporządkowania i utrwalenia** procesu wytwarzania w organizacji.
 
 - Wraz z jej wzrostem proces jest lepiej zdefiniowany, **powtarzalny**, konsekwentnie stosowany i doskonalony.
-- **Standardy**, szkolenia, polityka organizacji i określony podział odpowiedzialności pozwalają zachować sposób pracy mimo zmian personelu.
+- **Instytucjonalizacja procesu**, czyli utrwalenie go przez standardy, szkolenia, politykę i struktury organizacji, pozwala zachować sposób pracy mimo zmian personelu.
 
 Ułatwia to przewidywanie wyników projektów, lecz nie gwarantuje bezbłędności każdego produktu.
 
@@ -520,7 +523,7 @@ Wdrożenie wymaga szkoleń, koordynacji i przeglądów. Samo opisanie procesu w 
 
 ### 46. Czym różni się reprezentacja stopniowana CMMI od reprezentacji ciągłej?
 
-- **Reprezentacja stopniowana** ocenia dojrzałość organizacji względem wymaganych zestawów obszarów procesowych.
+- **Reprezentacja stopniowana** ocenia dojrzałość organizacji względem wymaganych zestawów obszarów procesowych. Uzyskanie poziomu wymaga spełnienia całego przypisanego mu zestawu wymagań, z zachowaniem wymagań niższych poziomów.
 - **Reprezentacja ciągła** pozwala osobno oceniać zdolność poszczególnych obszarów procesowych. Wyniki tworzą profil, a organizacja może ustalać własne priorytety doskonalenia.
 
 W **CMMI 1.1** obowiązują następujące poziomy:
@@ -652,7 +655,7 @@ Nawet zaangażowany zespół może **błędnie rozpoznać wymagania** lub przeoc
 - Satysfakcja klienta jest **jednym z aspektów jakości**.
 - Klient może być zadowolony z produktu, który nie spełnia **wymagań bezpieczeństwa**, obowiązkowych ograniczeń albo potrzeb użytkowników końcowych.
 
-Ocena jakości musi uwzględniać wymagania wypowiedziane, domyślne i jeszcze nierozpoznane oraz rzeczywistą przydatność produktu w użyciu.
+Ocena jakości musi uwzględniać wymagania wypowiedziane, znane klientowi, lecz niewypowiedziane, oraz jeszcze przez niego nierozpoznane. Ten podział opisuje model Kano. Trzeba też sprawdzić rzeczywistą przydatność produktu w użyciu.
 
 <a id="pytanie-53"></a>
 
@@ -662,9 +665,9 @@ Podstawowe warunki zapewnienia jakości to:
 
 1. **Codzienna współpraca** z klientami i użytkownikami przez cały proces.
 2. **Cele wydań** wynikające z rzeczywistych wymagań.
-3. Dobry **przepływ informacji** w zespole i między zainteresowanymi stronami.
+3. Dobry **przepływ informacji** w zespole i między zainteresowanymi stronami, przez bezpośrednią współpracę lub częste kontakty.
 4. Znajomość i stosowanie **standardów pracy inżynierskiej**.
-5. Rygorystyczne **testy jednostkowe** przed wydaniem.
+5. Rygorystyczne **testy jednostkowe** przed każdym wydaniem.
 6. **Testy akceptacyjne** z wybranymi użytkownikami przed rozpowszechnieniem.
 
 W Scrumie ukończony przyrost musi spełniać uzgodnione kryteria **Definition of Done**.
@@ -687,7 +690,7 @@ Skutkiem są niewłaściwe funkcje, pominięte scenariusze, opóźnienia oraz ko
 - Współpracę utrudniają **odległość**, różne strefy czasowe oraz tradycyjne procedury i warunki umowy.
 - Przedstawiciel może mieć zbyt małą wiedzę lub oczekiwania odmienne od potrzeb użytkowników. Może też **nie mieć uprawnień do podejmowania decyzji**.
 
-Stała cena sama nie przesądza o braku motywacji do współpracy.
+Przy z góry ustalonej cenie klient może nie dostrzegać korzyści z bieżącego udziału w pracach. Taki problem zależy jednak od warunków współpracy; stała cena nie przesądza o braku zaangażowania.
 
 <a id="pytanie-56"></a>
 
@@ -695,6 +698,7 @@ Stała cena sama nie przesądza o braku motywacji do współpracy.
 
 - Firmy **wyjaśniają klientowi zasady współpracy**, dopasowują umowy i organizują regularne demonstracje. Mogą też wyznaczyć zastępczego przedstawiciela, który ma dostęp do potrzebnej wiedzy i decyzji klienta.
 - **Oceniają ryzyko** braku zaangażowania, planują rezerwy czasu, przypisują właścicieli opowieściom użytkownika i odkładają te, które wymagają wyjaśnienia.
+- Sprawdzają **gotowość opowieści do implementacji**: czy określono cel biznesowy, oczekiwany wynik i szczegóły potrzebne do oszacowania pracochłonności.
 
 Zasady podejmowania decyzji, odbioru i zmian zakresu **powinny być jawne**.
 
@@ -727,7 +731,7 @@ Przydatność praktyk, np. programowania w parach, trzeba oceniać na podstawie 
 
 **Samo rygorystyczne testowanie nie wystarcza do zapewnienia jakości.**
 
-- Testy mogą opierać się na **niepełnych wymaganiach** i pomijać istotne dane oraz scenariusze.
+- Testy mogą opierać się na **niepełnych wymaganiach** i pomijać istotne dane oraz scenariusze. Program napisany „pod testy” może je przechodzić, a mimo to nie zaspokajać potrzeb użytkowników.
 - Nawet **100% pokrycia** instrukcji lub gałęzi nie oznacza sprawdzenia wszystkich przebiegów, a TDD **nie gwarantuje bezbłędności**.
 
 Potrzebne są także analiza wymagań, projektowanie, przeglądy, standardy i udział użytkowników w akceptacji.
@@ -749,6 +753,8 @@ W praktyce zdarza się, że wszystkie testy wykonują testerzy dostawcy, a użyt
 
 ### 61. Dla jakich projektów informatycznych metodyki zwinne się nie nadają (przykłady)?
 
+Ograniczenia są szczególnie istotne przy **projektach złożonych i wysokiego ryzyka**, w dużych, rozproszonych organizacjach oraz tam, gdzie nie można stale utrzymywać i aktualizować produktu.
+
 - Podejście oparte na częstej informacji zwrotnej i kolejnych aktualizacjach trudno stosować, gdy **klient jest niedostępny** lub produktu nie można łatwo zmieniać. Przykładem takiego produktu jest oprogramowanie **sondy kosmicznej**.
 - W systemach radioterapii i systemach sterowania samolotem konieczne są **analiza zagrożeń i rygorystyczna weryfikacja**. Wieloletnie utrzymywanie systemu wymaga także trwałej dokumentacji.
 
@@ -758,9 +764,10 @@ Zwinność można łączyć z tymi praktykami. Sama wielkość lub krytyczność
 
 ### 62. Jakie są wady/zagrożenia dla procesu wytwarzania w metodykach zwinnych?
 
-- Zagrożenia obejmują **zależność od konkretnych osób**, utratę wiedzy przy rotacji i braku dokumentacji, pomijanie wymagań jakościowych oraz sytuacji wyjątkowych.
+- Zagrożenia obejmują **zależność od konkretnych osób** i utratę wiedzy przy rotacji. Brak dokumentacji utrudnia rozwój i wznowienie projektu po przerwie.
+- Pomijanie **wymagań jakościowych i sytuacji wyjątkowych** może prowadzić do poważnych błędów projektowych ujawnianych dopiero podczas eksploatacji.
 - **Słaby kontakt** z klientem i trudności komunikacyjne utrudniają weryfikację potrzeb.
-- Presja kolejnych wydań może zwiększać **dług techniczny**, koszty zmian i ryzyko niedostatecznych testów.
+- Presja kolejnych wydań może zwiększać **dług techniczny** i ryzyko niedostatecznych testów. Ciągłe zmiany generują koszty podobne do kosztów pielęgnacji i grożą przekroczeniem budżetu.
 
 Są to zagrożenia związane z realizacją projektu, a nie konieczne cechy Agile. Podejścia zwinne nie wymagają rezygnacji z dokumentacji. W Scrumie jakość nie powinna spadać podczas Sprintu, a ukończony przyrost musi spełniać **Definition of Done**.
 

@@ -160,7 +160,7 @@ Wydajność jest cechą mierzalną, choć jej ocena może wymagać zestawu metry
 
 *Według prezentacji:*
 
-Slajd 23 używa rozróżnienia „metryka: to, co się mierzy” i „miara: jak się mierzy”. W tym ujęciu metryka określa ilościowy sposób oceny atrybutu. Miara wiąże tę ocenę z konkretną skalą, jednostką lub sposobem wyznaczenia wartości. Dla kompletności funkcjonalnej pokazano iloraz liczby zrealizowanych funkcji i liczby funkcji wymaganych.
+Slajd 23 używa rozróżnienia „metryka: to, co się mierzy” i „miara: jak się mierzy”. Strzałka przy metryce wskazuje kompletność funkcjonalną, a przy mierze iloraz liczby zrealizowanych funkcji i liczby funkcji wymaganych. W tym ujęciu metryka wskazuje przedmiot oceny, a miara określa sposób wyznaczenia jej wartości, skalę lub jednostkę.
 
 *Przykład własny:*
 
@@ -469,7 +469,9 @@ Obejmuje zarządzanie procesami, zapobieganie problemom, mierzenie jakości, pla
 
 *Według prezentacji:*
 
-SQA skupia się na planowych działaniach zapewniających jakość oprogramowania i jego wytwarzania. TQM rozszerza perspektywę na całą organizację, jej zarządzanie, kulturę pracy, procesy, dostawców i relacje z klientami. SQA można traktować jako część praktycznej realizacji TQM w obszarze oprogramowania.
+SQA skupia się na planowych działaniach zapewniających jakość oprogramowania i jego wytwarzania. Na schemacie ze slajdu 20 jakość produktu kontroluje się wielokrotnie na każdym etapie prac, m.in. za pomocą formalnych przeglądów. TQM rozszerza perspektywę na całą organizację, jej zarządzanie, kulturę pracy, procesy, dostawców i relacje z klientami. Schemat ze slajdu 23 podkreśla zapewnianie jakości procesów w każdej fazie cyklu życia, również podczas utrzymania.
+
+SQA można traktować jako część praktycznej realizacji TQM w obszarze oprogramowania.
 
 > **Komentarz własny.** Zdanie ze slajdu 20, że SQA nie zapewnia wysokiej jakości, odczytuję jako ostrzeżenie przed samym formalnym wykonywaniem procedur. Nie wynika z niego, że SQA jest nieskuteczne lub zbędne. Działania inżynierskie wymagają wsparcia organizacyjnego, zasobów i właściwie określonych celów.
 
@@ -579,7 +581,9 @@ Prezentacja: [4.Pomiary.pdf][P].
 
 *Synteza prezentacji:*
 
-Najpierw trzeba określić, czemu mają służyć pomiary, jakie wskaźniki będą potrzebne i jak zbierać dane. Następnie należy przygotować system wspomagający pomiary i sprawdzić jego działanie podczas pomiarów próbnych. Dopiero na tej podstawie można rozpocząć regularne zbieranie, przechowywanie i analizowanie wyników. Dane mogą obejmować pracochłonność, koszty, liczbę defektów, rozmiar produktów pracy i wyniki przeglądów lub testów. W dokumentacji procesu należy przechowywać raporty dotyczące problemów, zmian, audytów, inspekcji i testowania.
+Najpierw trzeba określić, czemu mają służyć pomiary, jakie wskaźniki będą potrzebne i jak zbierać dane. Następnie należy przygotować system wspomagający pomiary i sprawdzić jego działanie podczas pomiarów próbnych. Dopiero na tej podstawie można rozpocząć regularne zbieranie, przechowywanie i analizowanie wyników. Dane mogą obejmować pracochłonność, koszty, liczbę defektów, rozmiar produktów pracy i wyniki przeglądów lub testów. W dokumentacji procesu należy przechowywać raporty problemowe, żądania zmian oraz raporty z audytów, przeglądów, inspekcji i testowania.
+
+Trzeba też zapewnić trwałość nośników, dostęp do urządzeń i oprogramowania potrzebnego do odczytu zapisów oraz ochronę przed nieuprawnionym dostępem i szkodliwym oprogramowaniem.
 
 *Uzupełnienie własne, praktyczna realizacja:*
 
@@ -690,15 +694,15 @@ Prezentacja wskazuje również ograniczenia modelu. Zebranie danych do dużej li
 
 | Typ metryki | Źródła danych | Sposób uzyskania |
 |---|---|---|
-| Wewnętrzna | Specyfikacja, projekt, dokumentacja, kod źródłowy | Przeglądy i analiza cech produktu, porównanie z wymaganiami |
-| Zewnętrzna | Wyniki i raporty testów, dokumentacja, kwestionariusze | Uruchamianie programu i obserwowanie jego zachowania w określonych warunkach |
+| Wewnętrzna | Specyfikacja wymagań, kod źródłowy, dokumentacja i wyniki testów | Ocena dokumentacji oraz analiza własności produktu i ich zgodności z wymaganiami |
+| Zewnętrzna | Specyfikacja wymagań, dokumentacja i raporty z testów | Ocena zachowania działającego programu na podstawie wyników testów i dokumentacji |
 | Użytkowa | Raporty z obserwacji użytkowników, monitoring użycia, kwestionariusze satysfakcji | Obserwowanie realizacji rzeczywistych lub reprezentatywnych zadań |
 
 Na slajdach dokładność obliczeniową ocenia się przez udział funkcji spełniających wymagania dokładności. Łatwość nauki można oceniać na podstawie czasu potrzebnego użytkownikowi na opanowanie funkcji. W ocenie jakości w użyciu bierze się pod uwagę m.in. ukończenie zadań, czas ich wykonania i satysfakcję użytkownika.
 
 *Uzupełnienie własne:*
 
-O typie metryki decyduje przede wszystkim przedmiot oceny. Ten sam raport może zawierać dane przydatne dla kilku perspektyw. Trzeba też zapisać wersję produktu, środowisko, profil użytkowników i definicje liczników oraz mianowników.
+Tabela zachowuje przyporządkowanie źródeł ze slajdu 3, w tym wyniki testów przy metrykach wewnętrznych. Nie oznacza to, że pomiar zachowania uruchomionego programu staje się pomiarem wewnętrznym. O typie metryki decyduje przedmiot oceny, a ten sam raport może dostarczać danych dla kilku perspektyw. Trzeba też zapisać wersję produktu, środowisko, profil użytkowników i definicje liczników oraz mianowników.
 
 *Źródło:* [ISO], s. 2-7, 15-19.
 
@@ -744,7 +748,7 @@ Proces zdefiniowany musi być rzeczywiście stosowany i utrzymywany. Samo napisa
 
 *Według prezentacji, s. 20:*
 
-Reprezentacja stopniowana wyznacza kolejne poziomy obejmujące z góry ustalone wymagania dla organizacji. Reprezentacja ciągła pozwala organizacji wybierać obszary procesu oraz docelowe poziomy ich zdolności zgodnie z własnymi potrzebami.
+Reprezentacja stopniowana wyznacza kolejne poziomy obejmujące z góry ustalone wymagania dla organizacji. Wymagania danego poziomu muszą być spełnione w całości, z zachowaniem wymagań poziomów niższych. Reprezentacja ciągła pozwala organizacji wybierać obszary procesu oraz docelowe poziomy ich zdolności zgodnie z własnymi potrzebami.
 
 > **Korekta.** Slajdy 21 i 22 mają zamienione przyporządkowanie list poziomów do reprezentacji. Dla CMMI 1.1 właściwe rozróżnienie jest następujące:
 >
@@ -947,7 +951,7 @@ Materiał wskazuje problemy wynikające z braków wiedzy, rotacji personelu i br
 
 Zadowolenie klienta jest zbyt wąskim kryterium, aby stanowiło pełną definicję jakości. Klient może być zadowolony z demonstracji, choć produkt nie spełnia potrzeb użytkowników końcowych, wymagań domyślnych, wymagań bezpieczeństwa lub obowiązkowych ograniczeń. Satysfakcja może też zmienić się po dłuższym użytkowaniu i ujawnieniu problemów.
 
-Trzeba uwzględnić wymagania wypowiedziane, niewypowiedziane oraz jeszcze nierozpoznane, a także rzeczywiste zastosowanie produktu. Zadowolenie jest jednym z aspektów jakości, obok m.in. funkcjonalności i wiarygodności.
+Trzeba uwzględnić wymagania wypowiedziane, znane klientowi, lecz niewypowiedziane, oraz jeszcze przez niego nierozpoznane, a także rzeczywiste zastosowanie produktu. Slajd 7 przedstawia ten podział jako model Kano. Zadowolenie jest jednym z aspektów jakości, obok m.in. funkcjonalności i wiarygodności.
 
 > **Komentarz własny.** Przyznanie satysfakcji klienta wysokiego priorytetu nie oznacza, że jest ona jedynym kryterium jakości. Sama deklaracja „klient tak chciał” nie zwalnia zespołu z analizy skutków i ograniczeń rozwiązania.
 
@@ -1016,7 +1020,7 @@ Firmy stosują m.in. następujące rozwiązania:
 - wyjaśnianie klientowi sposobu współpracy i korzyści z częstej informacji zwrotnej;
 - różne opcje kontraktowe, np. finansowanie kolejnych wydań i możliwość zmiany zakresu;
 - margines czasowy oraz wcześniejszą ocenę ryzyka braku zaangażowania;
-- odkładanie opowieści czekających na wyjaśnienia i sprawdzanie ich gotowości do implementacji;
+- odkładanie opowieści czekających na wyjaśnienia i sprawdzanie ich gotowości do implementacji, czyli określenia celu biznesowego, oczekiwanego wyniku oraz szczegółów potrzebnych do oszacowania pracochłonności;
 - przypisywanie właścicieli konkretnym opowieściom;
 - wyznaczenie zastępczego przedstawiciela klienta, np. analityka biznesowego;
 - regularne demonstracje działającego produktu.
