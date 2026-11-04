@@ -16,7 +16,7 @@ Paczka zawiera obie wersje odpowiedzi i załączone materiały PDF/Markdown.
 Wszystko, co opublikujesz, będzie dostępne pod adresem strony.
 Kod, archiwum redakcji i inne foldery projektu nie są częścią paczki.
 
-Oceny Umiem/Powtórz są zapisane lokalnie w przeglądarce.
+Oceny Umiem/Średnio/Nie umiem są zapisane lokalnie w przeglądarce.
 Nie są częścią pliku HTML ani tej paczki. Telefon i komputer mają
 osobne postępy; także wersja lokalna i strona HTTPS mają osobne zapisy.
 Eksport nie zmienia ocen w dotychczasowym pliku na komputerze.

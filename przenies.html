@@ -15,19 +15,20 @@
 const key = 'jsi-flashcards-ec81d121c481edacc5693a7510050d7ed2b1d5762d33de9b83e23d0cb7f2b7e7';
 const status = document.getElementById('status');
 const button = document.getElementById('apply');
-const match = /^#postep=([a-f0-9]{64})\.([kr-]{62})$/.exec(location.hash);
+const match = /^#postep=([a-f0-9]{64})\.([kmr-]{62})$/.exec(location.hash);
 if (match && key === 'jsi-flashcards-' + match[1]) {
-  const values = Object.fromEntries([...match[2]].map((mark, i) => [i + 1, {k:'known', r:'repeat'}[mark]]).filter(([, value]) => value));
+  const values = Object.fromEntries([...match[2]].map((mark, i) => [i + 1, {k:'known', m:'medium', r:'repeat'}[mark]]).filter(([, value]) => value));
   const known = [...match[2]].filter(mark => mark === 'k').length;
   const repeat = [...match[2]].filter(mark => mark === 'r').length;
-  status.textContent = `Zapiszesz ${known} „Umiem” i ${repeat} „Do powtórki”, ${62-known-repeat} bez oceny. Zastąpią dotychczasowy podział w tej przeglądarce.`;
+  const medium = [...match[2]].filter(mark => mark === 'm').length;
+  status.textContent = `Zapiszesz ${known} „Umiem”, ${medium} „Średnio” i ${repeat} „Nie umiem”, ${62-known-medium-repeat} bez oceny. Zastąpią dotychczasowy podział w tej przeglądarce.`;
   button.hidden = false;
   button.onclick = () => {
     try {
       const previous = localStorage.getItem(key);
       if (previous) localStorage.setItem(key + '-backup', previous);
       localStorage.setItem(key, JSON.stringify(values));
-      status.textContent = `Zapisano ${known} „Umiem” i ${repeat} „Do powtórki”, ${62-known-repeat} bez oceny. Możesz przejść do fiszek.`;
+      status.textContent = `Zapisano ${known} „Umiem”, ${medium} „Średnio” i ${repeat} „Nie umiem”, ${62-known-medium-repeat} bez oceny. Możesz przejść do fiszek.`;
       button.disabled = true;
       try { history.replaceState(null, '', location.pathname); } catch {}
     } catch {
