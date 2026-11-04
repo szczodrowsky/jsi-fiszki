@@ -36,7 +36,15 @@ Prezentacja: [1.Wprowadzenie.pdf][W].
 
 *Według prezentacji:*
 
-Na jakość systemu wpływają oprogramowanie, sprzęt, ludzie, procesy, procedury oraz zasoby informacji, takie jak zewnętrzne dane i bazy wiedzy. **Jakość systemu zależy od współdziałania tych elementów.** Nawet poprawny program nie zapewni dobrych wyników przy błędnych danych, zawodnym sprzęcie lub niewłaściwych procedurach.
+Na jakość systemu wpływa współdziałanie pięciu grup elementów:
+
+- sprzętu, np. komputerów i urządzeń;
+- oprogramowania, w tym systemu operacyjnego i aplikacji;
+- ludzi, zarówno użytkowników bezpośrednich, jak i pośrednich;
+- elementów organizacyjnych, czyli procesów i procedur;
+- zasobów informacji, np. zewnętrznych danych i baz wiedzy.
+
+Nawet poprawny program może dawać błędne wyniki przy złych danych lub niewłaściwych procedurach.
 
 *Uzupełnienie własne:*
 
@@ -82,7 +90,13 @@ W rozbudowanym produkcie liczba kombinacji danych, stanów, interakcji i środow
 
 Jakość obejmuje również **spełnienie oczekiwań klienta i użytkownika**. Specyfikacja może pomijać potrzeby uznawane za oczywiste, potrzeby jeszcze nierozpoznane albo wymagania wynikające z warunków użycia. Produkt może więc spełnić zapisane wymagania i nadal nie nadawać się do rzeczywistej pracy.
 
-Trzeba uwzględnić m.in. bezpieczeństwo, ochronę danych, użyteczność, wydajność i wymagania obowiązkowe. Ocenę zgodności ze specyfikacją należy uzupełnić oceną przydatności produktu w docelowym zastosowaniu.
+- **bezpieczeństwo** osób, na które wpływa działanie programu;
+- **ochronę danych** przed nieuprawnionym dostępem;
+- **użyteczność** podczas rzeczywistych zadań;
+- **wydajność** przy obciążeniu typowym dla użytkowników;
+- **wymagania obowiązkowe**, nawet jeśli klient ich nie wymienił.
+
+Ocenę zgodności ze specyfikacją należy uzupełnić oceną przydatności produktu w docelowym zastosowaniu.
 
 *Źródło:* [W], s. 7-15; [I], s. 19-20; [AG], s. 6-7, 13.
 
@@ -92,7 +106,13 @@ Trzeba uwzględnić m.in. bezpieczeństwo, ochronę danych, użyteczność, wyda
 
 *Według prezentacji:*
 
-Przedstawiciel klienta może nie znać potrzeb wszystkich użytkowników, mieć ograniczoną wiedzę o pracy operacyjnej lub nie mieć odpowiednich uprawnień decyzyjnych. Może też pominąć wymagania, które uważa za oczywiste, albo nie wspomnieć o potrzebach, których sam jeszcze nie rozpoznał. Jego oczekiwania mogą różnić się od potrzeb osób faktycznie korzystających z systemu.
+**Jedna osoba może znać cele klienta, ale tylko część potrzeb użytkowników.** Wywiad z przedstawicielem nie wystarczy, bo może on:
+
+- nie znać przebiegu codziennej pracy;
+- pominąć potrzeby innych grup, np. odbiorców raportów;
+- przemilczeć wymaganie, które uważa za oczywiste;
+- nie rozpoznać potrzeby, która ujawni się dopiero w użyciu;
+- nie mieć uprawnień do rozstrzygnięcia sprzecznych oczekiwań.
 
 Wymagania należy uzgadniać również z użytkownikami bezpośrednimi i pośrednimi, dostawcami danych oraz odbiorcami wyników. Pomocne są prototypy i przeglądy z udziałem użytkowników. Trzeba też sprawdzić wymagania związane z zamierzonym użyciem produktu oraz wymagania obowiązkowe.
 
@@ -108,7 +128,13 @@ Warto obserwować rzeczywistą pracę i analizować przypadki wyjątkowe, zamias
 
 *Według prezentacji:*
 
-Korzeniem jest ogólna jakość. Niżej znajdują się główne atrybuty, następnie bardziej szczegółowe cechy, a ich ocenę umożliwiają metryki i pomiary. W modelu ze wprowadzenia główne gałęzie to **funkcjonalność, wydajność, wiarygodność, satysfakcja i elastyczność**. Przykładowo funkcjonalność obejmuje kompletność, adekwatność i spójność.
+**Korzeniem drzewa jest ogólna jakość.** Dzieli się ją na główne atrybuty, a każdy atrybut na szczegółowe cechy, które oceniamy za pomocą metryk. Przykłady gałęzi i należących do nich cech:
+
+- **Funkcjonalność** — np. kompletność wymaganych funkcji.
+- **Wydajność** — np. szybkość reakcji systemu.
+- **Wiarygodność** — np. odporność na błędy.
+- **Satysfakcja** — np. łatwość nauki obsługi.
+- **Elastyczność** — np. możliwość dostosowania konfiguracji.
 
 Metrykom przypisuje się wagi. Ocena atrybutu może być średnią ważoną:
 
@@ -124,7 +150,12 @@ Metrykom przypisuje się wagi. Ocena atrybutu może być średnią ważoną:
 
 *Według prezentacji:*
 
-Atrybuty to cechy jakościowe produktu świadczące o jego wartości dla użytkownika. Porządkują wymagania według rodzaju ocenianej jakości. Wprowadzenie łączy wymagania funkcjonalne z funkcjonalnością, czasowe z wydajnością, niezawodnościowe z wiarygodnością, a ograniczenia z elastycznością.
+Atrybuty opisują cechy produktu istotne dla użytkownika. Wprowadzenie wiąże z nimi cztery rodzaje wymagań:
+
+- wymagania funkcjonalne dotyczą **funkcjonalności**;
+- wymagania czasowe dotyczą **wydajności**;
+- wymagania niezawodnościowe dotyczą **wiarygodności**;
+- ograniczenia, np. dotyczące platformy, mogą dotyczyć **elastyczności**.
 
 *Uzupełnienie własne:*
 
@@ -148,11 +179,19 @@ Przy cechach trudno mierzalnych trzeba jawnie określić, co dany wskaźnik obej
 
 *Przykład własny: wydajność systemu.*
 
-Wydajność można oceniać przez czas odpowiedzi, przepustowość (liczbę żądań obsługiwanych w jednostce czasu) oraz zużycie zasobów, np. pamięci i procesora. Każda z tych metryk opisuje inny aspekt wydajności. Trzeba też określić warunki pomiaru, w tym liczbę jednoczesnych użytkowników, ponieważ od obciążenia zależą uzyskane wyniki.
+Przykładowe pomiary wydajności:
+
+- **czas odpowiedzi** — ile użytkownik czeka na wynik;
+- **czas przetwarzania** — jak długo trwa wykonanie całego zadania, np. przygotowanie raportu;
+- **przepustowość** — ile żądań system obsługuje na sekundę;
+- **zużycie pamięci** — ile pamięci zajmuje program podczas pracy;
+- **wykorzystanie procesora** — jaką część jego czasu zajmuje obsługa danego obciążenia.
+
+Każda metryka opisuje inny aspekt wydajności. Porównując wyniki, trzeba ustalić takie same warunki pomiaru, w tym liczbę jednoczesnych użytkowników.
 
 Wydajność jest cechą mierzalną, choć jej ocena może wymagać zestawu metryk. Trudniej jednoznacznie ocenić np. satysfakcję użytkownika, ponieważ jej ocena może zależeć od osoby i kontekstu. Można ją badać za pomocą ankiet, lecz wyrażenie odpowiedzi liczbą nie usuwa ich subiektywności.
 
-*Źródło:* [W], s. 21-25; [P], s. 3, 22; [ISO], s. 6, 20.
+*Źródło:* [W], s. 21-25; [P], s. 3, 22; [ISO], s. 6, 12, 20.
 
 <a id="pytanie-11"></a>
 
@@ -228,7 +267,15 @@ Przeliczenie wyniku pomiaru na ocenę powinno odpowiadać wymaganiom. Może być
 
 *Synteza prezentacji:*
 
-Model drzewa pozwala przejść od ogólnego pojęcia jakości do konkretnych cech i wskaźników. Umożliwia określenie priorytetów, przypisanie wag, porównanie produktów według wspólnych kryteriów oraz wskazanie cech wymagających poprawy. Pokazuje też, że znaczenie atrybutów zależy od klasy aplikacji.
+**Model drzewa** pokazuje, jak oceny poszczególnych cech składają się na ocenę jakości. Pozwala:
+
+- rozłożyć ogólną jakość na konkretne atrybuty;
+- powiązać każdy atrybut z pomiarami;
+- nadać cechom wagi odpowiednie dla danego zastosowania;
+- porównać produkty według wspólnych kryteriów;
+- wskazać, którą cechę trzeba poprawić.
+
+Znaczenie poszczególnych atrybutów zależy od klasy aplikacji.
 
 > **Komentarz własny.** Wynik końcowy zależy od przyjętego modelu, kryteriów i wag. Dwa produkty z taką samą oceną łączną mogą mieć zupełnie inne słabości. Obok wyniku zbiorczego warto zachować wyniki składowe oraz osobno sprawdzać wymagania krytyczne.
 
@@ -240,8 +287,13 @@ Model drzewa pozwala przejść od ogólnego pojęcia jakości do konkretnych cec
 
 *Według wprowadzenia:*
 
-- Wiarygodność (*dependability*) oznacza stopień zaufania do systemu. Obejmuje niezawodność, odporność na błędy, bezpieczeństwo, ochronę i testowalność.
-- Niezawodność (*reliability*) dotyczy możliwości korzystania z usług systemu bez jego upadku. Jest zatem częścią szerszej wiarygodności.
+**Wiarygodność** (*dependability*) oznacza stopień zaufania do systemu. W modelu z wprowadzenia składa się na nią pięć cech:
+
+- **Niezawodność** (*reliability*) — system świadczy usługę bez awarii.
+- **Odporność na błędy** — system toleruje błędy podczas pracy.
+- **Bezpieczeństwo** — system chroni ludzi i otoczenie przed szkodą.
+- **Ochrona** — system ogranicza dostęp do uprawnionych osób.
+- **Łatwość testowania** — można wykrywać i identyfikować błędy.
 
 *Przykład własny:*
 
@@ -404,7 +456,15 @@ W typowym oprogramowaniu defekt projektu jest powielany w kolejnych kopiach tego
 
 *Według prezentacji:*
 
-SQA (*Software Quality Assurance*) jest **planowym, usystematyzowanym zbiorem działań** służących zapewnieniu jakości. Organizacja ustanawia standardy i procedury oraz stosuje je na wszystkich etapach wytwarzania. Obejmuje to metody techniczne, formalne przeglądy, testowanie, kontrolę zmian, pomiary i raportowanie.
+**SQA** (*Software Quality Assurance*) to zaplanowane, systematyczne działania, które organizacja prowadzi przez cały proces wytwarzania:
+
+- ustala metody pracy inżynierskiej;
+- przeprowadza formalne przeglądy techniczne;
+- testuje oprogramowanie;
+- sprawdza przestrzeganie standardów;
+- kontroluje zmiany;
+- mierzy jakość produktu i przebieg prac;
+- zapisuje i raportuje wyniki.
 
 Działania SQA obejmują ocenę produktu z perspektywy klienta oraz sprawdzanie, czy zespół pracuje zgodnie z przyjętymi standardami. Są prowadzone podczas wytwarzania, a także przy końcowym odbiorze.
 
@@ -457,7 +517,17 @@ Określenie *peer review* wskazuje, że ocenę prowadzą współpracownicy. Taki
 
 TQM (*Total Quality Management*) angażuje **całą organizację** w rozumienie i spełnianie oczekiwań klientów. Każdy pracownik odpowiada za jakość swojej pracy, a kierownictwo przewodzi działaniom i zapewnia warunki ich realizacji.
 
-Obejmuje zarządzanie procesami, zapobieganie problemom, mierzenie jakości, planowanie usprawnień i ciągłe doskonalenie. Dotyczy całego cyklu życia produktu, łącznie z utrzymaniem, oraz relacji między wewnętrznymi klientami i dostawcami.
+W praktyce obowiązują m.in. następujące zasady:
+
+- oczekiwania klientów wyznaczają cele jakościowe;
+- kierownictwo ustala kierunek działań i zapewnia środki;
+- każdy pracownik odpowiada za jakość swojej pracy;
+- organizacja analizuje i poprawia procesy, w których powstają błędy;
+- zespół zapobiega defektom już podczas wytwarzania;
+- decyzje o zmianach opiera się na pomiarach;
+- usprawnienia planuje się i wprowadza także podczas utrzymania produktu.
+
+Dotyczy to też współpracy między wewnętrznymi klientami i dostawcami.
 
 > **Komentarz własny.** Hasło ze slajdu o standardzie wolnym od defektów wyraża cel: zapobieganie błędom. Nie dowodzi, że każdy produkt organizacji jest bezbłędny.
 
@@ -483,7 +553,14 @@ SQA można traktować jako część praktycznej realizacji TQM w obszarze oprogr
 
 *Według prezentacji:*
 
-Kierownictwo organizuje działania jakościowe i kieruje ich realizacją. Ustanawia politykę i cele, określa odpowiedzialności i uprawnienia, zapewnia ludzi, czas i środki oraz organizuje doskonalenie procesów.
+**Kierownictwo odpowiada za warunki, w których pracownicy mogą osiągać wymaganą jakość.** Do jego obowiązków należą:
+
+- ustalenie polityki i celów jakościowych;
+- określenie odpowiedzialności i uprawnień;
+- zapewnienie ludzi, czasu i środków;
+- zorganizowanie doskonalenia procesów;
+- okresowy przegląd wyników i działania systemu jakości;
+- rozwiązywanie problemów, na które pojedynczy zespół nie ma wpływu.
 
 Powinno też okresowo przeglądać działanie systemu jakości i reagować na problemy przekraczające możliwości pojedynczego zespołu. Odpowiedzialność obejmuje decyzje organizacyjne wpływające na jakość w całym cyklu życia produktu.
 
@@ -535,7 +612,15 @@ Dobór mechanizmów należy sprawdzać na rzeczywistych zadaniach użytkowników
 
 *Według prezentacji:*
 
-Naukę programu ułatwiają interfejs zgodny ze znanymi standardami oraz przewidywalne działanie programu. Nowy użytkownik powinien otrzymać informacje o podstawowych możliwościach i mieć dostęp do pomocy oraz podpowiedzi. Przydatne są również szablony, dokumenty przykładowe, demonstracje i samouczek. Sposób obsługi warto dostosować do umiejętności użytkownika.
+**Łatwość nauki** oznacza, że nowy użytkownik szybko opanowuje obsługę programu. Pomagają w tym:
+
+- **Znane konwencje interfejsu** — polecenia działają podobnie jak w innych programach tej klasy.
+- **Wprowadzenie przy pierwszym użyciu** — pokazuje podstawowe możliwości programu.
+- **Pomoc i podpowiedzi** — wyjaśniają znaczenie menu i przycisków w chwili, gdy są potrzebne.
+- **Szablony** — pozwalają wykonać pierwsze zadanie od gotowego wzoru.
+- **Dokumenty przykładowe** — pokazują, jaki wynik można uzyskać.
+- **Demonstracje i samouczki** — prowadzą użytkownika przez kolejne czynności.
+- **Dostosowanie do poziomu użytkownika** — początkujący otrzymuje więcej wskazówek.
 
 Chodzi o zmniejszenie wysiłku potrzebnego do przejścia od pierwszego kontaktu z programem do sprawnego wykonywania zadań. Materiał ISO 9126 pokazuje, że można to sprawdzać np. przez pomiar czasu nauki funkcji.
 
@@ -547,7 +632,15 @@ Chodzi o zmniejszenie wysiłku potrzebnego do przejścia od pierwszego kontaktu 
 
 *Według prezentacji:*
 
-Operatywność ułatwia bieżące wykonywanie pracy i sterowanie programem. Wspierają ją krótka sekwencja kroków potrzebnych do wykonania zadania, menu kontekstowe, przyciski narzędziowe i skróty klawiszowe. Znaczenie ma także możliwość dostosowania menu, przycisków i skrótów. Pracę usprawniają również podpowiedzi przy wprowadzaniu danych, powtarzanie i grupowanie operacji oraz automatyzacja.
+**Operatywność** dotyczy tego, jak sprawnie użytkownik wykonuje znane mu zadania. Zwiększają ją:
+
+- **Menu kontekstowe** z poleceniami dla wybranego obiektu.
+- **Przyciski na pasku narzędzi** zapewniające szybki dostęp do częstych poleceń.
+- **Skróty klawiszowe** ograniczające liczbę kroków.
+- **Dostosowanie menu, przycisków i skrótów** do sposobu pracy użytkownika.
+- **Podpowiedzi przy wprowadzaniu danych** ułatwiające wybór wartości.
+- **Powtarzanie i grupowanie operacji**, np. zmiana kilku rekordów naraz.
+- **Automatyzacja** powtarzalnych czynności.
 
 *Przykład własny:*
 
@@ -561,7 +654,14 @@ Doświadczony użytkownik może zaznaczyć wiele rekordów i wykonać na nich je
 
 *Według prezentacji:*
 
-Funkcje programu można rozszerzać dzięki rejestrowaniu sekwencji działań do ponownego użycia, tworzeniu własnych funkcji i skryptów oraz dodawaniu ich wywołań do interfejsu. Służą temu również dodatki (*add-ins*) i osadzanie obiektów obsługiwanych przez inne aplikacje. Elastyczność wspierają modularność, ogólność rozwiązań i możliwość ponownego wykorzystania komponentów.
+**Elastyczność funkcjonalna** pozwala rozszerzać możliwości programu. Przykładowe mechanizmy to:
+
+- **Makra** — użytkownik nagrywa sekwencję działań do ponownego wykonania.
+- **Własne funkcje i skrypty** — użytkownik definiuje nowe operacje.
+- **Własne polecenia w interfejsie** — skrypt można wywołać z menu lub przyciskiem.
+- **Dodatki** (*add-ins*) — użytkownik instaluje rozszerzenie napisane przez innego autora.
+- **Osadzanie obiektów** — dokument zawiera obiekt obsługiwany przez inną aplikację.
+- **Moduły** — komponent można doinstalować lub wykorzystać ponownie w innym programie.
 
 *Uzupełnienie własne:*
 
@@ -581,7 +681,16 @@ Prezentacja: [4.Pomiary.pdf][P].
 
 *Synteza prezentacji:*
 
-Najpierw trzeba określić, czemu mają służyć pomiary, jakie wskaźniki będą potrzebne i jak zbierać dane. Następnie należy przygotować system wspomagający pomiary i sprawdzić jego działanie podczas pomiarów próbnych. Dopiero na tej podstawie można rozpocząć regularne zbieranie, przechowywanie i analizowanie wyników. Dane mogą obejmować pracochłonność, koszty, liczbę defektów, rozmiar produktów pracy i wyniki przeglądów lub testów. W dokumentacji procesu należy przechowywać raporty problemowe, żądania zmian oraz raporty z audytów, przeglądów, inspekcji i testowania.
+Najpierw trzeba określić, czemu mają służyć pomiary, jakie wskaźniki będą potrzebne i jak zbierać dane. Następnie należy przygotować system wspomagający pomiary i sprawdzić jego działanie podczas pomiarów próbnych. Dopiero na tej podstawie można rozpocząć regularne zbieranie, przechowywanie i analizowanie wyników. Dane mogą obejmować pracochłonność, koszty, liczbę defektów, rozmiar produktów pracy i wyniki przeglądów lub testów.
+
+Przykładowe źródła danych:
+
+- **wyniki testów** — co sprawdzono i z jakim wynikiem;
+- **raporty problemowe** — jakie defekty zgłoszono;
+- **żądania zmian** — co i dlaczego trzeba zmienić;
+- **raporty z audytów** — jakie niezgodności stwierdzono;
+- **protokoły z przeglądów i inspekcji** — jakie błędy wykryto i ile pracy wymagała kontrola;
+- **ewidencję pracy i kosztów** — ile czasu i środków pochłonęły działania.
 
 Trzeba też zapewnić trwałość nośników, dostęp do urządzeń i oprogramowania potrzebnego do odczytu zapisów oraz ochronę przed nieuprawnionym dostępem i szkodliwym oprogramowaniem.
 
@@ -617,10 +726,15 @@ Rozmiar zależy jednak od języka i sposobu zapisu. Zwięzły kod może prowadzi
 
 *Według prezentacji:*
 
-Mierzą umowny rozmiar systemu na podstawie elementów związanych z funkcjami, a nie bezpośrednio jakość ich realizacji. Materiał rozróżnia:
+Punkty mierzą umowny rozmiar funkcjonalny systemu. W metodzie *Function Points* zlicza się i waży elementy pięciu kategorii:
 
-- punkty funkcyjne (*Function Points*): ważone wejścia, wyjścia, zapytania, pliki i interfejsy zewnętrzne, z pokazanym współczynnikiem korekcyjnym;
-- punkty funkcjonalne (*Feature Points*): podobne zliczanie z dodatkowym uwzględnieniem algorytmów.
+- **wejścia** od użytkownika;
+- **wyjścia** przekazywane użytkownikowi;
+- **zapytania**;
+- **pliki**;
+- **interfejsy zewnętrzne**.
+
+W przykładzie wynik podlega korekcie. Metoda *Feature Points* dodatkowo uwzględnia algorytmy.
 
 Punkty są mniej zależne od języka programowania niż LOC. Można je również wyznaczać przed napisaniem kodu. Dobór klas złożoności i wag może być jednak subiektywny, a zebranie danych bywa trudne.
 
@@ -678,7 +792,16 @@ Na podstawie potrzeb użytkownika określa się wymagania zewnętrzne, a z nich 
 
 Model daje wspólny sposób opisu jakości i pomaga przełożyć ogólne oczekiwania na cechy oraz pomiary. Rozróżnia jakość wewnętrzną, zewnętrzną i użytkową oraz odpowiadające im perspektywy oceny.
 
-W jakości wewnętrznej i zewnętrznej wyróżnia funkcjonalność, niezawodność, użyteczność, efektywność, utrzymywalność i przenośność. W jakości użytkowej obejmuje skuteczność, produktywność, bezpieczeństwo i satysfakcję. Pomaga więc ustalać wymagania, projektować ocenę produktu i porównywać wyniki przy wspólnych kryteriach.
+W jakości wewnętrznej i zewnętrznej model wyróżnia sześć charakterystyk:
+
+- **Funkcjonalność** — np. poprawność wyników.
+- **Wiarygodność** (*reliability*, czyli niezawodność) — np. zdolność odzyskania sprawności po awarii.
+- **Użyteczność** — np. łatwość nauki obsługi.
+- **Efektywność** — np. czas odpowiedzi i zużycie zasobów.
+- **Utrzymywalność** — np. łatwość wprowadzania i testowania zmian.
+- **Przenośność** — np. łatwość instalacji w innym środowisku.
+
+Jakość użytkową ocenia się przez skuteczność, produktywność, bezpieczeństwo i satysfakcję.
 
 Prezentacja wskazuje również ograniczenia modelu. Zebranie danych do dużej liczby miar może być trudne, a część skal wymaga dodatkowych ustaleń, zanim wynik pomiaru da się przełożyć na ocenę jakości.
 
@@ -720,7 +843,15 @@ Prezentacja: [5.CMM-CMMI.pdf][C]. Odpowiedzi odnoszą się do historycznych mode
 
 Dojrzałość oznacza, że proces jest coraz lepiej zdefiniowany, powtarzalny i konsekwentnie stosowany w organizacji. Polityka organizacji, standardy, procedury, szkolenia i określony podział odpowiedzialności utrwalają ten sposób pracy. Dzięki temu nie zależy on wyłącznie od konkretnych osób i może być zachowany po ich odejściu.
 
-Na kolejnych poziomach przechodzi się od działań doraźnych, przez zarządzanie i wspólne standardy, do zarządzania ilościowego i ciągłego doskonalenia. Dzięki temu łatwiej przewidywać koszty, harmonogram i wyniki jakościowe.
+Poziomy dojrzałości reprezentacji stopniowanej CMMI:
+
+1. **Początkowy** — sposób pracy zależy głównie od osób i sytuacji.
+2. **Zarządzany** — poszczególne projekty planują i kontrolują swoją pracę.
+3. **Zdefiniowany** — projekty korzystają ze wspólnego standardu organizacji.
+4. **Zarządzany ilościowo** — organizacja wykorzystuje pomiary do zarządzania procesami.
+5. **Optymalizowany** — organizacja systematycznie doskonali procesy.
+
+Wraz z dojrzewaniem procesu łatwiej przewidywać koszty, harmonogram i jakość wyników.
 
 > **Komentarz własny.** Dojrzałość dotyczy zdolności organizacji do realizowania i doskonalenia procesów. Nie jest tożsama z bezbłędnością konkretnego produktu. Slajdowe zapewnienia o stałej lub wysokiej jakości należy odczytywać jako oczekiwany efekt dojrzałego procesu, nie bezwarunkową gwarancję każdego projektu.
 
@@ -734,7 +865,16 @@ Na kolejnych poziomach przechodzi się od działań doraźnych, przez zarządzan
 
 Jest to **poziom 3, „zdefiniowany” (*Defined*)**. Organizacja dokumentuje i standaryzuje procesy zarządcze i inżynierskie oraz integruje je we wspólny proces organizacyjny. Zespoły projektowe stosują zatwierdzone wersje tego procesu, dostosowane do potrzeb projektu. Takie dostosowanie nazywa się *tailoringiem*.
 
-Obejmuje to m.in. wspólne zasady pracy, szkolenia, koordynację między zespołami i przeglądy wzajemne. Na poziomie 2 nacisk pada na zarządzanie poszczególnymi projektami. Poziom 3 wprowadza dodatkowo spójny standard procesów dla całej organizacji.
+Przykładowe działania organizacji na tym poziomie:
+
+- planowanie prac zgodnie z dostosowanym procesem projektu;
+- zbieranie doświadczeń z projektów i doskonalenie wspólnego standardu;
+- uzgadnianie wymagań i zobowiązań między zespołami;
+- koordynowanie zadań inżynierskich i dbanie o spójność ich wyników;
+- prowadzenie przeglądów wzajemnych w celu wykrywania defektów;
+- szkolenie pracowników do ról przewidzianych w procesie.
+
+Na poziomie 2 nacisk pada na zarządzanie poszczególnymi projektami. Poziom 3 dodatkowo wprowadza wspólny standard organizacji.
 
 *Uzupełnienie własne:*
 
@@ -793,7 +933,13 @@ Należy określić problem i mierzalny cel, zebrać porównywalne dane, ustalić
 
 *Według prezentacji:*
 
-Kierownictwo określa i dokumentuje kierunek działania w sprawach jakości, cele oraz związane z nimi obowiązki i uprawnienia. Zapewnia środki, wdraża odpowiednie zasady pracy i okresowo przegląda działanie systemu jakości. Polityka musi wiązać się z potrzebami klienta, planowaniem i doskonaleniem procesów.
+Wprowadzenie **polityki jakościowej** oznacza, że kierownictwo przekłada cele jakościowe na zasady codziennej pracy. W tym celu:
+
+- dokumentuje politykę i cele związane z potrzebami klienta;
+- ustala, kto za co odpowiada i jakie ma uprawnienia;
+- zapewnia ludzi, czas i środki;
+- wdraża wymagania systemu jakości i dba o ich przestrzeganie;
+- okresowo przegląda wyniki i decyduje o usprawnieniach.
 
 *Uzupełnienie własne:*
 
@@ -858,6 +1004,12 @@ W metodzie **GQM najpierw określa się cele konkretnego przedsięwzięcia**. Na
 
 Przewagą nad korzystaniem z szerokiego katalogu cech i miar jest uzasadnienie każdego pomiaru. Wiadomo, jakiej decyzji lub jakiemu usprawnieniu ma on służyć. Ogranicza to zbieranie danych tylko dlatego, że łatwo je uzyskać. W ocenie przedstawionej na wykładzie jednym z problemów ISO 9126 jest duża liczba miar, do których trudno zebrać dane.
 
+Przykład z inspekcji kodu (s. 14):
+
+1. **Cel (Goal).** Chcemy trafniej planować pracochłonność inspekcji.
+2. **Pytanie (Question).** Ile pracy wymaga przegląd kodu?
+3. **Metryki (Metrics).** Rejestrujemy rozmiar przejrzanego kodu w KLOC i średnią pracochłonność inspekcji na KLOC.
+
 *Przykład własny:*
 
 - Cel: zmniejszyć liczbę poważnych defektów wykrywanych dopiero przez użytkowników.
@@ -921,7 +1073,13 @@ Prezentacja: [8.Jakość w Agile.pdf][AG]. Znaczna część przykładów dotyczy
 
 *Według prezentacji:*
 
-Autor wskazuje duży nakład pracy nad dokumentacją i późne dostarczanie działających rezultatów. Problemem była również trudność pełnego określenia wymagań na początku projektu. Podczas implementacji zespół mógł stracić kontakt z klientem, a rozbudowany proces nadal nie dawał pewności co do końcowej jakości.
+W podejściu klasycznym dostrzegano pięć problemów:
+
+- przygotowanie dokumentacji pochłaniało dużo czasu;
+- działające oprogramowanie trafiało do klienta późno;
+- trudno było określić wszystkie wymagania na początku projektu;
+- podczas implementacji zespół tracił kontakt z użytkownikiem;
+- mimo przestrzegania procedur końcowa jakość pozostawała niepewna.
 
 W odpowiedzi zaproponowano częste dostarczanie działającego oprogramowania, bliską współpracę z klientem, reagowanie na zmiany, szybkie uzyskiwanie informacji zwrotnej i doskonalenie sposobu pracy.
 
@@ -935,7 +1093,14 @@ W odpowiedzi zaproponowano częste dostarczanie działającego oprogramowania, b
 
 *Odpowiedź wynikająca z prezentacji:*
 
-Nie. Oprócz motywacji i zaufania zespół potrzebuje kompetencji, odpowiedniego środowiska pracy, współpracy z klientem i sprawnego przepływu informacji. Konieczne są również standardy inżynierskie, projektowanie i testowanie. Zespół może być zaangażowany, a mimo to realizować błędnie rozpoznane potrzeby albo nie zauważyć istotnego ryzyka.
+**Sama motywacja i zaufanie nie wystarczą.** Nawet zaangażowany zespół może źle rozpoznać wymagania lub przeoczyć ryzyko. Potrzebuje również:
+
+- kompetencji technicznych i szkoleń;
+- czasu, zasobów i odpowiednich warunków pracy;
+- regularnego kontaktu z klientem i użytkownikami;
+- dobrego przepływu informacji i utrwalania wiedzy;
+- wspólnych standardów projektowania, kodowania i testowania;
+- regularnego sprawdzania, co w sposobie pracy trzeba poprawić.
 
 Materiał wskazuje problemy wynikające z braków wiedzy, rotacji personelu i braku dokumentacji. Potrzebne są szkolenia oraz utrwalanie wiedzy i zasad pracy.
 
@@ -951,7 +1116,13 @@ Materiał wskazuje problemy wynikające z braków wiedzy, rotacji personelu i br
 
 Zadowolenie klienta jest zbyt wąskim kryterium, aby stanowiło pełną definicję jakości. Klient może być zadowolony z demonstracji, choć produkt nie spełnia potrzeb użytkowników końcowych, wymagań domyślnych, wymagań bezpieczeństwa lub obowiązkowych ograniczeń. Satysfakcja może też zmienić się po dłuższym użytkowaniu i ujawnieniu problemów.
 
-Trzeba uwzględnić wymagania wypowiedziane, znane klientowi, lecz niewypowiedziane, oraz jeszcze przez niego nierozpoznane, a także rzeczywiste zastosowanie produktu. Slajd 7 przedstawia ten podział jako model Kano. Zadowolenie jest jednym z aspektów jakości, obok m.in. funkcjonalności i wiarygodności.
+Slajd 7 przedstawia trzy grupy wymagań w ujęciu modelu Kano:
+
+- **Wypowiedziane** — klient zna je i przekazuje wykonawcy.
+- **Znane, lecz niewypowiedziane** — klient zakłada, że produkt je spełni.
+- **Jeszcze nierozpoznane** — klient sam nie potrafi ich wskazać na początku.
+
+Liczy się również rzeczywiste zastosowanie produktu. Obok satysfakcji ocenia się m.in. funkcjonalność i wiarygodność.
 
 > **Komentarz własny.** Przyznanie satysfakcji klienta wysokiego priorytetu nie oznacza, że jest ona jedynym kryterium jakości. Sama deklaracja „klient tak chciał” nie zwalnia zespołu z analizy skutków i ograniczeń rozwiązania.
 
@@ -984,7 +1155,13 @@ W Scrumie Definition of Done określa wymagania jakościowe, które musi spełni
 
 *Według prezentacji:*
 
-Brak kontaktu z klientem i jego zaangażowania utrudnia zbieranie wymagań, wyjaśnianie szczegółów i ustalanie priorytetów. Jeśli po wydaniu nie ma informacji zwrotnej, rozbieżności są wykrywane z opóźnieniem. Zespół może czekać na decyzje albo realizować niepotwierdzone założenia, co obniża wydajność i zwiększa ryzyko niepowodzenia.
+Gdy kontakt z klientem jest nieregularny, zespół traci możliwość **sprawdzenia wymagań i uzyskania informacji zwrotnej**. Skutki pojawiają się na kilku etapach:
+
+- Klient może żądać ustalenia zakresu, terminu i ceny, zanim zespół pozna szczegóły.
+- Podczas analizy nie udaje się wyjaśnić wyjątków i niejednoznacznych wymagań.
+- Przy planowaniu brakuje decyzji, które funkcje są najważniejsze.
+- Podczas implementacji zespół czeka na decyzję albo buduje funkcję na podstawie własnych założeń.
+- Po wydaniu błędne założenia wychodzą na jaw z opóźnieniem, czasem dopiero podczas pracy użytkowników.
 
 *Synteza własna:*
 
@@ -1047,7 +1224,16 @@ Przed realizacją trzeba ustalić oczekiwany wynik biznesowy, grupy użytkownik�
 
 *Przykład własny:*
 
-Prośbę „chcę eksportować raport” trzeba uzupełnić m.in. o odbiorcę raportu, wymagane dane i format, zakres uprawnień, dopuszczalny czas generowania oraz zachowanie przy braku danych. Dopiero wtedy da się ocenić, czy wydanie rozwiązuje właściwy problem.
+Prośbę „chcę eksportować raport” można doprecyzować, ustalając:
+
+- kto będzie korzystać z raportu i do czego;
+- jakie dane mają się w nim znaleźć;
+- w jakim formacie trzeba je przekazać;
+- kto ma uprawnienia do eksportu;
+- jak długo może trwać przygotowanie raportu;
+- co system ma zrobić, gdy brakuje danych.
+
+Odpowiedzi pozwalają określić warunki akceptacji wydania.
 
 *Źródło:* [AG], s. 7, 12-13, 23-24; [I], s. 19-20, 27.
 
@@ -1061,9 +1247,14 @@ Nie wolno zakładać, że wysokie wynagrodzenie lub doświadczenie części zesp
 
 *Uzupełnienie własne:*
 
-Standardy powinny być konkretne i dostępne, a ich stosowanie należy sprawdzać w codziennej pracy. Pomagają w tym przykłady dobrego kodu, wdrażanie nowych osób do zespołu, mentoring i przeglądy zmian. Można też automatycznie sprawdzać formatowanie, prowadzić analizę statyczną i uruchamiać testy.
+Praktyczne sposoby wdrożenia standardów:
 
-Warto też utrwalać decyzje projektowe, aby wiedza nie znikała wraz z pracownikiem.
+- spisać i udostępnić zasady kodowania, projektowania, integracji i testowania;
+- szkolić nowych pracowników na przykładach z projektu;
+- zapewnić wsparcie doświadczonych osób, np. podczas wspólnej pracy nad zmianą;
+- sprawdzać stosowanie zasad podczas przeglądów kodu;
+- uruchamiać analizę statyczną i testy przy integracji zmian;
+- zapisywać decyzje projektowe, żeby wiedza była dostępna po zmianie składu zespołu.
 
 > **Komentarz własny.** Slajdy 16 i 20 kategorycznie określają programowanie w parach jako nieefektywne finansowo, a slajd 20 także jako niestosowane w praktyce. Prezentacja nie podaje danych uzasadniających taki ogólny wniosek. Ocenę tej praktyki należy oprzeć na wynikach w danym zespole, uwzględniając czas pracy, jakość i przekazywanie wiedzy, zamiast automatycznie zakładać jej opłacalność lub nieopłacalność.
 
@@ -1113,10 +1304,11 @@ Autor wiąże metodyki zwinne przede wszystkim z prostymi projektami, małymi i 
 
 *Przykłady własne ilustrujące te ograniczenia:*
 
-- sterowanie aparatem do radioterapii lub funkcjami krytycznymi samolotu, jeśli sposób pracy nie zapewnia analizy zagrożeń, wymaganej weryfikacji i dowodów bezpieczeństwa;
-- oprogramowanie sondy kosmicznej z bardzo ograniczoną możliwością aktualizacji po uruchomieniu;
-- projekt, w którym nie ma dostępu do osoby podejmującej decyzje po stronie klienta, a zespół dysponuje jedynie ogólnymi opowieściami i nie może wyjaśnić wymagań;
-- system utrzymywany przez wiele lat przez zmieniające się zespoły, jeśli wiedza pozostaje wyłącznie w głowach autorów.
+- **Aparat do radioterapii** — błędna dawka zagraża pacjentowi, więc przed użyciem trzeba zweryfikować zabezpieczenia.
+- **Sterowanie samolotem** — funkcje krytyczne wymagają analizy zagrożeń i dowodów bezpieczeństwa.
+- **Sonda kosmiczna** — po starcie możliwość aktualizowania produktu może być ograniczona.
+- **Projekt bez dostępnego klienta** — zespół nie może na bieżąco wyjaśniać wymagań i sprawdzać rezultatów.
+- **System utrzymywany latami przez kolejne zespoły** — potrzebna jest dokumentacja, z której następcy odtworzą decyzje i sposób działania.
 
 > **Komentarz własny.** Nie zgadzam się z ogólnym wnioskiem, że sama zwinność wyklucza projekty duże lub krytyczne. Powyższe przykłady pokazują niewystarczalność procesu pozbawionego potrzebnych zabezpieczeń i dokumentacji. Można łączyć iteracyjny rozwój z formalną analizą, kontrolą zmian, dokumentacją i niezależną weryfikacją.
 >
