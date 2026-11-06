@@ -14,7 +14,9 @@ FISZKI JSI NA TELEFONIE / GITHUB PAGES
 
 Paczka zawiera obie wersje odpowiedzi i załączone materiały PDF/Markdown.
 Testy_JSI.html zawiera 62 pytania w brzmieniu 1:1 z fiszek, 6 wariantów
-i losowanie. Wariant F zawiera wyłącznie pytania otwarte.
+i losowanie. Wariant F losuje 13 otwartych z całej bazy 62 pytań.
+Nowe uruchomienie F daje inny zestaw, bez powtórek wewnątrz testu.
+Powrót do rozpoczętego testu zachowuje jego pytania i odpowiedzi.
 Każdy test ma 13 pytań / 30 pkt. ABCD sprawdza się
 automatycznie; odpowiedzi otwarte oceniasz według wzorca i kryteriów.
 Przypisanie form odpowiedzi i punktów jest ćwiczeniowe.

@@ -22,7 +22,7 @@
 <body>
 <div class="wrap">
  <header class="topbar"><div class="brand"><span class="brand-mark">JSI</span><span>testy do samosprawdzenia</span></div><span class="offline"><span class="dot"></span>Działa offline</span></header>
- <nav class="page-nav" aria-label="Tryb nauki"><a href="index.html?v=741071e32c18">Fiszki</a><a id="show-tests" href="#testy" aria-current="page">Testy</a><a id="show-catalog" href="#pytania" aria-current="false">Pytania</a></nav>
+ <nav class="page-nav" aria-label="Tryb nauki"><a href="index.html?v=20fdaaead4fd">Fiszki</a><a id="show-tests" href="#testy" aria-current="page">Testy</a><a id="show-catalog" href="#pytania" aria-current="false">Pytania</a></nav>
  <noscript><p class="notice">Włącz JavaScript w przeglądarce, aby rozwiązywać i sprawdzać testy. Internet nie jest potrzebny.</p></noscript>
  <main>
  <section id="home" aria-labelledby="home-title">
@@ -31,7 +31,7 @@
     <div class="format-row"><div class="count">5 <span>× 1</span></div><div><strong>ABCD</strong><small>Jedna poprawna odpowiedź</small></div><span class="muted small">5 pkt</span></div>
     <div class="format-row"><div class="count">5 <span>× 2</span></div><div><strong>Wybór i krótkie odpowiedzi</strong><small>3 wielokrotne + 2 otwarte</small></div><span class="muted small">10 pkt</span></div>
     <div class="format-row"><div class="count">3 <span>× 5</span></div><div><strong>Zadania otwarte</strong><small>Wyjaśnij, porównaj, zastosuj</small></div><span class="muted small">15 pkt</span></div>
-    <p class="overview-note">Wariant F ma ten sam podział punktów, ale wszystkie 13 pytań jest otwartych.</p>
+    <p class="overview-note">Wariant F losuje 13 otwartych z całej bazy 62 pytań: 5 × 1 pkt, 5 × 2 pkt i 3 × 5 pkt.</p>
    </div>
   </div>
   <div class="section-line"><h2>Od którego zestawu zaczynasz?</h2><span class="small muted">6 wariantów · 62 pytania 1:1 · klucz do każdego</span></div>
@@ -41,7 +41,7 @@
    <button class="variant" data-start="C"><span class="letter">C</span><h3>TQM i modele</h3><p>Pytania 27–39. Zarządzanie, McCall, ISO 9126 i dane.</p><span class="go">Rozwiąż wariant C ↗</span></button>
    <button class="variant" data-start="D"><span class="letter">D</span><h3>Metryki i dojrzałość</h3><p>Pytania 40–52. GQM, AHP, CMMI, ISO i początki Agile.</p><span class="go">Rozwiąż wariant D ↗</span></button>
    <button class="variant" data-start="E"><span class="letter">E</span><h3>Jakość w Agile</h3><p>Pytania 53–62 oraz powtórka pytań 2, 18 i 45.</p><span class="go">Rozwiąż wariant E ↗</span></button>
-   <button class="variant open-only" data-start="F"><span class="letter">F</span><h3>Tylko otwarte</h3><p>13 pytań przekrojowych. Odpowiadasz z pamięci, potem oceniasz według wzorca.</p><span class="go">Rozwiąż wariant F ↗</span></button>
+   <button class="variant open-only" data-start="F"><span class="letter">F</span><h3>Tylko otwarte</h3><p>Za każdym razem nowy zestaw 13 z 62 pytań. Wszystkie otwarte, bez powtórek w teście. Razem 30 pkt.</p><span class="go">Losuj wariant F ↗</span></button>
   </div>
   <div class="shuffle"><div><h3>Wolisz niespodziankę?</h3><p>Losuj 13 zadań z całej puli. Ten sam podział punktów, nowa kolejność odpowiedzi.</p></div><button class="lime" data-start="random">Losuj test <span aria-hidden="true">↗</span></button></div>
   <div id="resume-box" class="resume" hidden><p id="resume-label"></p><button id="resume">Wróć do testu</button></div>
@@ -1319,6 +1319,203 @@
   ]
  },
  {
+  "id": "F1",
+  "originalId": 1,
+  "variant": "F",
+  "refs": [
+   1
+  ],
+  "question": "Jaki jest wpływ jakości oprogramowania na jakość systemu informatycznego w porównaniu z innymi elementami (np. sprzęt, ludzie, organizacja)?",
+  "model": "Jakość systemu informatycznego zależy od współdziałania oprogramowania, sprzętu, ludzi, procesów, procedur i danych.\n• Oprogramowanie wykonuje zadania użytkownika. Błąd w aplikacji może zmienić wynik obliczeń.\n• Sprzęt umożliwia wykonanie tych zadań. Awaria urządzenia może zatrzymać poprawnie działający program.\n• Ludzie wprowadzają dane, obsługują system i korzystają z wyników.\n• Procesy i procedury określają, kto sprawdza dane i jak reaguje na błąd.\n• Zasoby informacji, np. zewnętrzne źródła danych i bazy wiedzy, wpływają na poprawność wyniku.\nZnaczenie każdego elementu zależy od zastosowania systemu. Nie ma stałych udziałów procentowych.",
+  "type": "open",
+  "points": 5,
+  "criteria": [
+   "Opisuję wpływ oprogramowania na realizację zadań i wyniki systemu.",
+   "Opisuję wpływ sprzętu, np. awarii urządzenia.",
+   "Opisuję wpływ ludzi, np. wprowadzania danych lub obsługi.",
+   "Uwzględniam procesy, procedury lub jakość zasobów informacji.",
+   "Wyjaśniam współdziałanie elementów i zależność ich znaczenia od zastosowania, bez stałych udziałów procentowych."
+  ]
+ },
+ {
+  "id": "F2",
+  "originalId": 2,
+  "variant": "F",
+  "refs": [
+   2
+  ],
+  "question": "Czy u źródeł każdej awarii systemu informatycznego stoi błąd programistów?",
+  "model": "Nie. Awaria może mieć kilka przyczyn jednocześnie. Przykłady to:\n• błędne wymaganie, które pomija ważny przypadek;\n• błąd projektu, np. brak niezależnego zabezpieczenia;\n• awaria sprzętu;\n• nieprawidłowe dane wejściowe;\n• pomyłka podczas obsługi;\n• niewłaściwa procedura, np. ponowienie operacji mimo alarmu.\nDefekt prowadzi do awarii dopiero w warunkach, w których się ujawni. Zabezpieczenie może zatrzymać dalszy rozwój zdarzeń.",
+  "type": "open",
+  "points": 1,
+  "criteria": [
+   "Nie; przyczyny mogą obejmować wymagania, projekt, sprzęt, dane, ludzi i procedury."
+  ]
+ },
+ {
+  "id": "F3",
+  "originalId": 3,
+  "variant": "F",
+  "refs": [
+   3
+  ],
+  "question": "Dlaczego wytwórcy oprogramowania nie mogą zagwarantować 100% bezbłędności swojego produktu?",
+  "model": "• Ze względu na złożoność oprogramowania nie da się w praktyce sprawdzić wszystkich kombinacji danych, stanów i warunków działania.\n• Błędy mogą też występować w wymaganiach i specyfikacji.\n• Testy potwierdzają poprawność tylko w sprawdzonych przypadkach.\nDowody formalne mogą potwierdzić określone własności programu przy przyjętych założeniach. Nie dają jednak bezwarunkowej gwarancji poprawności całego systemu.",
+  "type": "open",
+  "points": 1,
+  "criteria": [
+   "Nie da się w praktyce sprawdzić wszystkich kombinacji danych, stanów i warunków; także wymagania mogą być błędne."
+  ]
+ },
+ {
+  "id": "F4",
+  "originalId": 4,
+  "variant": "F",
+  "refs": [
+   4
+  ],
+  "question": "Jakie były źródłowe przyczyny wypadków z systemem do radioterapii Therac-25 w połowie lat ’80 XX wieku w USA i Kanadzie (błędy użytkowników, programistów, konstruktorów, projektantów)?",
+  "model": "Wypadki Therac-25 miały przyczyny techniczne i organizacyjne.\n• Konstrukcja. Usunięto część niezależnych blokad sprzętowych i powierzono ochronę pacjenta programowi.\n• Synchronizacja. Po szybkiej korekcie parametrów ekran mógł pokazywać nowy tryb, choć urządzenie nadal było ustawione inaczej.\n• Błąd licznika. Co 256 przebiegów zmienna Class3 przyjmowała wartość zero. Program mógł wtedy pominąć kontrolę położenia kolimatora.\n• Interfejs. Niejasne komunikaty i mylące wskazania dawki utrudniały ocenę sytuacji. Operator mógł ponowić zabieg po błędzie.\n• Weryfikacja. Analiza bezpieczeństwa skupiała się na sprzęcie, a testy oprogramowania nie ujawniły niebezpiecznych przebiegów.\n• Reakcja na wypadki. Wcześniejsze zdarzenia niedostatecznie dokumentowano i analizowano.\nDziałanie operatora mogło uruchomić wadliwy scenariusz. Projekt urządzenia powinien był w takiej sytuacji zablokować emisję.",
+  "type": "open",
+  "points": 5,
+  "criteria": [
+   "Wskazuję problem konstrukcyjny: brak części niezależnych blokad sprzętowych lub nadmierne poleganie na oprogramowaniu.",
+   "Opisuję konkretny defekt programu, np. synchronizacji lub licznika.",
+   "Opisuję problem interfejsu, komunikatów lub wskazań dawki.",
+   "Wskazuję niedostateczną analizę bezpieczeństwa, weryfikację lub reakcję na wcześniejsze zdarzenia.",
+   "Wyjaśniam, że operator mógł wyzwolić scenariusz, ale system powinien blokować niebezpieczne działanie; przyczyny były techniczne i organizacyjne."
+  ]
+ },
+ {
+  "id": "F5",
+  "originalId": 5,
+  "variant": "F",
+  "refs": [
+   5
+  ],
+  "question": "Dlaczego rozumienie jakości oprogramowania jako stopnia spełnienia wyspecyfikowanych wymagań jest niewystarczająca?",
+  "model": "Specyfikacja może być niepełna albo błędna. Nawet program zgodny z jej treścią może nie nadawać się do pracy. W ocenie trzeba uwzględnić np.:\n• bezpieczeństwo osób, na które wpływa działanie programu;\n• ochronę danych przed nieuprawnionym dostępem;\n• użyteczność podczas rzeczywistych zadań;\n• wydajność przy obciążeniu typowym dla użytkowników;\n• wymagania obowiązkowe, nawet jeśli klient ich nie wymienił.\nJakość zależy również od spełnienia potrzeb domyślnych i jeszcze nierozpoznanych.",
+  "type": "open",
+  "points": 1,
+  "criteria": [
+   "Specyfikacja może być niepełna lub błędna i pomijać rzeczywiste, domyślne potrzeby."
+  ]
+ },
+ {
+  "id": "F6",
+  "originalId": 6,
+  "variant": "F",
+  "refs": [
+   6
+  ],
+  "question": "Dlaczego przy zbieraniu wymagań dla oprogramowania nie wystarczy o nie pytać przedstawiciela klienta?",
+  "model": "Jedna osoba może znać cele klienta, ale tylko część potrzeb użytkowników. Wywiad z przedstawicielem nie wystarczy, bo może on:\n• nie znać przebiegu codziennej pracy;\n• pominąć potrzeby innych grup, np. odbiorców raportów;\n• przemilczeć wymaganie, które uważa za oczywiste;\n• nie rozpoznać potrzeby, która ujawni się dopiero w użyciu;\n• nie mieć uprawnień do rozstrzygnięcia sprzecznych oczekiwań.\nWymagania warto sprawdzić z użytkownikami, dostawcami danych i odbiorcami wyników. Pomagają w tym obserwacja pracy, analiza sytuacji wyjątkowych oraz wspólny przegląd prototypu.",
+  "type": "open",
+  "points": 2,
+  "criteria": [
+   "Przedstawiciel może nie znać codziennej pracy i potrzeb wszystkich grup użytkowników.",
+   "Potrzeby mogą być niewypowiedziane lub jeszcze nierozpoznane."
+  ]
+ },
+ {
+  "id": "F7",
+  "originalId": 7,
+  "variant": "F",
+  "refs": [
+   7
+  ],
+  "question": "Czym różni się jakość wewnętrzna oprogramowania od zewnętrznej i użytkowej?",
+  "model": "• Jakość wewnętrzna dotyczy cech kodu, projektu i dokumentacji. Można ją ocenić bez uruchamiania programu.\n• Jakość zewnętrzna opisuje zachowanie uruchomionego programu, np. poprawność uzyskiwanych wyników i czas odpowiedzi.\n• Jakość użytkowa odnosi się do efektów korzystania z systemu w określonych warunkach. Obejmuje skuteczność i produktywność pracy, bezpieczeństwo użytkowników i otoczenia oraz satysfakcję użytkownika.\nNa podstawie potrzeb użytkowników określa się wymagania zewnętrzne, a następnie wynikające z nich wymagania wewnętrzne. Sama dobra struktura kodu nie gwarantuje, że system będzie użyteczny.",
+  "type": "open",
+  "points": 5,
+  "criteria": [
+   "Opisuję jakość wewnętrzną jako cechy kodu, projektu lub dokumentacji oceniane bez uruchamiania programu.",
+   "Opisuję jakość zewnętrzną jako zachowanie działającego programu.",
+   "Opisuję jakość użytkową przez efekty korzystania z systemu w określonym kontekście.",
+   "Podaję trafne przykłady odróżniające te rodzaje jakości.",
+   "Wyjaśniam związek z potrzebami użytkowników lub to, że dobra jakość wewnętrzna nie gwarantuje jakości użytkowej."
+  ]
+ },
+ {
+  "id": "F8",
+  "originalId": 8,
+  "variant": "F",
+  "refs": [
+   8
+  ],
+  "question": "Z jakich elementów składa się model „drzewa” jakości?",
+  "model": "Korzeniem drzewa jest ogólna jakość. Dzieli się ją na główne atrybuty, a każdy atrybut na szczegółowe cechy, które oceniamy za pomocą metryk. Przykłady gałęzi i należących do nich cech:\n• Funkcjonalność — np. kompletność wymaganych funkcji.\n• Wydajność — np. szybkość reakcji systemu.\n• Wiarygodność — np. odporność na błędy.\n• Satysfakcja — np. łatwość nauki obsługi.\n• Elastyczność — np. możliwość dostosowania konfiguracji.\nWagi określają znaczenie składowych. Ocenę atrybutu można obliczyć jako średnią ważoną A = Σ(w·M)/Σw, gdy suma wag jest dodatnia. Podział na gałęzie zależy od modelu jakości.",
+  "type": "open",
+  "points": 2,
+  "criteria": [
+   "Opisuję hierarchię od ogólnej jakości przez atrybuty do szczegółowych cech ocenianych metrykami.",
+   "Wyjaśniam rolę wag w znaczeniu składowych lub w obliczaniu oceny łącznej."
+  ]
+ },
+ {
+  "id": "F9",
+  "originalId": 9,
+  "variant": "F",
+  "refs": [
+   9
+  ],
+  "question": "Co to są atrybuty jakości i jak się mają do wymagań?",
+  "model": "Atrybut jakości to cecha produktu. Wymaganie określa oczekiwany poziom tej cechy w danych warunkach. Przykładowe powiązania:\n• wymagania funkcjonalne dotyczą funkcjonalności;\n• wymagania czasowe dotyczą wydajności;\n• wymagania niezawodnościowe dotyczą wiarygodności;\n• ograniczenia, np. dotyczące platformy, mogą dotyczyć elastyczności.\n„95% odpowiedzi poniżej 2 s przy 100 jednoczesnych użytkownikach” to sprawdzalne wymaganie dotyczące wydajności.",
+  "type": "open",
+  "points": 1,
+  "criteria": [
+   "Atrybut jest cechą produktu, a wymaganie określa oczekiwany poziom tej cechy w danych warunkach."
+  ]
+ },
+ {
+  "id": "F10",
+  "originalId": 10,
+  "variant": "F",
+  "refs": [
+   10
+  ],
+  "question": "Czy dla każdego atrybutu jakości można wyznaczyć metrykę?",
+  "model": "Nie dla każdego atrybutu da się wyznaczyć bezpośrednią, obiektywną metrykę. Nawet cecha mierzalna, taka jak wydajność systemu, może wymagać kilku pomiarów. Można zmierzyć np.:\n• czas odpowiedzi — ile użytkownik czeka na wynik;\n• czas przetwarzania — jak długo trwa wykonanie całego zadania, np. przygotowanie raportu;\n• przepustowość — ile żądań system obsługuje na sekundę;\n• zużycie pamięci — ile pamięci zajmuje program podczas pracy;\n• wykorzystanie procesora — jaką część jego czasu zajmuje obsługa danego obciążenia.\nAby porównać wyniki, trzeba ustalić warunki pomiaru, np. liczbę jednoczesnych użytkowników. Satysfakcję trudniej mierzyć bezpośrednio. Można ją ocenić ankietą, ale przypisanie odpowiedziom liczb nie usuwa subiektywności ocen.",
+  "type": "open",
+  "points": 2,
+  "criteria": [
+   "Nie dla każdej cechy istnieje bezpośrednia, obiektywna metryka.",
+   "Niektóre atrybuty wymagają kilku pomiarów, a ankietowa ocena satysfakcji pozostaje subiektywna."
+  ]
+ },
+ {
+  "id": "F11",
+  "originalId": 11,
+  "variant": "F",
+  "refs": [
+   11
+  ],
+  "question": "Czym różnią się metryki jakościowe od miar?",
+  "model": "Metryka określa, co oceniamy, a miara określa, jak wyznaczamy tę ocenę: sposób obliczenia, skalę lub jednostkę.\nPrzykładowo oceniamy kompletność funkcjonalną, a jej miarą jest iloraz liczby zrealizowanych funkcji i liczby funkcji wymaganych. Wynik można wyrazić jako ułamek lub procent.\n• Należy odróżniać samą cechę, definicję wskaźnika, procedurę pomiaru i otrzymany wynik.\n• Metryki nie muszą mieć skali [0,1]; mogą być wyrażone np. czasem.",
+  "type": "open",
+  "points": 2,
+  "criteria": [
+   "W ujęciu opracowania wyjaśniam, że metryka określa, co oceniamy.",
+   "Wyjaśniam miarę jako sposób wyznaczenia oceny, skalę lub jednostkę; mogę zilustrować to przykładem."
+  ]
+ },
+ {
+  "id": "F12",
+  "originalId": 12,
+  "variant": "F",
+  "refs": [
+   12
+  ],
+  "question": "Jakie problemy występują przy pomiarach jakości?",
+  "model": "Przy pomiarach jakości występują m.in. następujące problemy:\n• Wiele cech naraz. Jedna liczba może ukryć słaby wynik w ważnym obszarze.\n• Subiektywność. Dwie osoby mogą inaczej ocenić tę samą cechę.\n• Brak punktu odniesienia. Trudno stwierdzić, czy wynik jest wystarczająco dobry.\n• Normalizacja. Żeby połączyć wyniki w różnych jednostkach, trzeba ustalić wspólną skalę.\n• Dobór wag. Zmiana znaczenia atrybutów może zmienić ocenę końcową.\n• Zebranie i interpretacja danych. Wiele pomiarów kosztuje czas, a długa ankieta może obniżyć rzetelność odpowiedzi.\nPytania tak/nie ułatwiają liczenie odpowiedzi, ale same nie zapewniają obiektywności.",
+  "type": "open",
+  "points": 2,
+  "criteria": [
+   "Subiektywność ocen, brak punktu odniesienia oraz dobór wag.",
+   "Trudności normalizacji, zbierania i interpretacji wielu danych."
+  ]
+ },
+ {
   "id": "F13",
   "originalId": 13,
   "variant": "F",
@@ -1349,6 +1546,25 @@
   ]
  },
  {
+  "id": "F15",
+  "originalId": 15,
+  "variant": "F",
+  "refs": [
+   15
+  ],
+  "question": "Co daje ocena jakości z użyciem modelu drzewa?",
+  "model": "Model drzewa pokazuje, jak oceny poszczególnych cech składają się na ocenę jakości. Pozwala:\n• rozłożyć ogólną jakość na konkretne atrybuty;\n• powiązać każdy atrybut z pomiarami;\n• nadać cechom wagi odpowiednie dla danego zastosowania;\n• porównać produkty według wspólnych kryteriów;\n• wskazać, którą cechę trzeba poprawić.\nOcena łączna może ukryć krytyczną słabość. Dlatego warto zachować wyniki składowe i oddzielnie sprawdzać wymagania obowiązkowe.",
+  "type": "open",
+  "points": 5,
+  "criteria": [
+   "Wyjaśniam rozłożenie ogólnej jakości na konkretne atrybuty.",
+   "Wskazuję powiązanie atrybutów z pomiarami.",
+   "Wyjaśniam możliwość nadania wag odpowiednich dla zastosowania.",
+   "Wskazuję porównywanie produktów lub lokalizowanie cech wymagających poprawy.",
+   "Zaznaczam, że ocena łączna może ukryć krytyczną słabość i trzeba sprawdzać składowe lub wymagania obowiązkowe."
+  ]
+ },
+ {
   "id": "F16",
   "originalId": 16,
   "variant": "F",
@@ -1364,6 +1580,22 @@
   ]
  },
  {
+  "id": "F17",
+  "originalId": 17,
+  "variant": "F",
+  "refs": [
+   17
+  ],
+  "question": "Czym różni się bezpieczeństwo systemu informatycznego od jego ochrony?",
+  "model": "• Bezpieczeństwo (safety) oznacza zapobieganie szkodom, które system może wyrządzić ludziom i otoczeniu.\n• Ochrona (security) dotyczy zabezpieczenia systemu i informacji przed nieuprawnionym dostępem i działaniem, przy zachowaniu dostępu dla osób uprawnionych.\nNiedopuszczenie do podania nadmiernej dawki promieniowania jest przykładem bezpieczeństwa. Zablokowanie nieuprawnionej zmiany tej dawki jest przykładem ochrony.\nKontrola dostępu jest tylko jednym z mechanizmów ochrony.",
+  "type": "open",
+  "points": 2,
+  "criteria": [
+   "Bezpieczeństwo (safety) ogranicza szkody, które system może wyrządzić ludziom i otoczeniu.",
+   "Ochrona (security) zabezpiecza system i informacje przed nieuprawnionym dostępem lub działaniem."
+  ]
+ },
+ {
   "id": "F18",
   "originalId": 18,
   "variant": "F",
@@ -1376,37 +1608,6 @@
   "points": 1,
   "criteria": [
    "Odróżniam dostosowanie istniejących możliwości przez konfigurację od zmiany lub dodawania funkcji przez modyfikację."
-  ]
- },
- {
-  "id": "F45",
-  "originalId": 45,
-  "variant": "F",
-  "refs": [
-   45
-  ],
-  "question": "Który poziom dojrzałości w CMM/CMMI oznacza wprowadzenie procesu zdefiniowanego i na czym to polega?",
-  "model": "Proces zdefiniowany to poziom 3 (Defined). Organizacja ma wspólny, udokumentowany standard procesów zarządczych i inżynierskich. Projekty dostosowują go do swoich potrzeb według zatwierdzonych zasad (tailoring). W praktyce oznacza to m.in.:\n• planowanie prac zgodnie z dostosowanym procesem projektu;\n• zbieranie doświadczeń z projektów i doskonalenie wspólnego standardu;\n• uzgadnianie wymagań i zobowiązań między zespołami;\n• koordynowanie zadań inżynierskich i dbanie o spójność ich wyników;\n• prowadzenie przeglądów wzajemnych w celu wykrywania defektów;\n• szkolenie pracowników do ról przewidzianych w procesie.",
-  "type": "open",
-  "points": 1,
-  "criteria": [
-   "Wskazuję poziom 3 oraz wspólny, udokumentowany standard organizacji dostosowywany do potrzeb projektów."
-  ]
- },
- {
-  "id": "F8",
-  "originalId": 8,
-  "variant": "F",
-  "refs": [
-   8
-  ],
-  "question": "Z jakich elementów składa się model „drzewa” jakości?",
-  "model": "Korzeniem drzewa jest ogólna jakość. Dzieli się ją na główne atrybuty, a każdy atrybut na szczegółowe cechy, które oceniamy za pomocą metryk. Przykłady gałęzi i należących do nich cech:\n• Funkcjonalność — np. kompletność wymaganych funkcji.\n• Wydajność — np. szybkość reakcji systemu.\n• Wiarygodność — np. odporność na błędy.\n• Satysfakcja — np. łatwość nauki obsługi.\n• Elastyczność — np. możliwość dostosowania konfiguracji.\nWagi określają znaczenie składowych. Ocenę atrybutu można obliczyć jako średnią ważoną A = Σ(w·M)/Σw, gdy suma wag jest dodatnia. Podział na gałęzie zależy od modelu jakości.",
-  "type": "open",
-  "points": 2,
-  "criteria": [
-   "Opisuję hierarchię od ogólnej jakości przez atrybuty do szczegółowych cech ocenianych metrykami.",
-   "Wyjaśniam rolę wag w znaczeniu składowych lub w obliczaniu oceny łącznej."
   ]
  },
  {
@@ -1426,6 +1627,106 @@
   ]
  },
  {
+  "id": "F20",
+  "originalId": 20,
+  "variant": "F",
+  "refs": [
+   20
+  ],
+  "question": "Dlaczego o jakość oprogramowania warto dbać od samego początku projektu?",
+  "model": "• Błędy wymagań i projektu mogą przechodzić do kodu oraz testów i powodować kolejne defekty.\n• Im później zostaną wykryte, tym więcej zależnych elementów trzeba poprawić i tym większy jest koszt naprawy.\nWczesne przeglądy, uzgodnienia wymagań i kontrola projektu ograniczają rozprzestrzenianie się błędów oraz liczbę defektów pozostających w gotowym produkcie.",
+  "type": "open",
+  "points": 2,
+  "criteria": [
+   "Błędy wymagań i projektu mogą powodować kolejne defekty w następnych etapach.",
+   "Późna naprawa obejmuje więcej zależnych elementów i zwykle kosztuje więcej."
+  ]
+ },
+ {
+  "id": "F21",
+  "originalId": 21,
+  "variant": "F",
+  "refs": [
+   21
+  ],
+  "question": "Jak wygląda kosztowność zmian w różnych fazach cyklu życia oprogramowania?",
+  "model": "Koszt zmian zwykle rośnie wraz z przechodzeniem od definiowania, przez opracowywanie, do utrzymywania oprogramowania.\nPrzykładowa proporcja względnych kosztów to 1 : 10 : 100.\n• Późna zmiana wymaga poprawienia większej liczby zależnych elementów. Konieczne są też testy regresyjne, wdrożenie poprawki, a czasem migracja danych.\n• Dokładne proporcje zależą od projektu i rodzaju zmiany.",
+  "type": "open",
+  "points": 1,
+  "criteria": [
+   "Koszt zwykle rośnie od definiowania przez opracowywanie do utrzymywania; 1 : 10 : 100 jest przykładową proporcją."
+  ]
+ },
+ {
+  "id": "F22",
+  "originalId": 22,
+  "variant": "F",
+  "refs": [
+   22
+  ],
+  "question": "Co to jest i co daje model wzmocnienia defektów?",
+  "model": "Model wzmocnienia defektów opisuje, jak defekty przechodzą między etapami wytwarzania. Uwzględnia defekty odziedziczone bez zmian, defekty powodujące kolejne błędy, defekty nowo wprowadzone oraz te usuwane dzięki kontroli.\nPozwala porównywać skuteczność i koszty kontroli prowadzonej na różnych etapach.\nW przykładowym obliczeniu kontrola dopiero podczas testów pozostawia 12 błędów przy koszcie 2177. Kontrola prowadzona w całym procesie pozostawia 3 błędy przy koszcie 693.\nWczesne wykrywanie ogranicza wzmocnienie defektów i koszt ich usuwania.",
+  "type": "open",
+  "points": 5,
+  "criteria": [
+   "Opisuję przechodzenie defektów między etapami wytwarzania.",
+   "Wyjaśniam, że część defektów powoduje kolejne błędy.",
+   "Uwzględniam defekty nowo wprowadzone lub usuwane dzięki kontroli.",
+   "Wyjaśniam możliwość porównania skuteczności i kosztów kontroli na różnych etapach.",
+   "Wskazuję, że wczesne wykrywanie ogranicza wzmocnienie defektów i koszt naprawy; mogę użyć przykładu liczbowego z opracowania."
+  ]
+ },
+ {
+  "id": "F23",
+  "originalId": 23,
+  "variant": "F",
+  "refs": [
+   23
+  ],
+  "question": "Dlaczego tradycyjna kontrola jakości produktu zawodzi w przypadku oprogramowania?",
+  "model": "• Kontrola gotowego produktu wykrywa błędy późno, gdy wadliwe wymagania i decyzje projektowe wpłynęły już na wiele elementów.\n• W oprogramowaniu defekt jest powielany w kolejnych kopiach, więc odrzucenie wadliwej kopii nie usuwa jego przyczyny.\nUsunięcie przyczyny wymaga poprawienia wymagań, projektu lub kodu.\nZapewnianie jakości powinno obejmować cały proces wytwarzania, a testy końcowe powinny być jednym z działań jakościowych.",
+  "type": "open",
+  "points": 1,
+  "criteria": [
+   "Defekty wykrywa się późno, a odrzucenie wadliwej kopii nie usuwa przyczyny powielanej w innych kopiach."
+  ]
+ },
+ {
+  "id": "F24",
+  "originalId": 24,
+  "variant": "F",
+  "refs": [
+   24
+  ],
+  "question": "Na czym polega polityka zapewniania jakości oprogramowania (SQA) w organizacji?",
+  "model": "SQA (Software Quality Assurance) to zaplanowane, systematyczne działania, które organizacja prowadzi przez cały proces wytwarzania:\n• ustala metody pracy inżynierskiej;\n• przeprowadza formalne przeglądy techniczne;\n• testuje oprogramowanie;\n• sprawdza przestrzeganie standardów;\n• kontroluje zmiany;\n• mierzy jakość produktu i przebieg prac;\n• zapisuje i raportuje wyniki.\nW ten sposób organizacja sprawdza zarówno jakość produktu z perspektywy klienta, jak i zgodność pracy z przyjętym procesem. SQA ogranicza ryzyko defektów.",
+  "type": "open",
+  "points": 5,
+  "criteria": [
+   "Opisuję SQA jako planowe, systematyczne działania przez cały proces wytwarzania.",
+   "Uwzględniam metody pracy inżynierskiej i sprawdzanie standardów.",
+   "Uwzględniam przeglądy techniczne i testowanie.",
+   "Uwzględniam kontrolę zmian oraz pomiary lub raportowanie wyników.",
+   "Wyjaśniam ocenę jakości produktu z perspektywy klienta i zgodności pracy z przyjętym procesem."
+  ]
+ },
+ {
+  "id": "F25",
+  "originalId": 25,
+  "variant": "F",
+  "refs": [
+   25
+  ],
+  "question": "Jakie są zadania zespołu zapewniania jakości (SQA) w organizacji?",
+  "model": "Zespół SQA ma następujące zadania:\n• ocenia powstający produkt z punktu widzenia klienta;\n• sprawdza zgodność pracy ze standardami i wymaganiami;\n• sprawdza, czy uczestnicy projektu wykonują przypisane im zadania jakościowe;\n• nadzoruje przeglądy, testowanie, kontrolę zmian i pomiary;\n• dokumentuje wyniki i zgłasza niezgodności zainteresowanym osobom;\n• przekazuje wyższemu kierownictwu problemy, których zespół projektowy nie może rozwiązać.\nZa jakość swojej pracy odpowiadają również wykonawcy i kierownictwo.",
+  "type": "open",
+  "points": 2,
+  "criteria": [
+   "Ocena produktu z perspektywy klienta oraz zgodności pracy ze standardami i wymaganiami.",
+   "Nadzór nad działaniami jakościowymi, dokumentowanie niezgodności i eskalowanie problemów."
+  ]
+ },
+ {
   "id": "F26",
   "originalId": 26,
   "variant": "F",
@@ -1439,6 +1740,25 @@
   "criteria": [
    "Wymieniam walkthrough i opisuję przejście przez produkt w logicznej kolejności.",
    "Wymieniam inspekcję i opisuję systematyczne sprawdzanie, np. według listy kontrolnej."
+  ]
+ },
+ {
+  "id": "F27",
+  "originalId": 27,
+  "variant": "F",
+  "refs": [
+   27
+  ],
+  "question": "Co oznacza kompleksowe zarządzanie jakością (TQM) w organizacji?",
+  "model": "TQM (Total Quality Management) angażuje całą organizację w spełnianie oczekiwań klientów przez cały cykl życia produktu. W praktyce oznacza to, że:\n• oczekiwania klientów wyznaczają cele jakościowe;\n• kierownictwo ustala kierunek działań i zapewnia środki;\n• każdy pracownik odpowiada za jakość swojej pracy;\n• organizacja analizuje i poprawia procesy, w których powstają błędy;\n• zespół zapobiega defektom już podczas wytwarzania;\n• decyzje o zmianach opiera się na pomiarach;\n• usprawnienia planuje się i wprowadza także podczas utrzymania produktu.\n„Zero defektów” wyraża cel tych działań.",
+  "type": "open",
+  "points": 5,
+  "criteria": [
+   "Opisuję orientację na oczekiwania klienta przez cały cykl życia produktu.",
+   "Uwzględniam udział całej organizacji i odpowiedzialność każdego za swoją pracę.",
+   "Opisuję rolę kierownictwa w ustalaniu kierunku i zapewnieniu środków.",
+   "Uwzględniam zapobieganie defektom oraz analizę i doskonalenie procesów.",
+   "Uwzględniam decyzje oparte na pomiarach lub ciągłe usprawnienia również podczas utrzymania."
   ]
  },
  {
@@ -1458,38 +1778,210 @@
   ]
  },
  {
-  "id": "F44",
-  "originalId": 44,
+  "id": "F29",
+  "originalId": 29,
   "variant": "F",
   "refs": [
-   44
+   29
   ],
-  "question": "Jak należy rozumieć dojrzałość procesu wytwarzania oprogramowania w sensie CMM/CMMI?",
-  "model": "Dojrzałość procesu określa, na ile organizacja potrafi powtarzać, kontrolować i doskonalić sposób wytwarzania oprogramowania. W reprezentacji stopniowanej CMMI kolejne poziomy oznaczają:\n• Początkowy — sposób pracy zależy głównie od osób i sytuacji.\n• Zarządzany — poszczególne projekty planują i kontrolują swoją pracę.\n• Zdefiniowany — projekty korzystają ze wspólnego standardu organizacji.\n• Zarządzany ilościowo — organizacja wykorzystuje pomiary do zarządzania procesami.\n• Optymalizowany — organizacja systematycznie doskonali procesy.\nStandardy, szkolenia i podział odpowiedzialności utrwalają sposób pracy mimo zmian personelu. Ułatwia to przewidywanie wyników projektów, ale nie gwarantuje bezbłędności produktu.",
+  "question": "Co oznacza odpowiedzialność kierownictwa za kompleksowe zarządzanie jakością (TQM) w organizacji?",
+  "model": "Kierownictwo odpowiada za warunki, w których pracownicy mogą osiągać wymaganą jakość. Do jego obowiązków należą:\n• ustalenie polityki i celów jakościowych;\n• określenie odpowiedzialności i uprawnień;\n• zapewnienie ludzi, czasu i środków;\n• zorganizowanie doskonalenia procesów;\n• okresowy przegląd wyników i działania systemu jakości;\n• rozwiązywanie problemów, na które pojedynczy zespół nie ma wpływu.",
   "type": "open",
   "points": 2,
   "criteria": [
-   "Opisuję zdolność organizacji do powtarzania, kontrolowania i doskonalenia procesu.",
-   "Wyjaśniam utrwalenie procesu przez standardy, role lub szkolenia i mniejszą zależność od osób; nie utożsamiam dojrzałości z bezbłędnością produktu."
+   "Kierownictwo ustala politykę, cele, role i zapewnia środki potrzebne do jakościowej pracy.",
+   "Kierownictwo nadzoruje wyniki, organizuje doskonalenie i rozwiązuje problemy poza zakresem pojedynczego zespołu."
   ]
  },
  {
-  "id": "F4",
-  "originalId": 4,
+  "id": "F30",
+  "originalId": 30,
   "variant": "F",
   "refs": [
-   4
+   30
   ],
-  "question": "Jakie były źródłowe przyczyny wypadków z systemem do radioterapii Therac-25 w połowie lat ’80 XX wieku w USA i Kanadzie (błędy użytkowników, programistów, konstruktorów, projektantów)?",
-  "model": "Wypadki Therac-25 miały przyczyny techniczne i organizacyjne.\n• Konstrukcja. Usunięto część niezależnych blokad sprzętowych i powierzono ochronę pacjenta programowi.\n• Synchronizacja. Po szybkiej korekcie parametrów ekran mógł pokazywać nowy tryb, choć urządzenie nadal było ustawione inaczej.\n• Błąd licznika. Co 256 przebiegów zmienna Class3 przyjmowała wartość zero. Program mógł wtedy pominąć kontrolę położenia kolimatora.\n• Interfejs. Niejasne komunikaty i mylące wskazania dawki utrudniały ocenę sytuacji. Operator mógł ponowić zabieg po błędzie.\n• Weryfikacja. Analiza bezpieczeństwa skupiała się na sprzęcie, a testy oprogramowania nie ujawniły niebezpiecznych przebiegów.\n• Reakcja na wypadki. Wcześniejsze zdarzenia niedostatecznie dokumentowano i analizowano.\nDziałanie operatora mogło uruchomić wadliwy scenariusz. Projekt urządzenia powinien był w takiej sytuacji zablokować emisję.",
+  "question": "Czy kierownictwo organizacji może przenieść odpowiedzialność za kompleksowe zarządzanie jakością (TQM) na niższy szczebel zarządzania?",
+  "model": "Kierownictwo nie może przenieść swojej nadrzędnej odpowiedzialności za jakość na niższy szczebel.\n• Może jednak delegować zadania i uprawnienia.\n• Nadal odpowiada za politykę, cele, zasoby, nadzór i skuteczność systemu zarządzania jakością.\nPrzekazanie zadań na niższy szczebel nie zwalnia go z oceny wyników i organizowania doskonalenia.",
+  "type": "open",
+  "points": 1,
+  "criteria": [
+   "Może delegować zadania i uprawnienia, lecz zachowuje nadrzędną odpowiedzialność za jakość."
+  ]
+ },
+ {
+  "id": "F31",
+  "originalId": 31,
+  "variant": "F",
+  "refs": [
+   31
+  ],
+  "question": "Jak w praktyce zrealizować w organizacji zasadę TQM „podejmowania decyzji w oparciu o fakty”?",
+  "model": "Decyzja oparta na faktach powinna wynikać z pomiarów, a jej skuteczność trzeba sprawdzić po wdrożeniu.\n• Określić problem i mierzalny cel.\n• Ustalić punkt odniesienia i zebrać porównywalne dane, np. liczbę i rodzaj reklamacji.\n• Przeanalizować możliwe przyczyny problemu.\n• Wybrać i wdrożyć usprawnienie.\n• Powtórzyć pomiar, ocenić skutki i udokumentować decyzję.\nKorelacja nie rozstrzyga przyczyny. Dłuższa inspekcja może ujawnić więcej błędów, ale znalezienie wielu błędów może też wydłużyć inspekcję.",
   "type": "open",
   "points": 5,
   "criteria": [
-   "Wskazuję problem konstrukcyjny: brak części niezależnych blokad sprzętowych lub nadmierne poleganie na oprogramowaniu.",
-   "Opisuję konkretny defekt programu, np. synchronizacji lub licznika.",
-   "Opisuję problem interfejsu, komunikatów lub wskazań dawki.",
-   "Wskazuję niedostateczną analizę bezpieczeństwa, weryfikację lub reakcję na wcześniejsze zdarzenia.",
-   "Wyjaśniam, że operator mógł wyzwolić scenariusz, ale system powinien blokować niebezpieczne działanie; przyczyny były techniczne i organizacyjne."
+   "Określam problem i mierzalny cel.",
+   "Ustalam punkt odniesienia i zbieram porównywalne dane.",
+   "Analizuję możliwe przyczyny, nie utożsamiając samej korelacji z przyczynowością.",
+   "Wybieram i wdrażam usprawnienie wynikające z danych.",
+   "Powtarzam pomiar, oceniam skuteczność i dokumentuję decyzję."
+  ]
+ },
+ {
+  "id": "F32",
+  "originalId": 32,
+  "variant": "F",
+  "refs": [
+   32
+  ],
+  "question": "Jakie mechanizmy w oprogramowaniu się stosuje dla zapewnienia łatwości użycia?",
+  "model": "Łatwość użycia oznacza, że użytkownik może wykonać zadanie i poradzić sobie z pomyłką. Pomagają w tym:\n• Spójny interfejs. Te same polecenia i pola wyglądają podobnie w całym programie.\n• Zrozumiałe etykiety i podpowiedzi. Użytkownik wie, co wpisać i do czego służy przycisk.\n• Odpowiednie jednostki i formaty. Dane można odczytać bez samodzielnego przeliczania.\n• Informacja o stanie. Program pokazuje nazwę otwartego dokumentu i postęp długiej operacji.\n• Podgląd wyniku. Użytkownik może obejrzeć dokument przed wydrukiem.\n• Walidacja i komunikaty błędów. Program wskazuje błędną wartość i podpowiada, jak ją poprawić.\n• Cofanie zmian i odzyskiwanie danych. Użytkownik może naprawić skutki pomyłki.\nSkuteczność tych rozwiązań sprawdza się podczas wykonywania rzeczywistych zadań.",
+  "type": "open",
+  "points": 1,
+  "criteria": [
+   "Spójny interfejs, zrozumiałe etykiety, informacja o stanie, walidacja i możliwość cofania zmian."
+  ]
+ },
+ {
+  "id": "F33",
+  "originalId": 33,
+  "variant": "F",
+  "refs": [
+   33
+  ],
+  "question": "Jakie mechanizmy w oprogramowaniu się stosuje dla zapewnienia łatwości nauki?",
+  "model": "Łatwość nauki oznacza, że nowy użytkownik szybko opanowuje obsługę programu. Pomagają w tym:\n• Znane konwencje interfejsu — polecenia działają podobnie jak w innych programach tej klasy.\n• Wprowadzenie przy pierwszym użyciu — pokazuje podstawowe możliwości programu.\n• Pomoc i podpowiedzi — wyjaśniają znaczenie menu i przycisków w chwili, gdy są potrzebne.\n• Szablony — pozwalają wykonać pierwsze zadanie od gotowego wzoru.\n• Dokumenty przykładowe — pokazują, jaki wynik można uzyskać.\n• Demonstracje i samouczki — prowadzą użytkownika przez kolejne czynności.\n• Dostosowanie do poziomu użytkownika — początkujący otrzymuje więcej wskazówek.\nŁatwość nauki można ocenić, mierząc czas potrzebny do samodzielnego opanowania funkcji.",
+  "type": "open",
+  "points": 1,
+  "criteria": [
+   "Znane konwencje, podpowiedzi, szablony, przykłady i samouczki."
+  ]
+ },
+ {
+  "id": "F34",
+  "originalId": 34,
+  "variant": "F",
+  "refs": [
+   34
+  ],
+  "question": "Jakie mechanizmy w oprogramowaniu się stosuje dla zapewnienia operatywności?",
+  "model": "Operatywność dotyczy tego, jak sprawnie użytkownik wykonuje znane mu zadania. Zwiększają ją:\n• Menu kontekstowe z poleceniami dla wybranego obiektu.\n• Przyciski na pasku narzędzi zapewniające szybki dostęp do częstych poleceń.\n• Skróty klawiszowe ograniczające liczbę kroków.\n• Dostosowanie menu, przycisków i skrótów do sposobu pracy użytkownika.\n• Podpowiedzi przy wprowadzaniu danych ułatwiające wybór wartości.\n• Powtarzanie i grupowanie operacji, np. zmiana kilku rekordów naraz.\n• Automatyzacja powtarzalnych czynności.\nŁatwość nauki dotyczy czasu opanowania funkcji, a operatywność — sprawności późniejszej pracy.",
+  "type": "open",
+  "points": 1,
+  "criteria": [
+   "Skróty, menu kontekstowe, grupowanie operacji i automatyzacja znanych zadań."
+  ]
+ },
+ {
+  "id": "F35",
+  "originalId": 35,
+  "variant": "F",
+  "refs": [
+   35
+  ],
+  "question": "Jakie mechanizmy w oprogramowaniu się stosuje dla zapewnienia elastyczności w zakresie funkcjonalnym?",
+  "model": "Elastyczność funkcjonalna pozwala rozszerzać możliwości programu. Przykładowe mechanizmy to:\n• Makra — użytkownik nagrywa sekwencję działań do ponownego wykonania.\n• Własne funkcje i skrypty — użytkownik definiuje nowe operacje.\n• Własne polecenia w interfejsie — skrypt można wywołać z menu lub przyciskiem.\n• Dodatki (add-ins) — użytkownik instaluje rozszerzenie napisane przez innego autora.\n• Osadzanie obiektów — dokument zawiera obiekt obsługiwany przez inną aplikację.\n• Moduły — komponent można doinstalować lub wykorzystać ponownie w innym programie.\nKonfiguracja zmienia ustawienia istniejącej funkcji. Rozszerzenie dodaje nową możliwość.",
+  "type": "open",
+  "points": 2,
+  "criteria": [
+   "Makra, własne funkcje i skrypty dodające nowe operacje.",
+   "Dodatki, moduły i osadzanie obiektów obsługiwanych przez inne aplikacje."
+  ]
+ },
+ {
+  "id": "F36",
+  "originalId": 36,
+  "variant": "F",
+  "refs": [
+   36
+  ],
+  "question": "Jakie jest znaczenie modelu ISO/IEC 9126 w praktyce?",
+  "model": "ISO/IEC 9126 daje wspólny sposób opisywania wymagań, doboru pomiarów i porównywania produktów. Do oceny jakości wewnętrznej i zewnętrznej służy sześć charakterystyk:\n• Funkcjonalność — np. poprawność wyników.\n• Wiarygodność (reliability, czyli niezawodność) — np. zdolność odzyskania sprawności po awarii.\n• Użyteczność — np. łatwość nauki obsługi.\n• Efektywność — np. czas odpowiedzi i zużycie zasobów.\n• Utrzymywalność — np. łatwość wprowadzania i testowania zmian.\n• Przenośność — np. łatwość instalacji w innym środowisku.\nOsobno ocenia się jakość użytkową przez skuteczność i produktywność pracy, bezpieczeństwo i satysfakcję. W praktyce trzeba dobrać miary i skale do celu oceny oraz uwzględnić koszt zbierania danych.\nTo model historyczny. ISO/IEC 9126-1:2001 zastąpiono przez ISO/IEC 25010:2011.",
+  "type": "open",
+  "points": 2,
+  "criteria": [
+   "Wyjaśniam wspólny model opisu cech, wymagań, pomiarów lub porównywania produktów.",
+   "Wskazuję dobór miar do celu lub rozróżnienie jakości wewnętrznej, zewnętrznej i użytkowej; podaję trafne charakterystyki modelu."
+  ]
+ },
+ {
+  "id": "F37",
+  "originalId": 37,
+  "variant": "F",
+  "refs": [
+   37
+  ],
+  "question": "Skąd zdobyć dane pomiarowe dla metryk wewnętrznych, zewnętrznych i użytkowych w modelu ISO/IEC 9126?",
+  "model": "• Dane do metryk wewnętrznych pochodzą ze specyfikacji wymagań, kodu źródłowego i dokumentacji. Pomocniczo można korzystać z zapisanych wyników testów; ocena dotyczy własności produktu.\n• Dane do metryk zewnętrznych pochodzą ze specyfikacji wymagań, dokumentacji i raportów z testów. Opisują zachowanie działającego programu w określonych warunkach.\n• Dane do metryk użytkowych pochodzą z raportów z obserwacji użytkowników, monitorowania użycia i kwestionariuszy. Opisują wykonywanie zadań oraz satysfakcję użytkowników.\nPrzy każdym pomiarze trzeba określić wersję produktu, warunki i kontekst oceny.",
+  "type": "open",
+  "points": 2,
+  "criteria": [
+   "Wewnętrzne: kod i dokumentacja; zewnętrzne: dane z działania programu i raporty z testów.",
+   "Użytkowe: obserwacje pracy użytkowników, monitorowanie użycia i kwestionariusze."
+  ]
+ },
+ {
+  "id": "F38",
+  "originalId": 38,
+  "variant": "F",
+  "refs": [
+   38
+  ],
+  "question": "W jaki sposób zapewnić dane do pomiaru procesów w inżynierii oprogramowania?",
+  "model": "Najpierw trzeba określić cel pomiarów, metryki, sposób zapisu danych i osoby odpowiedzialne. Po pomiarze próbnym zespół regularnie gromadzi i analizuje zapisy, m.in.:\n• wyniki testów — co sprawdzono i z jakim wynikiem;\n• raporty problemowe — jakie defekty zgłoszono;\n• żądania zmian — co i dlaczego trzeba zmienić;\n• raporty z audytów — jakie niezgodności stwierdzono;\n• protokoły z przeglądów i inspekcji — jakie błędy wykryto i ile pracy wymagała kontrola;\n• ewidencję pracy i kosztów — ile czasu i środków pochłonęły działania.\nW zbieraniu danych pomagają systemy zgłoszeń, repozytoria i automatyczne raporty. Zapisy muszą być kompletne, porównywalne, chronione i możliwe do odczytania po czasie.",
+  "type": "open",
+  "points": 5,
+  "criteria": [
+   "Określam cel, metryki, sposób zapisu i odpowiedzialność za dane.",
+   "Wskazuję wyniki testów lub raporty problemowe jako źródło.",
+   "Wskazuję żądania zmian, audyty, przeglądy lub inspekcje jako źródło.",
+   "Uwzględniam ewidencję pracy i kosztów albo narzędzia systematycznego zbierania danych.",
+   "Dbam o kompletność, porównywalność, ochronę lub trwałą dostępność zapisów i ich regularną analizę."
+  ]
+ },
+ {
+  "id": "F39",
+  "originalId": 39,
+  "variant": "F",
+  "refs": [
+   39
+  ],
+  "question": "Czy metryki zorientowane na rozmiar kodu są wiarygodne?",
+  "model": "Metryki oparte na liczbie linii kodu (LOC/KLOC) są użyteczne przy porównywaniu podobnych projektów, jeśli obowiązują te same zasady liczenia.\n• Po implementacji łatwo policzyć linie kodu.\n• Rozmiar kodu można wykorzystać w modelach szacowania kosztów i pracochłonności.\n• Wynik zależy od języka i stylu programowania.\n• Zwięzły program może uzyskać gorszy wskaźnik oparty na LOC mimo dobrej jakości.\n• Porównania są szczególnie trudne dla języków nieproceduralnych.\n• Przed implementacją liczbę linii trzeba oszacować, więc wynik zależy od trafności prognozy.\nDefekty/KLOC to liczba wykrytych defektów na tysiąc linii. Częstość awarii podczas użytkowania wymaga odrębnego pomiaru.",
+  "type": "open",
+  "points": 1,
+  "criteria": [
+   "Są użyteczne dla podobnych projektów i wspólnych zasad, ale zależą od języka, stylu i trafności oszacowań."
+  ]
+ },
+ {
+  "id": "F40",
+  "originalId": 40,
+  "variant": "F",
+  "refs": [
+   40
+  ],
+  "question": "Czy punkty funkcjonalne rzeczywiście mierzą funkcjonalność systemu?",
+  "model": "Punkty mierzą rozmiar funkcjonalny systemu. W metodzie Function Points zlicza się elementy pięciu kategorii i uwzględnia ich złożoność:\n• wejścia od użytkownika;\n• wyjścia przekazywane użytkownikowi;\n• zapytania;\n• pliki;\n• interfejsy zewnętrzne.\nMetoda Feature Points uwzględnia dodatkowo algorytmy. Obie metody można stosować przed napisaniem kodu. Wynik jest mniej zależny od języka niż LOC, ale dobór wag bywa subiektywny, a dane są trudniejsze do zebrania.\nLiczba punktów nie mówi, czy funkcje działają poprawnie, odpowiadają potrzebom użytkowników i są łatwe w obsłudze.",
+  "type": "open",
+  "points": 1,
+  "criteria": [
+   "Mierzą rozmiar funkcjonalny, ale nie dowodzą poprawności, przydatności lub łatwości obsługi funkcji."
+  ]
+ },
+ {
+  "id": "F41",
+  "originalId": 41,
+  "variant": "F",
+  "refs": [
+   41
+  ],
+  "question": "Jakie znaczenie mają metryki złożoności oprogramowania?",
+  "model": "Metryki złożoności opisują strukturę kodu. Pomagają wskazać moduły trudniejsze do zrozumienia, przetestowania lub utrzymania.\n• Metryki Halsteada opierają się na liczbie operatorów i operandów w kodzie.\n• Złożoność McCabe’a podaje liczbę liniowo niezależnych ścieżek w grafie przepływu sterowania. Dla pojedynczego połączonego grafu z jednym wejściem i wyjściem V(G) = E − N + 2, gdzie E to liczba krawędzi, a N to liczba węzłów.\n• Indeks utrzymywalności łączy miary Halsteada i McCabe’a z rozmiarem kodu (LOC).\nWysoki wynik może wskazać moduł wymagający przeglądu. Sam wynik nie wyznacza dokładnego czasu pracy ani liczby błędów.",
+  "type": "open",
+  "points": 1,
+  "criteria": [
+   "Opisują strukturę kodu i pomagają wskazać moduły trudniejsze do rozumienia, testowania lub utrzymania."
   ]
  },
  {
@@ -1512,6 +2004,169 @@
   ]
  },
  {
+  "id": "F43",
+  "originalId": 43,
+  "variant": "F",
+  "refs": [
+   43
+  ],
+  "question": "Kiedy warto stosować metodę Saaty’ego (Analytic Hierarchy Process) do oceny jakości?",
+  "model": "AHP warto stosować, gdy porównujemy kilka systemów według wielu kryteriów o różnym znaczeniu, a trudno ocenić jakość w skali bezwzględnej. Łatwiej wtedy porównać dwa warianty pod jednym względem, np. wskazać, który system szybciej reaguje.\n• Ułożyć kryteria w hierarchię i porównać je parami, aby ustalić ich wagi.\n• Dla każdego kryterium porównać systemy parami.\n• Połączyć oceny cząstkowe z wagami, aby uzyskać ranking zgodny z przyjętymi priorytetami.\nWynik zależy od ocen osób wykonujących porównania. Trzeba sprawdzić spójność ocen, a wymagania obowiązkowe rozpatrzyć osobno.",
+  "type": "open",
+  "points": 1,
+  "criteria": [
+   "Przy porównywaniu systemów według wielu kryteriów o różnym znaczeniu, zwłaszcza gdy łatwiej oceniać parami niż bezwzględnie."
+  ]
+ },
+ {
+  "id": "F44",
+  "originalId": 44,
+  "variant": "F",
+  "refs": [
+   44
+  ],
+  "question": "Jak należy rozumieć dojrzałość procesu wytwarzania oprogramowania w sensie CMM/CMMI?",
+  "model": "Dojrzałość procesu określa, na ile organizacja potrafi powtarzać, kontrolować i doskonalić sposób wytwarzania oprogramowania. W reprezentacji stopniowanej CMMI kolejne poziomy oznaczają:\n• Początkowy — sposób pracy zależy głównie od osób i sytuacji.\n• Zarządzany — poszczególne projekty planują i kontrolują swoją pracę.\n• Zdefiniowany — projekty korzystają ze wspólnego standardu organizacji.\n• Zarządzany ilościowo — organizacja wykorzystuje pomiary do zarządzania procesami.\n• Optymalizowany — organizacja systematycznie doskonali procesy.\nStandardy, szkolenia i podział odpowiedzialności utrwalają sposób pracy mimo zmian personelu. Ułatwia to przewidywanie wyników projektów, ale nie gwarantuje bezbłędności produktu.",
+  "type": "open",
+  "points": 2,
+  "criteria": [
+   "Opisuję zdolność organizacji do powtarzania, kontrolowania i doskonalenia procesu.",
+   "Wyjaśniam utrwalenie procesu przez standardy, role lub szkolenia i mniejszą zależność od osób; nie utożsamiam dojrzałości z bezbłędnością produktu."
+  ]
+ },
+ {
+  "id": "F45",
+  "originalId": 45,
+  "variant": "F",
+  "refs": [
+   45
+  ],
+  "question": "Który poziom dojrzałości w CMM/CMMI oznacza wprowadzenie procesu zdefiniowanego i na czym to polega?",
+  "model": "Proces zdefiniowany to poziom 3 (Defined). Organizacja ma wspólny, udokumentowany standard procesów zarządczych i inżynierskich. Projekty dostosowują go do swoich potrzeb według zatwierdzonych zasad (tailoring). W praktyce oznacza to m.in.:\n• planowanie prac zgodnie z dostosowanym procesem projektu;\n• zbieranie doświadczeń z projektów i doskonalenie wspólnego standardu;\n• uzgadnianie wymagań i zobowiązań między zespołami;\n• koordynowanie zadań inżynierskich i dbanie o spójność ich wyników;\n• prowadzenie przeglądów wzajemnych w celu wykrywania defektów;\n• szkolenie pracowników do ról przewidzianych w procesie.",
+  "type": "open",
+  "points": 1,
+  "criteria": [
+   "Wskazuję poziom 3 oraz wspólny, udokumentowany standard organizacji dostosowywany do potrzeb projektów."
+  ]
+ },
+ {
+  "id": "F46",
+  "originalId": 46,
+  "variant": "F",
+  "refs": [
+   46
+  ],
+  "question": "Czym różni się reprezentacja stopniowana CMMI od reprezentacji ciągłej?",
+  "model": "• Reprezentacja stopniowana ocenia dojrzałość organizacji względem wymaganych zestawów obszarów procesowych. Uzyskanie poziomu wymaga spełnienia całego przypisanego mu zestawu wymagań, z zachowaniem wymagań niższych poziomów.\n• Reprezentacja ciągła pozwala osobno oceniać zdolność poszczególnych obszarów procesowych. Wyniki tworzą profil, a organizacja może ustalać własne priorytety doskonalenia.\nW CMMI 1.1 obowiązują następujące poziomy:\nStopniowana: dojrzałość | Ciągła: zdolność obszaru\nBrak poziomu 0 | 0 Incomplete\n1 Initial | 1 Performed\n2 Managed | 2 Managed\n3 Defined | 3 Defined\n4 Quantitatively Managed | 4 Quantitatively Managed\n5 Optimizing | 5 Optimizing",
+  "type": "open",
+  "points": 2,
+  "criteria": [
+   "Stopniowana ocenia dojrzałość organizacji wobec wymaganych zestawów obszarów procesowych.",
+   "Ciągła pozwala osobno oceniać zdolność obszarów i tworzyć profil ich rozwoju."
+  ]
+ },
+ {
+  "id": "F47",
+  "originalId": 47,
+  "variant": "F",
+  "refs": [
+   47
+  ],
+  "question": "Co oznacza wprowadzenie polityki jakościowej w organizacji wg ISO 9000?",
+  "model": "Wprowadzenie polityki jakościowej oznacza, że kierownictwo przekłada cele jakościowe na zasady codziennej pracy. W tym celu:\n• dokumentuje politykę i cele związane z potrzebami klienta;\n• ustala, kto za co odpowiada i jakie ma uprawnienia;\n• zapewnia ludzi, czas i środki;\n• wdraża wymagania systemu jakości i dba o ich przestrzeganie;\n• okresowo przegląda wyniki i decyduje o usprawnieniach.\nW wydaniach z 2015 r. ISO 9000 opisuje podstawy i terminologię, a ISO 9001 określa wymagania dotyczące systemu zarządzania jakością.",
+  "type": "open",
+  "points": 5,
+  "criteria": [
+   "Uwzględniam udokumentowaną politykę i cele związane z potrzebami klienta.",
+   "Opisuję określenie odpowiedzialności i uprawnień.",
+   "Uwzględniam zapewnienie ludzi, czasu lub środków.",
+   "Opisuję wdrożenie wymagań systemu jakości i ich stosowanie w codziennej pracy.",
+   "Uwzględniam okresowy przegląd wyników i decyzje o usprawnieniach."
+  ]
+ },
+ {
+  "id": "F48",
+  "originalId": 48,
+  "variant": "F",
+  "refs": [
+   48
+  ],
+  "question": "Co to jest i co obejmuje księga jakości?",
+  "model": "Księga jakości opisuje system zarządzania jakością organizacji. Przykładowa księga obejmuje:\n• zakres systemu i podstawy normatywne;\n• politykę i cele jakościowe;\n• strukturę organizacji, obowiązki i uprawnienia;\n• nadzór nad dokumentami i zapisami;\n• odpowiedzialność kierownictwa i zarządzanie zasobami;\n• realizację wyrobu, od rozpoznania wymagań klienta po wytwarzanie;\n• pomiary, analizę niezgodności i doskonalenie.\nKsięga może odsyłać do procedur i rejestrów, np. rejestru reklamacji. Starsze wydania ISO 9001 wymagały księgi jakości. Wydanie z 2015 r. wymaga udokumentowanych informacji, ale pozostawia organizacji wybór formy.",
+  "type": "open",
+  "points": 2,
+  "criteria": [
+   "Wyjaśniam, że księga opisuje system zarządzania jakością organizacji.",
+   "Podaję co najmniej trzy składniki, np. zakres, politykę i cele, role, nadzór nad dokumentami, procesy realizacji, pomiary i doskonalenie."
+  ]
+ },
+ {
+  "id": "F49",
+  "originalId": 49,
+  "variant": "F",
+  "refs": [
+   49
+  ],
+  "question": "Czy wprowadzenie ISO 9001 zapewnia zauważalną poprawę jakości produktów?",
+  "model": "Samo wdrożenie ISO 9001 nie gwarantuje poprawy jakości produktów.\n• ISO 9001 porządkuje system zarządzania jakością i może zwiększyć powtarzalność wyników.\n• Poprawa jakości produktów zależy od rzeczywistego stosowania i doskonalenia procesów. Trzeba ją potwierdzić pomiarami cech produktu oraz wyników jego użytkowania.\nSam certyfikat ani dokumentacja zgodna z normą nie gwarantują wysokiej jakości lub bezbłędności produktu.",
+  "type": "open",
+  "points": 1,
+  "criteria": [
+   "Samo wdrożenie nie gwarantuje poprawy; zależy ona od rzeczywistego stosowania i doskonalenia procesów i wymaga pomiarów."
+  ]
+ },
+ {
+  "id": "F50",
+  "originalId": 50,
+  "variant": "F",
+  "refs": [
+   50
+  ],
+  "question": "Z jakich powodów sygnatariusze manifestu zwinności odrzucili klasyczne metodyki wytwarzania?",
+  "model": "W podejściu klasycznym dostrzegano pięć problemów:\n• przygotowanie dokumentacji pochłaniało dużo czasu;\n• działające oprogramowanie trafiało do klienta późno;\n• trudno było określić wszystkie wymagania na początku projektu;\n• podczas implementacji zespół tracił kontakt z użytkownikiem;\n• mimo przestrzegania procedur końcowa jakość pozostawała niepewna.\nDlatego Manifest przyznaje większe znaczenie ludziom i ich współpracy, działającemu oprogramowaniu, współpracy z klientem i reagowaniu na zmiany. Nadal uznaje wartość dokumentacji, procesów, narzędzi, umów i planowania.",
+  "type": "open",
+  "points": 2,
+  "criteria": [
+   "Dostrzegano późne dostarczanie działającego produktu i nadmierny koszt dokumentowania.",
+   "Trudno było ustalić wszystkie wymagania z góry i utrzymać kontakt z użytkownikiem, a procedury nie gwarantowały jakości."
+  ]
+ },
+ {
+  "id": "F51",
+  "originalId": 51,
+  "variant": "F",
+  "refs": [
+   51
+  ],
+  "question": "Czy motywacje ludzi i zaufanie do nich są wystarczające dla sukcesu projektu informatycznego?",
+  "model": "Sama motywacja i zaufanie nie wystarczą. Nawet zaangażowany zespół może źle rozpoznać wymagania lub przeoczyć ryzyko. Potrzebuje również:\n• kompetencji technicznych i szkoleń;\n• czasu, zasobów i odpowiednich warunków pracy;\n• regularnego kontaktu z klientem i użytkownikami;\n• dobrego przepływu informacji i utrwalania wiedzy;\n• wspólnych standardów projektowania, kodowania i testowania;\n• regularnego sprawdzania, co w sposobie pracy trzeba poprawić.",
+  "type": "open",
+  "points": 2,
+  "criteria": [
+   "Nie; potrzebne są również kompetencje, zasoby i odpowiednie warunki pracy.",
+   "Nie; potrzebne są także kontakt z użytkownikami, standardy i utrwalanie wiedzy."
+  ]
+ },
+ {
+  "id": "F52",
+  "originalId": 52,
+  "variant": "F",
+  "refs": [
+   52
+  ],
+  "question": "Czy utożsamianie jakości oprogramowania z zadowoleniem klienta w metodykach zwinnych jest słuszne?",
+  "model": "Zadowolenie klienta jest jednym z aspektów jakości. Klient może dobrze ocenić produkt po demonstracji, choć produkt nie spełnia wymagań bezpieczeństwa lub potrzeb użytkowników końcowych. W omawianym ujęciu modelu Kano trzeba uwzględnić trzy grupy wymagań:\n• Wypowiedziane — klient zna je i przekazuje wykonawcy.\n• Znane, lecz niewypowiedziane — klient zakłada, że produkt je spełni.\n• Jeszcze nierozpoznane — klient sam nie potrafi ich wskazać na początku.\nJakość trzeba więc ocenić również podczas rzeczywistej pracy z systemem.",
+  "type": "open",
+  "points": 5,
+  "criteria": [
+   "Wyjaśniam, że zadowolenie klienta jest jednym z aspektów jakości i samo nie wystarcza.",
+   "Uwzględniam wymagania wypowiedziane.",
+   "Uwzględniam wymagania znane, lecz niewypowiedziane.",
+   "Uwzględniam potrzeby jeszcze nierozpoznane.",
+   "Wskazuję ocenę podczas rzeczywistej pracy, potrzeby użytkowników końcowych lub wymagania bezpieczeństwa niezależne od samego zadowolenia."
+  ]
+ },
+ {
   "id": "F53",
   "originalId": 53,
   "variant": "F",
@@ -1529,6 +2184,154 @@
    "Uwzględniam znajomość i stosowanie standardów pracy inżynierskiej.",
    "Uwzględniam oba rodzaje weryfikacji: rygorystyczne testy jednostkowe oraz testy akceptacyjne z użytkownikami przed rozpowszechnieniem."
   ]
+ },
+ {
+  "id": "F54",
+  "originalId": 54,
+  "variant": "F",
+  "refs": [
+   54
+  ],
+  "question": "W jaki sposób problemy z klientem w metodykach zwinnych mogą wpłynąć negatywnie na jakość produktu?",
+  "model": "Gdy kontakt z klientem jest nieregularny, zespół traci możliwość sprawdzenia wymagań i uzyskania informacji zwrotnej. Skutki pojawiają się na kilku etapach:\n• Klient może żądać ustalenia zakresu, terminu i ceny, zanim zespół pozna szczegóły.\n• Podczas analizy nie udaje się wyjaśnić wyjątków i niejednoznacznych wymagań.\n• Przy planowaniu brakuje decyzji, które funkcje są najważniejsze.\n• Podczas implementacji zespół czeka na decyzję albo buduje funkcję na podstawie własnych założeń.\n• Po wydaniu błędne założenia wychodzą na jaw z opóźnieniem, czasem dopiero podczas pracy użytkowników.\nRezultatem mogą być zbędne funkcje, pominięte scenariusze, kosztowne poprawki i opóźnienia.",
+  "type": "open",
+  "points": 5,
+  "criteria": [
+   "Opisuję utratę możliwości wyjaśniania wymagań lub wyjątków podczas analizy.",
+   "Wskazuję problem ustalania zakresu, priorytetów lub celów wydań.",
+   "Opisuję oczekiwanie na decyzje lub budowanie funkcji na własnych założeniach.",
+   "Opisuję opóźnioną informację zwrotną lub wykrycie problemów dopiero po wydaniu.",
+   "Wskazuję skutki: zbędne funkcje, pominięte scenariusze, kosztowne poprawki lub opóźnienia."
+  ]
+ },
+ {
+  "id": "F55",
+  "originalId": 55,
+  "variant": "F",
+  "refs": [
+   55
+  ],
+  "question": "Skąd mogą wynikać problemy z klientem w metodykach zwinnych?",
+  "model": "Problemy we współpracy z klientem mogą wynikać z kilku przyczyn:\n• Niezrozumienie roli. Klient zakłada, że wystarczy przekazać wymagania na początku.\n• Odległość i różne strefy czasowe. Trudniej szybko wyjaśnić wątpliwości.\n• Niski priorytet projektu. Przedstawiciel klienta ma za mało czasu na bieżącą współpracę.\n• Procedury i umowa. Organizacja może oczekiwać z góry ustalonego zakresu, a warunki umowy mogą osłabiać motywację do udziału w kolejnych wydaniach.\n• Brak wiedzy lub uprawnień. Wyznaczona osoba nie zna szczegółów pracy albo nie może podjąć decyzji.\n• Różne potrzeby. Oczekiwania przedstawiciela odbiegają od tego, czego potrzebują użytkownicy.\nSama stała cena nie przesądza o zaangażowaniu klienta.",
+  "type": "open",
+  "points": 2,
+  "criteria": [
+   "Brak czasu, wiedzy, uprawnień lub zrozumienia roli przedstawiciela klienta.",
+   "Odległość, różne potrzeby użytkowników oraz procedury i warunki współpracy."
+  ]
+ },
+ {
+  "id": "F56",
+  "originalId": 56,
+  "variant": "F",
+  "refs": [
+   56
+  ],
+  "question": "Jak firmy stosujące metodyki zwinne sobie radzą przy problemach z klientem?",
+  "model": "Firmy starają się utrzymać dostęp do decyzji klienta i ograniczyć skutki opóźnionych odpowiedzi. Mogą:\n• wyjaśnić klientowi jego rolę i ustalić zasady odbioru oraz zmian zakresu;\n• dopasować umowę, np. finansować kolejne wydania osobno;\n• ocenić ryzyko braku kontaktu i zaplanować rezerwę czasu;\n• wyznaczyć przedstawiciela zastępczego, np. analityka z dostępem do klienta;\n• przypisać konkretnej osobie odpowiedzialność za wyjaśnienie danej opowieści;\n• odłożyć opowieść, dopóki nie ma określonego celu, oczekiwanego wyniku i szczegółów potrzebnych do oszacowania pracy;\n• regularnie pokazywać działający produkt i zbierać uwagi.\nW Scrumie Product Owner odpowiada za wartość produktu i zarządzanie Product Backlogiem. Może pełnić tę rolę również osoba inna niż klient kontraktowy.",
+  "type": "open",
+  "points": 5,
+  "criteria": [
+   "Proponuję wyjaśnienie roli klienta i zasad współpracy, odbioru lub zmian.",
+   "Uwzględniam dopasowanie umowy lub planowanie ryzyka i rezerwy czasu.",
+   "Proponuję przedstawiciela zastępczego z dostępem do klienta lub wskazanie osoby odpowiedzialnej za wyjaśnienie opowieści.",
+   "Uwzględniam doprecyzowanie niejasnych opowieści przed realizacją lub ich odłożenie.",
+   "Uwzględniam regularne pokazywanie działającego produktu i zbieranie uwag."
+  ]
+ },
+ {
+  "id": "F57",
+  "originalId": 57,
+  "variant": "F",
+  "refs": [
+   57
+  ],
+  "question": "Jak należy rozumieć formułowanie celów wydań na podstawie rzeczywistych wymagań klientów, a nie tylko ich opowieści?",
+  "model": "Cel wydania określa rezultat potrzebny użytkownikowi i warunki jego osiągnięcia. Opowieść użytkownika wymaga doprecyzowania. Na przykład przy prośbie „chcę eksportować raport” trzeba ustalić:\n• kto będzie korzystać z raportu i do czego;\n• jakie dane mają się w nim znaleźć;\n• w jakim formacie trzeba je przekazać;\n• kto ma uprawnienia do eksportu;\n• jak długo może trwać przygotowanie raportu;\n• co system ma zrobić, gdy brakuje danych.\nZ odpowiedzi wynikają sprawdzalne kryteria akceptacji. Pozwalają ocenić, czy wydanie spełnia rzeczywistą potrzebę.",
+  "type": "open",
+  "points": 2,
+  "criteria": [
+   "Wyjaśniam cel wydania jako rezultat potrzebny użytkownikowi wraz z warunkami osiągnięcia, wymagający doprecyzowania opowieści.",
+   "Pokazuję, że ustalenia o użytkowniku, danych, ograniczeniach lub wyjątkach prowadzą do sprawdzalnych kryteriów akceptacji."
+  ]
+ },
+ {
+  "id": "F58",
+  "originalId": 58,
+  "variant": "F",
+  "refs": [
+   58
+  ],
+  "question": "Jak zapewnić znajomość i stosowanie odpowiednich standardów pracy inżynierskiej w zespole zwinnym?",
+  "model": "Żeby zespół znał i stosował standardy inżynierskie, trzeba włączyć je do codziennej pracy:\n• spisać i udostępnić zasady kodowania, projektowania, integracji i testowania;\n• szkolić nowych pracowników na przykładach z projektu;\n• zapewnić wsparcie doświadczonych osób, np. podczas wspólnej pracy nad zmianą;\n• sprawdzać stosowanie zasad podczas przeglądów kodu;\n• uruchamiać analizę statyczną i testy przy integracji zmian;\n• zapisywać decyzje projektowe, żeby wiedza była dostępna po zmianie składu zespołu.\nPrzydatność programowania w parach warto ocenić na podstawie wyników i kosztów w danym zespole.",
+  "type": "open",
+  "points": 2,
+  "criteria": [
+   "Spisać i udostępnić zasady oraz uczyć ich na przykładach z projektu, ze wsparciem doświadczonych osób.",
+   "Sprawdzać zasady w przeglądach, analizie statycznej i testach przy integracji oraz utrwalać decyzje."
+  ]
+ },
+ {
+  "id": "F59",
+  "originalId": 59,
+  "variant": "F",
+  "refs": [
+   59
+  ],
+  "question": "Czy rygorystyczne testowanie w metodykach zwinnych jest wystarczające dla zapewnienia jakości oprogramowania?",
+  "model": "Samo rygorystyczne testowanie nie wystarcza do zapewnienia jakości.\n• Testy mogą opierać się na niepełnych wymaganiach i pomijać istotne dane oraz scenariusze. Program napisany „pod testy” może je przechodzić, a mimo to nie zaspokajać potrzeb użytkowników.\n• Nawet 100% pokrycia instrukcji lub gałęzi nie oznacza sprawdzenia wszystkich przebiegów, a TDD nie gwarantuje bezbłędności.\nPotrzebne są także analiza wymagań, projektowanie, przeglądy, standardy i udział użytkowników w akceptacji.\nNiezależna ocena testów pomaga wykryć przeoczenia, ale nie oznacza konieczności wykonywania każdego testu jednostkowego przez inną osobę.",
+  "type": "open",
+  "points": 1,
+  "criteria": [
+   "Nie; testy mogą pomijać ważne wymagania i przebiegi, więc potrzebne są też analiza, projektowanie, przeglądy i udział użytkowników."
+  ]
+ },
+ {
+  "id": "F60",
+  "originalId": 60,
+  "variant": "F",
+  "refs": [
+   60
+  ],
+  "question": "Kto powinien przeprowadzać testy akceptacyjne w metodykach zwinnych i jak się to ma do realiów?",
+  "model": "• Klient powinien ustalać warunki akceptacji i odpowiadać za ocenę przydatności produktu. W testach wydań powinni uczestniczyć reprezentatywni użytkownicy.\n• Testerzy mogą przygotować i technicznie wykonać testy.\nW praktyce zdarza się, że wszystkie testy wykonują testerzy dostawcy, a użytkownicy jedynie nieregularnie sprawdzają wybrane funkcje. Zwiększa to ryzyko wykrycia problemów dopiero po wdrożeniu.\nTesty regresyjne powinny być stałą częścią procesu wytwarzania. Decyzję o akceptacji trzeba uzgodnić z klientem.",
+  "type": "open",
+  "points": 1,
+  "criteria": [
+   "Klient ustala warunki i ocenia przydatność, reprezentatywni użytkownicy uczestniczą w testach, a testerzy mogą je wspierać technicznie; w praktyce udział użytkowników bywa zbyt mały."
+  ]
+ },
+ {
+  "id": "F61",
+  "originalId": 61,
+  "variant": "F",
+  "refs": [
+   61
+  ],
+  "question": "Dla jakich projektów informatycznych metodyki zwinne się nie nadają (przykłady)?",
+  "model": "Trudności pojawiają się zwłaszcza przy wysokim ryzyku, ograniczonej możliwości aktualizacji lub utrudnionej współpracy. Przykłady projektów, w których trzeba uzupełnić typowe praktyki zwinne:\n• Aparat do radioterapii — błędna dawka zagraża pacjentowi, więc przed użyciem trzeba zweryfikować zabezpieczenia.\n• Sterowanie samolotem — funkcje krytyczne wymagają analizy zagrożeń i dowodów bezpieczeństwa.\n• Sonda kosmiczna — po starcie możliwość aktualizowania produktu może być ograniczona.\n• Projekt bez dostępnego klienta — zespół nie może na bieżąco wyjaśniać wymagań i sprawdzać rezultatów.\n• System utrzymywany latami przez kolejne zespoły — potrzebna jest dokumentacja, z której następcy odtworzą decyzje i sposób działania.\nDuża, rozproszona organizacja może dodatkowo utrudniać współpracę. Rozwój iteracyjny pozostaje możliwy, jeśli proces zapewnia wymaganą weryfikację, dokumentację i kontakt z użytkownikami.",
+  "type": "open",
+  "points": 2,
+  "criteria": [
+   "Systemy o wysokim ryzyku lub ograniczonej możliwości aktualizacji, np. radioterapia, sterowanie samolotem i sonda kosmiczna, wymagają dodatkowej weryfikacji i dokumentacji.",
+   "Projekty bez dostępnego klienta lub przekazywane kolejnym zespołom wymagają zapewnienia współpracy i trwałej wiedzy."
+  ]
+ },
+ {
+  "id": "F62",
+  "originalId": 62,
+  "variant": "F",
+  "refs": [
+   62
+  ],
+  "question": "Jakie są wady/zagrożenia dla procesu wytwarzania w metodykach zwinnych?",
+  "model": "Zagrożenia dla jakości w projekcie zwinnym obejmują m.in.:\n• Zależność od konkretnych osób. Wraz z odejściem pracownika może zniknąć wiedza potrzebna do dalszej pracy.\n• Braki w dokumentacji. Po przerwie trudno wznowić projekt lub przekazać go innemu zespołowi.\n• Pominięcie wymagań jakościowych i wyjątków. Błąd projektu może ujawnić się dopiero podczas eksploatacji.\n• Słaby kontakt z klientem. Zespół z opóźnieniem dowiaduje się, że źle zrozumiał potrzebę.\n• Presja terminu. Odkładanie poprawek i ograniczanie testów prowadzi do długu technicznego.\n• Koszt ciągłych zmian. Wielokrotne przeróbki mogą wyczerpać budżet.\n• Trudności komunikacyjne. Odległość i różne strefy czasowe utrudniają uzgadnianie decyzji.\nTo ryzyka zależne od sposobu prowadzenia projektu. W Scrumie ukończony przyrost musi spełniać Definition of Done, a jakość nie powinna spadać podczas Sprintu.",
+  "type": "open",
+  "points": 2,
+  "criteria": [
+   "Wymieniam co najmniej dwa różne ryzyka, np. utratę wiedzy, brak dokumentacji, słaby kontakt z klientem lub pominięcie wymagań jakościowych.",
+   "Wskazuję kolejne odrębne ryzyko albo wyjaśniam skutek wcześniej wskazanego, np. dług techniczny, koszt przeróbek lub trudność utrzymania."
+  ]
  }
 ]
 </script>
@@ -1540,18 +2343,23 @@ const catalogQuestions = [...new Map(bank.map(q => [q.originalId,q])).values()].
 const storageKey = 'jsi-tests-v2';
 const variants = {A:'Podstawy jakości',B:'Proces i SQA',C:'TQM i modele',D:'Metryki i dojrzałość',E:'Jakość w Agile',F:'Tylko otwarte',random:'Test losowy'};
 const slots = [['single',1,5],['multi',2,3],['open',2,2],['open',5,3]];
+const openSlots = [['open',1,5],['open',2,5],['open',5,3]];
 const $ = id => document.getElementById(id);
 const esc = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function shuffled(items) { const a = [...items]; for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];} return a; }
 function makeTest(variant) {
- const items = variant === 'random' ? slots.flatMap(([type,points,n]) => shuffled(bank.filter(q => q.variant!=='F' && q.type===type && q.points===points)).slice(0,n)) : bank.filter(q => q.variant.includes(variant));
+ const pool = bank.filter(q => variant==='F' ? q.variant==='F' : q.variant!=='F');
+ const items = variant==='random'||variant==='F' ? (variant==='F'?openSlots:slots).flatMap(([type,points,n]) => shuffled(pool.filter(q => q.type===type && q.points===points)).slice(0,n)) : pool.filter(q => q.variant.includes(variant));
+ if(variant==='F'&&state?.variant==='F'&&items.every(q=>state.ids.includes(q.id))) {
+  items[0]=pool.find(q=>q.points===items[0].points&&!state.ids.includes(q.id));
+ }
  return {version:2,variant,ids:items.map(q=>q.id),answers:{},orders:Object.fromEntries(items.filter(q=>q.type!=='open').map(q=>[q.id,shuffled([0,1,2,3])])),rubric:{},reviewed:{},submitted:false};
 }
 function validState(s) {
  if(!s || s.version!==2 || !Object.hasOwn(variants,s.variant) || typeof s.submitted!=='boolean' || !Array.isArray(s.ids) || s.ids.length!==13 || new Set(s.ids).size!==13 || s.ids.some(id=>!byId.has(id))) return false;
  if(s.variant!=='random' && s.ids.some(id=>!byId.get(id).variant.includes(s.variant))) return false;
  if(s.variant==='random' && s.ids.some(id=>byId.get(id).variant==='F')) return false;
- const expectedSlots=s.variant==='F'?[['open',1,5],['open',2,5],['open',5,3]]:slots;
+ const expectedSlots=s.variant==='F'?openSlots:slots;
  if(!expectedSlots.every(([type,points,n])=>s.ids.filter(id=>byId.get(id).type===type && byId.get(id).points===points).length===n)) return false;
  if(!['answers','orders','rubric','reviewed'].every(k=>s[k] && typeof s[k]==='object' && !Array.isArray(s[k]))) return false;
  return s.ids.every(id=>{const q=byId.get(id),a=s.answers[id],r=s.rubric[id],o=s.orders[id];
