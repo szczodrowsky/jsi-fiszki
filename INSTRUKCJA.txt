@@ -4,7 +4,7 @@ FISZKI JSI NA TELEFONIE / GITHUB PAGES
 2. Utwórz repozytorium GitHub przeznaczone na fiszki.
    Darmowy wariant GitHub Free wymaga repozytorium publicznego.
 3. Wgraj zawartość paczki do głównego katalogu repozytorium:
-   index.html, przenies.html, .nojekyll i folder materialy (z zachowaniem struktury).
+   index.html, Testy_JSI.html, przenies.html, .nojekyll i folder materialy (z zachowaniem struktury).
    Nie wgrywaj samego ZIP-a jako strony.
 4. W repozytorium wejdź w Settings > Pages.
 5. Source: Deploy from a branch.
@@ -13,6 +13,10 @@ FISZKI JSI NA TELEFONIE / GITHUB PAGES
    w Safari lub Chrome na telefonie.
 
 Paczka zawiera obie wersje odpowiedzi i załączone materiały PDF/Markdown.
+Testy_JSI.html zawiera 62 pytania w brzmieniu 1:1 z fiszek, 5 wariantów
+i losowanie. Każdy test ma 13 pytań / 30 pkt. ABCD sprawdza się
+automatycznie; odpowiedzi otwarte oceniasz według wzorca i kryteriów.
+Przypisanie form odpowiedzi i punktów jest ćwiczeniowe.
 Wszystko, co opublikujesz, będzie dostępne pod adresem strony.
 Kod, archiwum redakcji i inne foldery projektu nie są częścią paczki.
 
