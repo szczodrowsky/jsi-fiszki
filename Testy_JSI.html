@@ -11,6 +11,9 @@
 .variants{grid-template-columns:repeat(3,minmax(0,1fr))}.variant{padding:19px}.variant h3{font-size:18px}.variant.open-only{background:var(--soft);border-color:#a8be8c}.overview-note{margin:20px 0 0;color:var(--muted);font-size:13px}
 @media(max-width:1000px){.hero{gap:30px}.variants{grid-template-columns:repeat(2,1fr)}.variant{min-height:200px}.layout{grid-template-columns:180px minmax(0,1fr);gap:20px}.sidebar{padding:16px}.question{padding:23px}}
 @media(max-width:680px){.wrap{padding:0 18px}.topbar{height:72px}.brand{font-size:14px}.offline{font-size:11px}.hero{grid-template-columns:1fr;padding-top:34px;gap:26px}h1{letter-spacing:-1.5px;font-size:43px}.hero .intro{font-size:15px}.overview{padding:22px}.format-row{margin-top:14px}.variants{gap:10px}.variant{padding:17px;min-height:224px}.variant h3{font-size:18px}.variant p{font-size:12px}.letter{margin-bottom:14px}.section-line{align-items:flex-start;flex-direction:column;gap:4px}.section-line h2{font-size:21px}.shuffle{padding:22px;align-items:flex-start;flex-direction:column;gap:17px}.shuffle button{width:100%}.footer{flex-direction:column;gap:6px}.resume{align-items:flex-start;flex-direction:column}.exam-heading{align-items:flex-start;flex-direction:column;gap:12px}.exam-heading h1{font-size:28px}.layout{display:flex;flex-direction:column;gap:16px}.sidebar{position:static;width:100%;padding:18px}.sidebar .nav-grid{grid-template-columns:repeat(7,1fr);margin:14px 0}.sidebar .primary{width:auto;padding:10px 16px}.sidebar .save-status{display:inline-block;margin:0 0 0 12px;max-width:170px;vertical-align:middle}.exam-main{width:100%}.question{padding:21px 18px}.question h2{font-size:19px}.choice{font-size:14px;padding:13px 12px;gap:10px}.result{padding:23px}.score{font-size:40px}.finish-row{align-items:flex-start;flex-direction:column}.finish-row button{width:100%}.result-main{align-items:flex-start;flex-direction:column;gap:8px}.result-grid{gap:12px}.q-meta{align-items:flex-start}.q-type{gap:5px}}
+.page-nav{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}.page-nav button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:white}.catalog-search-box{padding:22px;background:white;border:1px solid var(--line);border-radius:var(--radius);margin-bottom:20px}.catalog-search-box label{display:block;font-weight:600;color:var(--ink);margin-bottom:9px}.catalog-search-row{display:flex;gap:10px}.catalog-search-row input{min-width:0;flex:1;border:1px solid #bdcbbd;border-radius:12px;padding:12px 15px;background:#fdfefb;color:var(--text);font-size:16px}.catalog-help{margin:10px 0 0;color:var(--muted);font-size:13px}.catalog-item{background:white;border:1px solid var(--line);border-radius:14px;margin-bottom:10px;overflow:hidden}.catalog-item summary{padding:18px 20px;cursor:pointer;font-weight:600;color:var(--ink);line-height:1.5;overflow-wrap:anywhere}.catalog-number{font-family:ui-monospace,monospace;font-size:13px;color:var(--muted);margin:0 8px}.catalog-answer{border-top:1px solid var(--line);padding:20px;font-size:15px;line-height:1.75;white-space:pre-line;overflow-wrap:anywhere}.catalog-answer p{margin:0}.catalog-answer .small{white-space:normal;margin-bottom:12px;color:var(--muted)}#catalog{padding-bottom:35px}.catalog-empty{padding:28px;border:1px dashed var(--line);border-radius:14px;color:var(--muted)}
+@media(max-width:680px){.page-nav button{padding:10px 14px;font-size:14px}.catalog-search-box{padding:17px}.catalog-search-row{flex-wrap:wrap}.catalog-search-row input{flex-basis:100%}.catalog-item summary{padding:16px;font-size:15px}.catalog-answer{padding:16px}}
+@media print{.page-nav{display:none!important}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}button{transition:none}}
 @media print{@page{margin:14mm}body{background:white;color:#111;font-size:11pt}.wrap{padding:0;max-width:none}.topbar,.sidebar,.actions,.finish-row,.footer,.guide,.resume,#home,.no-print,dialog{display:none!important}.layout{display:block}.exam-heading{padding:0 0 16px}.exam-heading h1{font-size:23pt}.question{border:1px solid #bbb;border-radius:4px;break-inside:avoid;padding:14px;margin-bottom:14px}.question h2{font-size:13pt}.choice{font-size:10pt;padding:7px;border-radius:3px}.choice input{accent-color:#111}.q-meta,.hint,.source{font-size:9pt!important}.q-value{background:none}.result{background:white;color:#111;border:1px solid #bbb;padding:15px}.result h2,.result .small,.result p,.score span{color:#111}.result-grid{border-top:1px solid #bbb}.result-grid strong{font-size:14pt}.score{font-size:30pt}textarea{display:none}.print-answer{display:block;white-space:pre-wrap;overflow-wrap:anywhere;min-height:90px;border:1px solid #bbb;padding:12px}.answer-label{display:none}.answer-copy{background:none;border:1px solid #bbb}.criterion{font-size:10pt}.feedback p{font-size:10pt}.status{color:#111!important}a{text-decoration:none;color:#111}.notice{background:none;color:#111}.q-type{color:#333}}
 </style>
@@ -18,6 +21,7 @@
 <body>
 <div class="wrap">
  <header class="topbar"><div class="brand"><span class="brand-mark">JSI</span><span>testy do samosprawdzenia</span></div><span class="offline"><span class="dot"></span>Działa offline</span></header>
+ <nav class="page-nav" aria-label="Nauka i wyszukiwanie"><button id="show-tests" aria-pressed="true" aria-controls="home">Testy</button><button id="show-catalog" aria-pressed="false" aria-controls="catalog">Lista pytań (62)</button></nav>
  <noscript><p class="notice">Włącz JavaScript w przeglądarce, aby rozwiązywać i sprawdzać testy. Internet nie jest potrzebny.</p></noscript>
  <main>
  <section id="home" aria-labelledby="home-title">
@@ -42,6 +46,12 @@
   <div id="resume-box" class="resume" hidden><p id="resume-label"></p><button id="resume">Wróć do testu</button></div>
   <p id="home-warning" class="notice" hidden></p>
   <details class="guide"><summary>Jak liczymy punkty i z jakich materiałów korzystamy?</summary><div class="guide-content"><ol><li>Jednokrotny wybór: 1 pkt za poprawną odpowiedź.</li><li>Wielokrotny wybór: 2 pkt za dokładnie cały poprawny zestaw. Nie ma punktów częściowych ani ujemnych.</li><li>Otwarte: po oddaniu testu porównaj swoją odpowiedź ze wzorcem. Zaznacz spełnione kryteria (po 1 pkt) i zatwierdź ocenę. Własne, równoważne sformułowania są poprawne. Pusta odpowiedź daje 0 pkt.</li></ol><p>Brzmienie wszystkich 62 pytań jest identyczne z naszym opracowaniem i fiszkami. Odpowiedzi wzorcowe pochodzą z wersji „W skrócie”. Odpowiedzi do wyboru i punktacja są ćwiczeniowe; to nie jest oficjalny klucz prowadzącego. Przy każdym zadaniu znajdziesz oryginalny numer pytania.</p><p>Warianty A–D obejmują kolejno pytania 1–52. Wariant E obejmuje pytania 53–62 oraz powtórkę pytań 2, 18 i 45, aby zachować 13 pytań i 30 pkt. W losowym teście nie powtarza się żadne pytanie. ISO/IEC 9126 i CMMI dotyczą historycznych modeli z wykładu.</p><p>Postęp jednego testu zapisuje się w tej przeglądarce. Przeniesienie pliku, zmiana przeglądarki lub tryb prywatny mogą odłączyć zapis. Lokalny plik działa samodzielnie i niczego nie wysyła. Wersję na GitHub Pages trzeba najpierw otworzyć z dostępem do internetu. Przycisk „Drukuj / PDF” pozwala zachować arkusz lub wynik.</p></div></details>
+ </section>
+ <section id="catalog" aria-labelledby="catalog-title" hidden>
+  <div class="exam-heading"><div><div class="eyebrow">Oryginalna baza · pytania 1–62</div><h1 id="catalog-title">Wszystkie pytania</h1></div><button id="catalog-resume" hidden>Wróć do testu</button></div>
+  <div class="catalog-search-box"><label for="catalog-search">Szukaj po numerze lub treści</label><div class="catalog-search-row"><input id="catalog-search" type="search" maxlength="200" placeholder="np. 19, AHP, bezpieczeństwo" aria-controls="catalog-list" aria-describedby="catalog-help" autocomplete="off"><button id="catalog-clear">Wyczyść</button></div><p id="catalog-help" class="catalog-help">Szukamy w pytaniach i odpowiedziach. Możesz pisać bez polskich znaków. Kliknij pytanie, aby rozwinąć odpowiedź z fiszek.</p></div>
+  <p id="catalog-count" class="small muted" role="status" aria-live="polite"></p>
+  <div id="catalog-list"></div>
  </section>
  <section id="exam" aria-labelledby="exam-title" hidden>
   <div class="exam-heading"><div><div class="eyebrow">13 pytań · 30 punktów</div><h1 id="exam-title" tabindex="-1"></h1></div><div class="actions"><button id="home-button">Wybierz inny test</button><button id="print">Drukuj / PDF</button></div></div>
@@ -1525,6 +1535,7 @@
 'use strict';
 const bank = JSON.parse(document.getElementById('bank-data').textContent);
 const byId = new Map(bank.map(q => [q.id, q]));
+const catalogQuestions = [...new Map(bank.map(q => [q.originalId,q])).values()].sort((a,b)=>a.originalId-b.originalId);
 const storageKey = 'jsi-tests-v2';
 const variants = {A:'Podstawy jakości',B:'Proces i SQA',C:'TQM i modele',D:'Metryki i dojrzałość',E:'Jakość w Agile',F:'Tylko otwarte',random:'Test losowy'};
 const slots = [['single',1,5],['multi',2,3],['open',2,2],['open',5,3]];
@@ -1572,8 +1583,29 @@ catch {storageOk=false;restoreWarning='Nie udało się odczytać zapisu. Możesz
 function storageLabel(){ $('save-status').textContent=storageOk?'Zapisano w tej przeglądarce.':'Zapis niedostępny. Zachowaj otwartą kartę.';$('save-status').classList.toggle('error',!storageOk);}
 function save(){try{localStorage.setItem(storageKey,JSON.stringify(state));storageOk=true;}catch{storageOk=false;}storageLabel();}
 function ask(title,message,action,label){pendingAction=action;$('confirm-title').textContent=title;$('confirm-text').textContent=message;$('confirm-action').textContent=label;$('confirmation').showModal();}
+function showView(view){
+ for(const id of ['home','exam','catalog'])$(id).hidden=id!==view;
+ $('show-tests').setAttribute('aria-pressed',String(view!=='catalog'));
+ $('show-catalog').setAttribute('aria-pressed',String(view==='catalog'));
+}
+function normalizeSearch(text){return text.toLowerCase().normalize('NFD').replace(/\p{M}/gu,'').replace(/ł/g,'l');}
+function findQuestions(query){
+ const value=query.trim(),number=value.match(/^#?\s*(\d+)\.?$/);
+ if(number)return catalogQuestions.filter(q=>q.originalId===Number(number[1]));
+ const words=normalizeSearch(value).split(/\s+/).filter(Boolean);
+ return catalogQuestions.filter(q=>{const text=normalizeSearch(q.question+' '+q.model);return words.every(word=>text.includes(word));});
+}
+function renderCatalog(){
+ const matches=findQuestions($('catalog-search').value);
+ $('catalog-count').textContent=`Wyniki: ${matches.length} z ${catalogQuestions.length} pytań`;
+ $('catalog-list').innerHTML=matches.length?matches.map(q=>`<details class="catalog-item"><summary><span class="catalog-number">${String(q.originalId).padStart(2,'0')}.</span>${esc(q.question)}</summary><div class="catalog-answer"><p class="small">Odpowiedź z fiszek „W skrócie” · pytanie ${q.originalId}</p><p>${esc(q.model)}</p></div></details>`).join(''):'<p class="catalog-empty">Brak pasujących pytań. Spróbuj krótszego hasła lub numeru od 1 do 62.</p>';
+}
+function showCatalog(){
+ showView('catalog');$('catalog-resume').hidden=!state;renderCatalog();
+ window.scrollTo({top:0,behavior:'instant'});$('catalog-search').focus({preventScroll:true});
+}
 function showHome(){
- $('home').hidden=false;$('exam').hidden=true;$('resume-box').hidden=!state;
+ showView('home');$('resume-box').hidden=!state;
  if(state){const s=summary(state);$('resume-label').textContent=`${state.variant==='random'?'Test losowy':'Wariant '+state.variant} · ${state.submitted?'odpowiedzi oddane':s.answered+' z 13 odpowiedzi zapisanych'}`;}
  $('home-warning').hidden=!restoreWarning;$('home-warning').textContent=restoreWarning;
  window.scrollTo({top:0,behavior:'instant'});
@@ -1583,7 +1615,7 @@ function start(variant){
  if(state&&!state.submitted&&summary(state).answered>0) ask('Rozpocząć nowy test?','Bieżące odpowiedzi zostaną zastąpione. Możesz wrócić do poprzedniego testu i go dokończyć.',launch,'Rozpocznij nowy');else launch();
 }
 function showExam(){
- $('home').hidden=true;$('exam').hidden=false;
+ showView('exam');
  $('exam-title').textContent=(state.variant==='random'?'':`Wariant ${state.variant} / `)+variants[state.variant];
  renderQuestions();renderProgress();renderResult();storageLabel();
  $('finish').hidden=$('side-finish').hidden=state.submitted;
@@ -1648,6 +1680,11 @@ document.addEventListener('click',event=>{
 $('finish').onclick=$('side-finish').onclick=finish;
 $('home-button').onclick=()=>{showHome();$('home-title').setAttribute('tabindex','-1');$('home-title').focus();};
 $('resume').onclick=showExam;
+$('show-tests').onclick=showHome;
+$('show-catalog').onclick=showCatalog;
+$('catalog-resume').onclick=showExam;
+$('catalog-search').oninput=renderCatalog;
+$('catalog-clear').onclick=()=>{$('catalog-search').value='';renderCatalog();$('catalog-search').focus();};
 $('print').onclick=()=>window.print();
 $('cancel-action').onclick=()=>{$('confirmation').close();pendingAction=null;};
 $('confirmation').addEventListener('cancel',()=>{pendingAction=null;});

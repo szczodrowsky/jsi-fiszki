@@ -18,6 +18,8 @@ i losowanie. Wariant F zawiera wyłącznie pytania otwarte.
 Każdy test ma 13 pytań / 30 pkt. ABCD sprawdza się
 automatycznie; odpowiedzi otwarte oceniasz według wzorca i kryteriów.
 Przypisanie form odpowiedzi i punktów jest ćwiczeniowe.
+„Lista pytań (62)” pozwala szukać po numerze oraz treści pytań i odpowiedzi,
+także bez polskich znaków. Kliknięcie pytania rozwija odpowiedź z fiszek.
 Wszystko, co opublikujesz, będzie dostępne pod adresem strony.
 Kod, archiwum redakcji i inne foldery projektu nie są częścią paczki.
 
