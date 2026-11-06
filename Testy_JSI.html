@@ -1695,7 +1695,12 @@ $('print').onclick=()=>window.print();
 $('cancel-action').onclick=()=>{$('confirmation').close();pendingAction=null;};
 $('confirmation').addEventListener('cancel',()=>{pendingAction=null;});
 $('confirm-action').onclick=()=>{const action=pendingAction;pendingAction=null;$('confirmation').close();if(action)action();};
-window.addEventListener('hashchange',()=>{if(['#testy','#pytania','#warianty',''].includes(window.location.hash))showPage();});
+window.addEventListener('hashchange',()=>{
+ const hash=window.location.hash;
+ if(hash.startsWith('#q-')){
+  if(state&&$('exam').hidden){showExam();window.history.replaceState(null,'',hash);$(hash.slice(1))?.scrollIntoView();}
+ }else if(['#testy','#pytania','#warianty',''].includes(hash))showPage();
+});
 showPage();
 </script>
 </body>
