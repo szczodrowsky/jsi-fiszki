@@ -1592,7 +1592,7 @@ function showView(view){
 function normalizeSearch(text){return text.toLowerCase().normalize('NFD').replace(/\p{M}/gu,'').replace(/ł/g,'l');}
 function findQuestions(query){
  const value=query.trim(),number=value.match(/^#?\s*(\d+)\.?$/);
- if(number)return catalogQuestions.filter(q=>q.originalId===Number(number[1]));
+ if(number)return catalogQuestions.filter(q=>String(q.originalId).startsWith(String(Number(number[1]))));
  const words=normalizeSearch(value).split(/\s+/).filter(Boolean);
  return catalogQuestions.filter(q=>{const text=normalizeSearch(q.question+' '+q.model);return words.every(word=>text.includes(word));});
 }
