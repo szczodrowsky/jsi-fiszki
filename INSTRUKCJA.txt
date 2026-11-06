@@ -13,8 +13,9 @@ FISZKI JSI NA TELEFONIE / GITHUB PAGES
    w Safari lub Chrome na telefonie.
 
 Paczka zawiera obie wersje odpowiedzi i załączone materiały PDF/Markdown.
-Testy_JSI.html zawiera 62 pytania w brzmieniu 1:1 z fiszek, 5 wariantów
-i losowanie. Każdy test ma 13 pytań / 30 pkt. ABCD sprawdza się
+Testy_JSI.html zawiera 62 pytania w brzmieniu 1:1 z fiszek, 6 wariantów
+i losowanie. Wariant F zawiera wyłącznie pytania otwarte.
+Każdy test ma 13 pytań / 30 pkt. ABCD sprawdza się
 automatycznie; odpowiedzi otwarte oceniasz według wzorca i kryteriów.
 Przypisanie form odpowiedzi i punktów jest ćwiczeniowe.
 Wszystko, co opublikujesz, będzie dostępne pod adresem strony.

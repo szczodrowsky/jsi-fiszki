@@ -8,7 +8,7 @@
 <style>
 :root{--paper:#f6f7f2;--white:#fff;--ink:#183c35;--text:#273e38;--muted:#60736a;--line:#dbe2d8;--green:#245d4c;--lime:#dfef9b;--soft:#edf2e7;--red:#a53333;--redbg:#fff0ed;--good:#eaf5ee;--amber:#7c5115;--amberbg:#fff6dd;--radius:20px}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:28px}body{margin:0;background:var(--paper);color:var(--text);font-family:"Segoe UI",system-ui,sans-serif;font-size:16px;line-height:1.6}button,input,textarea,select{font:inherit}button,a,input,textarea{touch-action:manipulation}button{cursor:pointer}button:disabled{cursor:default;opacity:.65}a{color:var(--green)}button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid #397fce;outline-offset:4px}button{border:1px solid var(--line);border-radius:12px;background:white;padding:11px 18px;color:var(--ink);font-weight:600;transition:background .15s,transform .15s}button:hover:not(:disabled){background:var(--soft)}button.primary{background:var(--ink);border-color:var(--ink);color:#fff}button.primary:hover:not(:disabled){background:#2d584c}button.lime{background:var(--lime);border-color:var(--lime)}button.link{border:0;background:transparent;padding:8px 0;text-decoration:underline;text-underline-offset:4px}h1,h2,h3,p{margin-top:0}h1,h2,h3{color:var(--ink);line-height:1.2}h1{font-size:clamp(36px,5vw,66px);letter-spacing:-2.5px;font-weight:650;margin-bottom:22px}h2{font-size:28px;letter-spacing:-.7px}h3{font-size:21px;letter-spacing:-.3px}small,.small{font-size:13px}.muted{color:var(--muted)}.eyebrow{text-transform:uppercase;font-size:12px;font-weight:700;letter-spacing:1.7px;color:var(--muted)}.wrap{max-width:1160px;padding:0 30px;margin:0 auto}.topbar{height:88px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);gap:15px}.brand{display:flex;align-items:center;gap:12px;font-weight:700;color:var(--ink);letter-spacing:-.3px}.brand-mark{width:40px;height:40px;display:grid;place-items:center;border-radius:11px;background:var(--ink);color:var(--lime);font-size:14px;letter-spacing:0}.offline{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:8px}.dot{width:7px;height:7px;background:#3b8057;border-radius:50%}.hero{display:grid;grid-template-columns:1.35fr 1fr;gap:60px;align-items:center;padding:60px 0 44px}.hero .intro{max-width:560px;font-size:17px;color:var(--muted);margin-bottom:0}.hero .eyebrow{margin-bottom:20px}.overview{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:26px 28px;box-shadow:0 8px 0 -4px #e5eadd}.overview-top{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-bottom:21px;border-bottom:1px solid var(--line)}.big-number{font-size:43px;line-height:1;font-weight:650;letter-spacing:-2px}.big-number span{font-size:15px;letter-spacing:0;font-weight:500}.points{background:var(--lime);border-radius:100px;padding:7px 12px;font-size:14px;font-weight:700}.format-row{display:grid;grid-template-columns:52px 1fr auto;align-items:center;gap:12px;margin-top:19px}.format-row .count{font-size:21px;font-weight:650;color:var(--ink)}.format-row .count span{font-size:13px;color:var(--muted)}.format-row strong{font-size:14px;font-weight:600}.format-row small{display:block;color:var(--muted)}.section-line{display:flex;align-items:baseline;justify-content:space-between;gap:15px;margin:14px 0 20px}.section-line h2{margin:0;font-size:22px}.variants{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.variant{padding:22px;text-align:left;border-radius:var(--radius);font-weight:400;display:flex;flex-direction:column;min-height:228px;align-items:flex-start}.variant:hover{transform:translateY(-3px)}.letter{display:grid;place-items:center;width:38px;height:38px;border:1px solid var(--line);border-radius:50%;font-family:ui-monospace,monospace;margin-bottom:20px}.variant h3{margin-bottom:8px;font-size:20px}.variant p{font-size:13px;color:var(--muted);line-height:1.5;margin-bottom:22px}.variant .go{margin-top:auto;color:var(--green);font-weight:650;font-size:13px}.shuffle{margin-top:16px;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:23px 28px;border-radius:var(--radius);background:var(--ink);color:white}.shuffle h3{font-size:19px;color:white;margin-bottom:5px}.shuffle p{font-size:13px;color:#c9dad2;margin:0}.shuffle button{flex-shrink:0}.resume{display:flex;align-items:center;justify-content:space-between;gap:16px;background:var(--amberbg);padding:17px 22px;border-radius:14px;margin-top:28px}.resume p{margin:0;font-size:14px}.guide{margin:30px 0 42px;border-top:1px solid var(--line);padding-top:23px}.guide summary{cursor:pointer;font-weight:600;color:var(--ink)}.guide-content{max-width:850px;font-size:14px;padding-top:16px;color:var(--muted)}.guide-content p:last-child{margin-bottom:0}.guide-content ol{padding-left:22px}.footer{border-top:1px solid var(--line);padding:20px 0 26px;display:flex;justify-content:space-between;gap:20px;font-size:12px;color:var(--muted)}[hidden]{display:none!important}.exam-heading{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:30px 0 25px}.exam-heading h1{font-size:32px;letter-spacing:-1px;margin:5px 0 0}.actions{display:flex;align-items:center;flex-wrap:wrap;gap:10px}.layout{display:grid;grid-template-columns:220px minmax(0,1fr);gap:30px;align-items:start}.sidebar{position:sticky;top:24px;background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:22px}.sidebar h2{font-size:16px;margin-bottom:6px;letter-spacing:0}.progress-text{font-size:13px;color:var(--muted);margin-bottom:13px}progress{display:block;appearance:none;width:100%;height:6px;border:0;border-radius:10px;overflow:hidden;background:var(--soft)}progress::-webkit-progress-bar{background:var(--soft)}progress::-webkit-progress-value{background:var(--green)}progress::-moz-progress-bar{background:var(--green)}.nav-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:22px 0}.nav-grid a{display:grid;place-items:center;min-height:35px;text-decoration:none;border:1px solid var(--line);border-radius:9px;font-size:13px;font-weight:600;color:var(--muted)}.nav-grid a.done{background:var(--ink);border-color:var(--ink);color:white}.nav-grid a.good{background:var(--good);border-color:#a4cbb2;color:#20593e}.nav-grid a.bad{background:var(--redbg);border-color:#dfb0a7;color:var(--red)}.nav-grid a.pending{background:var(--amberbg);border-color:#e6ca84;color:var(--amber)}.sidebar .primary{width:100%;font-size:13px;padding:12px 6px}.save-status{font-size:12px;color:var(--muted);margin:17px 0 0;line-height:1.45}.save-status.error{color:var(--red)}.question{background:white;border:1px solid var(--line);border-radius:var(--radius);padding:28px;margin-bottom:20px;scroll-margin-top:25px}.q-meta{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:15px;font-size:12px;color:var(--muted)}.q-type{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.q-no{font-family:ui-monospace,monospace;color:var(--green);font-weight:700}.q-value{background:var(--soft);color:var(--green);border-radius:100px;padding:3px 10px;font-weight:700;white-space:nowrap}.question h2{font-size:21px;letter-spacing:-.3px;line-height:1.42;margin-bottom:20px}.hint{font-size:13px;color:var(--muted);margin:-8px 0 17px}fieldset{border:0;padding:0;margin:0;min-width:0}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.choice{display:flex;align-items:flex-start;gap:13px;padding:14px 16px;border:1px solid var(--line);border-radius:12px;margin-bottom:9px;font-size:15px;cursor:pointer}.choice:last-child{margin-bottom:0}.choice:has(input:checked){background:#f0f5e5;border-color:#7d9b60}.choice:has(input:focus-visible){outline:3px solid #397fce;outline-offset:2px}.choice input{margin:5px 0 0;accent-color:var(--green);flex-shrink:0;width:16px;height:16px}.choice-letter{color:var(--muted);font-size:13px;font-weight:700;margin-right:8px}.choice.correct{background:var(--good);border-color:#a4cbb2}.choice.incorrect{background:var(--redbg);border-color:#dfb0a7}.choice.disabled{cursor:default}.choice-note{display:block;font-size:12px;font-weight:600;margin-top:5px}.answer-label{font-size:13px;color:var(--muted);display:block;margin-bottom:7px}textarea{width:100%;resize:vertical;min-height:128px;padding:15px 16px;border:1px solid #bdcbbd;border-radius:12px;line-height:1.65;color:var(--text);background:#fdfefb}textarea.long{min-height:180px}textarea:focus{border-color:var(--green)}.feedback{margin-top:22px;padding-top:22px;border-top:1px solid var(--line)}.feedback h3{font-size:16px;margin:0 0 9px;letter-spacing:0}.feedback p{font-size:14px;margin-bottom:12px;white-space:pre-line}.feedback .status{font-size:14px;font-weight:700;margin-bottom:14px}.status.good{color:#20593e}.status.bad{color:var(--red)}.status.pending{color:var(--amber)}.criteria{margin:16px 0}.criterion{display:flex;align-items:flex-start;gap:12px;font-size:14px;padding:11px 0;border-bottom:1px solid #edf0e8;cursor:pointer}.criterion input{margin:6px 0 0;accent-color:var(--green);width:17px;height:17px;flex-shrink:0}.criterion span{flex:1}.criterion small{white-space:nowrap;color:var(--muted);padding-top:1px}.source{color:var(--muted);font-size:12px!important;margin:16px 0 0!important}.answer-copy{white-space:pre-wrap;overflow-wrap:anywhere;background:var(--paper);border-radius:12px;padding:15px 16px;font-size:15px}.result{background:var(--ink);border-radius:var(--radius);padding:30px;color:white;margin-bottom:24px}.result h2{color:white;font-size:22px;margin-bottom:14px}.result-main{display:flex;align-items:center;justify-content:space-between;gap:22px}.score{font-size:48px;letter-spacing:-2px;font-weight:650;line-height:1.1}.score span{font-size:22px;letter-spacing:0;color:#c9dad2}.result .small{color:#c9dad2}.result-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:23px 0 18px;padding-top:19px;border-top:1px solid #406157}.result-grid strong{display:block;font-size:21px}.result p{margin:0;font-size:13px;color:#d6e4dc}.result .actions{margin-top:20px}.result button{font-size:13px}.finish-row{display:flex;justify-content:space-between;align-items:center;gap:20px;margin:26px 0 42px}.finish-row p{font-size:13px;margin:0;color:var(--muted)}.print-answer{display:none}.notice{background:var(--amberbg);color:var(--amber);border:1px solid #e6ca84;padding:15px 20px;border-radius:12px;margin-bottom:18px;font-size:14px}.modal{max-width:460px;border:1px solid var(--line);border-radius:20px;padding:28px;color:var(--text);width:calc(100% - 32px)}.modal::backdrop{background:#142c2580}.modal h2{font-size:23px}.modal p{font-size:15px}.modal .actions{justify-content:flex-end;margin-top:22px}.modal button{font-size:14px}
-.variants{grid-template-columns:repeat(5,minmax(0,1fr))}.variant{padding:19px}.variant h3{font-size:18px}
+.variants{grid-template-columns:repeat(3,minmax(0,1fr))}.variant{padding:19px}.variant h3{font-size:18px}.variant.open-only{background:var(--soft);border-color:#a8be8c}.overview-note{margin:20px 0 0;color:var(--muted);font-size:13px}
 @media(max-width:1000px){.hero{gap:30px}.variants{grid-template-columns:repeat(2,1fr)}.variant{min-height:200px}.layout{grid-template-columns:180px minmax(0,1fr);gap:20px}.sidebar{padding:16px}.question{padding:23px}}
 @media(max-width:680px){.wrap{padding:0 18px}.topbar{height:72px}.brand{font-size:14px}.offline{font-size:11px}.hero{grid-template-columns:1fr;padding-top:34px;gap:26px}h1{letter-spacing:-1.5px;font-size:43px}.hero .intro{font-size:15px}.overview{padding:22px}.format-row{margin-top:14px}.variants{gap:10px}.variant{padding:17px;min-height:224px}.variant h3{font-size:18px}.variant p{font-size:12px}.letter{margin-bottom:14px}.section-line{align-items:flex-start;flex-direction:column;gap:4px}.section-line h2{font-size:21px}.shuffle{padding:22px;align-items:flex-start;flex-direction:column;gap:17px}.shuffle button{width:100%}.footer{flex-direction:column;gap:6px}.resume{align-items:flex-start;flex-direction:column}.exam-heading{align-items:flex-start;flex-direction:column;gap:12px}.exam-heading h1{font-size:28px}.layout{display:flex;flex-direction:column;gap:16px}.sidebar{position:static;width:100%;padding:18px}.sidebar .nav-grid{grid-template-columns:repeat(7,1fr);margin:14px 0}.sidebar .primary{width:auto;padding:10px 16px}.sidebar .save-status{display:inline-block;margin:0 0 0 12px;max-width:170px;vertical-align:middle}.exam-main{width:100%}.question{padding:21px 18px}.question h2{font-size:19px}.choice{font-size:14px;padding:13px 12px;gap:10px}.result{padding:23px}.score{font-size:40px}.finish-row{align-items:flex-start;flex-direction:column}.finish-row button{width:100%}.result-main{align-items:flex-start;flex-direction:column;gap:8px}.result-grid{gap:12px}.q-meta{align-items:flex-start}.q-type{gap:5px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}button{transition:none}}
@@ -22,19 +22,21 @@
  <main>
  <section id="home" aria-labelledby="home-title">
   <div class="hero"><div><p class="eyebrow">Jakość systemów informatycznych</p><h1 id="home-title">Sprawdź, ile<br>już umiesz.</h1><p class="intro">Nasze 62 pytania w oryginalnym brzmieniu. ABCD policzy się samo, a otwarte ocenisz według odpowiedzi z fiszek i krótkiej listy kryteriów.</p></div>
-   <div class="overview" aria-label="Struktura każdego testu"><div class="overview-top"><div class="big-number">13 <span>pytań w teście</span></div><span class="points">30 pkt</span></div>
+   <div class="overview" aria-label="Punktacja każdego testu i rodzaje pytań w wariantach mieszanych"><div class="overview-top"><div class="big-number">13 <span>pytań w teście</span></div><span class="points">30 pkt</span></div>
     <div class="format-row"><div class="count">5 <span>× 1</span></div><div><strong>ABCD</strong><small>Jedna poprawna odpowiedź</small></div><span class="muted small">5 pkt</span></div>
     <div class="format-row"><div class="count">5 <span>× 2</span></div><div><strong>Wybór i krótkie odpowiedzi</strong><small>3 wielokrotne + 2 otwarte</small></div><span class="muted small">10 pkt</span></div>
     <div class="format-row"><div class="count">3 <span>× 5</span></div><div><strong>Zadania otwarte</strong><small>Wyjaśnij, porównaj, zastosuj</small></div><span class="muted small">15 pkt</span></div>
+    <p class="overview-note">Wariant F ma ten sam podział punktów, ale wszystkie 13 pytań jest otwartych.</p>
    </div>
   </div>
-  <div class="section-line"><h2>Od którego zestawu zaczynasz?</h2><span class="small muted">5 wariantów · 62 pytania 1:1 · klucz do każdego</span></div>
+  <div class="section-line"><h2>Od którego zestawu zaczynasz?</h2><span class="small muted">6 wariantów · 62 pytania 1:1 · klucz do każdego</span></div>
   <div class="variants">
    <button class="variant" data-start="A"><span class="letter">A</span><h3>Podstawy jakości</h3><p>Pytania 1–13. System, wymagania, Therac-25 i pomiary.</p><span class="go">Rozwiąż wariant A ↗</span></button>
    <button class="variant" data-start="B"><span class="letter">B</span><h3>Proces i SQA</h3><p>Pytania 14–26. Cechy jakości, defekty i przeglądy.</p><span class="go">Rozwiąż wariant B ↗</span></button>
    <button class="variant" data-start="C"><span class="letter">C</span><h3>TQM i modele</h3><p>Pytania 27–39. Zarządzanie, McCall, ISO 9126 i dane.</p><span class="go">Rozwiąż wariant C ↗</span></button>
    <button class="variant" data-start="D"><span class="letter">D</span><h3>Metryki i dojrzałość</h3><p>Pytania 40–52. GQM, AHP, CMMI, ISO i początki Agile.</p><span class="go">Rozwiąż wariant D ↗</span></button>
    <button class="variant" data-start="E"><span class="letter">E</span><h3>Jakość w Agile</h3><p>Pytania 53–62 oraz powtórka pytań 2, 18 i 45.</p><span class="go">Rozwiąż wariant E ↗</span></button>
+   <button class="variant open-only" data-start="F"><span class="letter">F</span><h3>Tylko otwarte</h3><p>13 pytań przekrojowych. Odpowiadasz z pamięci, potem oceniasz według wzorca.</p><span class="go">Rozwiąż wariant F ↗</span></button>
   </div>
   <div class="shuffle"><div><h3>Wolisz niespodziankę?</h3><p>Losuj 13 zadań z całej puli. Ten sam podział punktów, nowa kolejność odpowiedzi.</p></div><button class="lime" data-start="random">Losuj test <span aria-hidden="true">↗</span></button></div>
   <div id="resume-box" class="resume" hidden><p id="resume-label"></p><button id="resume">Wróć do testu</button></div>
@@ -1304,6 +1306,218 @@
    "Uwzględniam doprecyzowanie niejasnych opowieści przed realizacją lub ich odłożenie.",
    "Uwzględniam regularne pokazywanie działającego produktu i zbieranie uwag."
   ]
+ },
+ {
+  "id": "F13",
+  "originalId": 13,
+  "variant": "F",
+  "refs": [
+   13
+  ],
+  "question": "Czy zawsze wyniki pomiarów uśrednia się wg średniej arytmetycznej?",
+  "model": "Nie zawsze stosuje się zwykłą średnią arytmetyczną.\n• Sposób łączenia wyników zależy od rodzaju danych i celu oceny.\n• Można stosować średnią ważoną, a przy czasach odpowiedzi także medianę i percentyle.\nPrzy łączeniu odsetków trzeba uwzględniać liczbę prób: wyniki 1/1 i 1/9 dają łącznie 2/10 = 20%. Zwykła średnia tych dwóch odsetków nie opisuje łącznej skuteczności.",
+  "type": "open",
+  "points": 1,
+  "criteria": [
+   "Wyjaśniam, że nie zawsze stosuje się zwykłą średnią arytmetyczną, i podaję właściwą alternatywę lub przykład uwzględnienia liczebności grup."
+  ]
+ },
+ {
+  "id": "F14",
+  "originalId": 14,
+  "variant": "F",
+  "refs": [
+   14
+  ],
+  "question": "Czy zawsze miary się przelicza na metryki wg skali liniowej?",
+  "model": "Przeliczenie nie musi być liniowe.\n• Sposób przeliczenia wyniku pomiaru na ocenę jakości powinien odpowiadać wymaganiom.\n• Zależność może być liniowa, progowa lub odcinkowa.\nNa przykład przekroczenie dopuszczalnego czasu reakcji może oznaczać niespełnienie wymagania, nawet jeśli pozostałe cechy uzyskały dobre oceny.\nTrzeba również ustalić, czy lepsza jest większa, czy mniejsza wartość wskaźnika.",
+  "type": "open",
+  "points": 1,
+  "criteria": [
+   "Wyjaśniam, że przeliczenie może być nieliniowe, np. progowe lub odcinkowe, zależnie od wymagań."
+  ]
+ },
+ {
+  "id": "F16",
+  "originalId": 16,
+  "variant": "F",
+  "refs": [
+   16
+  ],
+  "question": "Czym różni się wiarygodność systemu informatycznego od jego niezawodności?",
+  "model": "Wiarygodność (dependability) oznacza stopień zaufania do systemu. W modelu z wprowadzenia składa się na nią pięć cech:\n• Niezawodność (reliability) — system świadczy usługę bez awarii.\n• Odporność na błędy — system toleruje błędy podczas pracy.\n• Bezpieczeństwo — system chroni ludzi i otoczenie przed szkodą.\n• Ochrona — system ogranicza dostęp do uprawnionych osób.\n• Łatwość testowania — można wykrywać i identyfikować błędy.\nNiezawodność jest więc częścią wiarygodności. System może działać bez przerwy, a mimo to ujawniać dane osobom nieuprawnionym.",
+  "type": "open",
+  "points": 1,
+  "criteria": [
+   "Wyjaśniam, że niezawodność jest jedną ze składowych szerszej wiarygodności systemu."
+  ]
+ },
+ {
+  "id": "F18",
+  "originalId": 18,
+  "variant": "F",
+  "refs": [
+   18
+  ],
+  "question": "Czym różni się konfigurowalność systemu informatycznego od jego modyfikowalności?",
+  "model": "• Konfigurowalność oznacza łatwość dostosowania istniejących możliwości systemu bez zmiany jego funkcji.\n• Modyfikowalność to łatwość zmieniania lub dodawania funkcji.\nWybór języka interfejsu jest konfiguracją, natomiast dodanie nowego algorytmu naliczania opłat wymaga modyfikacji systemu.",
+  "type": "open",
+  "points": 1,
+  "criteria": [
+   "Odróżniam dostosowanie istniejących możliwości przez konfigurację od zmiany lub dodawania funkcji przez modyfikację."
+  ]
+ },
+ {
+  "id": "F45",
+  "originalId": 45,
+  "variant": "F",
+  "refs": [
+   45
+  ],
+  "question": "Który poziom dojrzałości w CMM/CMMI oznacza wprowadzenie procesu zdefiniowanego i na czym to polega?",
+  "model": "Proces zdefiniowany to poziom 3 (Defined). Organizacja ma wspólny, udokumentowany standard procesów zarządczych i inżynierskich. Projekty dostosowują go do swoich potrzeb według zatwierdzonych zasad (tailoring). W praktyce oznacza to m.in.:\n• planowanie prac zgodnie z dostosowanym procesem projektu;\n• zbieranie doświadczeń z projektów i doskonalenie wspólnego standardu;\n• uzgadnianie wymagań i zobowiązań między zespołami;\n• koordynowanie zadań inżynierskich i dbanie o spójność ich wyników;\n• prowadzenie przeglądów wzajemnych w celu wykrywania defektów;\n• szkolenie pracowników do ról przewidzianych w procesie.",
+  "type": "open",
+  "points": 1,
+  "criteria": [
+   "Wskazuję poziom 3 oraz wspólny, udokumentowany standard organizacji dostosowywany do potrzeb projektów."
+  ]
+ },
+ {
+  "id": "F8",
+  "originalId": 8,
+  "variant": "F",
+  "refs": [
+   8
+  ],
+  "question": "Z jakich elementów składa się model „drzewa” jakości?",
+  "model": "Korzeniem drzewa jest ogólna jakość. Dzieli się ją na główne atrybuty, a każdy atrybut na szczegółowe cechy, które oceniamy za pomocą metryk. Przykłady gałęzi i należących do nich cech:\n• Funkcjonalność — np. kompletność wymaganych funkcji.\n• Wydajność — np. szybkość reakcji systemu.\n• Wiarygodność — np. odporność na błędy.\n• Satysfakcja — np. łatwość nauki obsługi.\n• Elastyczność — np. możliwość dostosowania konfiguracji.\nWagi określają znaczenie składowych. Ocenę atrybutu można obliczyć jako średnią ważoną A = Σ(w·M)/Σw, gdy suma wag jest dodatnia. Podział na gałęzie zależy od modelu jakości.",
+  "type": "open",
+  "points": 2,
+  "criteria": [
+   "Opisuję hierarchię od ogólnej jakości przez atrybuty do szczegółowych cech ocenianych metrykami.",
+   "Wyjaśniam rolę wag w znaczeniu składowych lub w obliczaniu oceny łącznej."
+  ]
+ },
+ {
+  "id": "F19",
+  "originalId": 19,
+  "variant": "F",
+  "refs": [
+   19
+  ],
+  "question": "Czym różni się łatwość testowania systemu informatycznego od łatwości śledzenia?",
+  "model": "• Łatwość testowania oznacza łatwość przygotowania i wykonania sprawdzeń poprawności oraz wykrywania błędów.\n• Łatwość śledzenia oznacza, że działanie systemu można łatwo odtworzyć i zrozumieć, np. na podstawie logów.\nW modelu McCalla traceability oznacza także możliwość powiązania wymagań z implementacją.\nTakie powiązania i informacje o wykonaniu wspierają testowanie, ale go nie zastępują.",
+  "type": "open",
+  "points": 2,
+  "criteria": [
+   "Opisuję testowalność jako łatwość przygotowania lub wykonania sprawdzeń i wykrywania błędów.",
+   "Opisuję śledzenie jako odtwarzanie działania, np. z logów, lub powiązanie wymagań z implementacją; odróżniam je od testowania."
+  ]
+ },
+ {
+  "id": "F26",
+  "originalId": 26,
+  "variant": "F",
+  "refs": [
+   26
+  ],
+  "question": "Jakie formy przeglądów technicznych produktów programowych stosuje się w projekcie?",
+  "model": "Podstawowe formy formalnych przeglądów technicznych (FTR) to walkthrough i inspekcje.\n• Podczas przeglądu typu walkthrough uczestnicy przechodzą przez dokument lub inny produkt pracy w logicznej kolejności.\n• Inspekcja polega na systematycznym sprawdzaniu według listy kontrolnej.\n• Peer review oznacza ocenę prowadzoną przez współpracowników. Może mieć formę inspekcji lub walkthrough.\nPrzeglądy mogą obejmować wymagania, projekt, kod i testy.",
+  "type": "open",
+  "points": 2,
+  "criteria": [
+   "Wymieniam walkthrough i opisuję przejście przez produkt w logicznej kolejności.",
+   "Wymieniam inspekcję i opisuję systematyczne sprawdzanie, np. według listy kontrolnej."
+  ]
+ },
+ {
+  "id": "F28",
+  "originalId": 28,
+  "variant": "F",
+  "refs": [
+   28
+  ],
+  "question": "Jak się ma zapewnianie jakości oprogramowania (SQA) do kompleksowego zarządzania jakością (TQM) w organizacji?",
+  "model": "• SQA obejmuje planowe działania zapewniające jakość oprogramowania, w tym wielokrotne przeglądy i kontrole produktów na każdym etapie wytwarzania.\n• TQM obejmuje zarządzanie jakością procesów w całej organizacji i całym cyklu życia produktu, również podczas utrzymania. Angażuje kierownictwo, pracowników, dostawców i klientów.\nSQA może realizować zasady TQM w obszarze oprogramowania.\nSkuteczność obu podejść zależy od stosowania przyjętych zasad i wsparcia kierownictwa. Samo ustanowienie procedur nie wystarcza.",
+  "type": "open",
+  "points": 2,
+  "criteria": [
+   "Opisuję SQA jako działania zapewniania jakości oprogramowania w procesie wytwarzania.",
+   "Opisuję szerszy zakres TQM w całej organizacji i cyklu życia oraz wyjaśniam, że SQA może realizować jego zasady."
+  ]
+ },
+ {
+  "id": "F44",
+  "originalId": 44,
+  "variant": "F",
+  "refs": [
+   44
+  ],
+  "question": "Jak należy rozumieć dojrzałość procesu wytwarzania oprogramowania w sensie CMM/CMMI?",
+  "model": "Dojrzałość procesu określa, na ile organizacja potrafi powtarzać, kontrolować i doskonalić sposób wytwarzania oprogramowania. W reprezentacji stopniowanej CMMI kolejne poziomy oznaczają:\n• Początkowy — sposób pracy zależy głównie od osób i sytuacji.\n• Zarządzany — poszczególne projekty planują i kontrolują swoją pracę.\n• Zdefiniowany — projekty korzystają ze wspólnego standardu organizacji.\n• Zarządzany ilościowo — organizacja wykorzystuje pomiary do zarządzania procesami.\n• Optymalizowany — organizacja systematycznie doskonali procesy.\nStandardy, szkolenia i podział odpowiedzialności utrwalają sposób pracy mimo zmian personelu. Ułatwia to przewidywanie wyników projektów, ale nie gwarantuje bezbłędności produktu.",
+  "type": "open",
+  "points": 2,
+  "criteria": [
+   "Opisuję zdolność organizacji do powtarzania, kontrolowania i doskonalenia procesu.",
+   "Wyjaśniam utrwalenie procesu przez standardy, role lub szkolenia i mniejszą zależność od osób; nie utożsamiam dojrzałości z bezbłędnością produktu."
+  ]
+ },
+ {
+  "id": "F4",
+  "originalId": 4,
+  "variant": "F",
+  "refs": [
+   4
+  ],
+  "question": "Jakie były źródłowe przyczyny wypadków z systemem do radioterapii Therac-25 w połowie lat ’80 XX wieku w USA i Kanadzie (błędy użytkowników, programistów, konstruktorów, projektantów)?",
+  "model": "Wypadki Therac-25 miały przyczyny techniczne i organizacyjne.\n• Konstrukcja. Usunięto część niezależnych blokad sprzętowych i powierzono ochronę pacjenta programowi.\n• Synchronizacja. Po szybkiej korekcie parametrów ekran mógł pokazywać nowy tryb, choć urządzenie nadal było ustawione inaczej.\n• Błąd licznika. Co 256 przebiegów zmienna Class3 przyjmowała wartość zero. Program mógł wtedy pominąć kontrolę położenia kolimatora.\n• Interfejs. Niejasne komunikaty i mylące wskazania dawki utrudniały ocenę sytuacji. Operator mógł ponowić zabieg po błędzie.\n• Weryfikacja. Analiza bezpieczeństwa skupiała się na sprzęcie, a testy oprogramowania nie ujawniły niebezpiecznych przebiegów.\n• Reakcja na wypadki. Wcześniejsze zdarzenia niedostatecznie dokumentowano i analizowano.\nDziałanie operatora mogło uruchomić wadliwy scenariusz. Projekt urządzenia powinien był w takiej sytuacji zablokować emisję.",
+  "type": "open",
+  "points": 5,
+  "criteria": [
+   "Wskazuję problem konstrukcyjny: brak części niezależnych blokad sprzętowych lub nadmierne poleganie na oprogramowaniu.",
+   "Opisuję konkretny defekt programu, np. synchronizacji lub licznika.",
+   "Opisuję problem interfejsu, komunikatów lub wskazań dawki.",
+   "Wskazuję niedostateczną analizę bezpieczeństwa, weryfikację lub reakcję na wcześniejsze zdarzenia.",
+   "Wyjaśniam, że operator mógł wyzwolić scenariusz, ale system powinien blokować niebezpieczne działanie; przyczyny były techniczne i organizacyjne."
+  ]
+ },
+ {
+  "id": "F42",
+  "originalId": 42,
+  "variant": "F",
+  "refs": [
+   42
+  ],
+  "question": "Jaka jest przewaga metody pomiaru jakości Goal-Question-Metrics w porównaniu do metod klasycznych opartych o drzewo jakości (jak ISO/IEC 9126)?",
+  "model": "Przewagą GQM jest dobór metryk do konkretnego celu. Drzewo jakości porządkuje cechy produktu, a GQM pozwala ustalić, które dane są potrzebne do podjęcia danej decyzji. Przykład z inspekcji kodu:\n• Cel (Goal). Chcemy trafniej planować pracochłonność inspekcji.\n• Pytanie (Question). Ile pracy wymaga przegląd kodu?\n• Metryki (Metrics). Rejestrujemy rozmiar przejrzanego kodu w KLOC i średnią pracochłonność inspekcji na KLOC.\nKażda metryka odpowiada na konkretne pytanie, co ogranicza zbieranie zbędnych danych. GQM można łączyć z drzewem jakości ISO/IEC 9126. Źle dobrany cel może jednak spowodować pominięcie ważnych cech.\nCały proces GQM obejmuje planowanie, definiowanie, zbieranie danych i interpretację wyników.",
+  "type": "open",
+  "points": 5,
+  "criteria": [
+   "Wskazuję dobór metryk do konkretnego celu jako przewagę GQM.",
+   "Opisuję wyprowadzenie pytań z celu.",
+   "Opisuję dobór metryk odpowiadających na pytania, np. w spójnym przykładzie.",
+   "Wyjaśniam ograniczenie zbędnych pomiarów lub związek danych z podejmowaną decyzją.",
+   "Odróżniam dobór pomiarów w GQM od porządkowania cech w drzewie jakości i dopuszczam łączenie obu podejść."
+  ]
+ },
+ {
+  "id": "F53",
+  "originalId": 53,
+  "variant": "F",
+  "refs": [
+   53
+  ],
+  "question": "Jakie są podstawowe warunki zapewnienia jakości oprogramowania w metodykach zwinnych?",
+  "model": "Podstawowe warunki zapewnienia jakości to:\n• Codzienna współpraca z klientami i użytkownikami przez cały proces.\n• Cele wydań wynikające z rzeczywistych wymagań.\n• Dobry przepływ informacji w zespole i między zainteresowanymi stronami, przez bezpośrednią współpracę lub częste kontakty.\n• Znajomość i stosowanie standardów pracy inżynierskiej.\n• Rygorystyczne testy jednostkowe przed każdym wydaniem.\n• Testy akceptacyjne z wybranymi użytkownikami przed rozpowszechnieniem.\nW Scrumie ukończony przyrost musi spełniać uzgodnione kryteria Definition of Done.",
+  "type": "open",
+  "points": 5,
+  "criteria": [
+   "Uwzględniam codzienną współpracę z klientami i użytkownikami.",
+   "Uwzględniam cele wydań wynikające z rzeczywistych wymagań.",
+   "Uwzględniam dobry przepływ informacji w zespole i między zainteresowanymi stronami.",
+   "Uwzględniam znajomość i stosowanie standardów pracy inżynierskiej.",
+   "Uwzględniam oba rodzaje weryfikacji: rygorystyczne testy jednostkowe oraz testy akceptacyjne z użytkownikami przed rozpowszechnieniem."
+  ]
  }
 ]
 </script>
@@ -1312,19 +1526,21 @@
 const bank = JSON.parse(document.getElementById('bank-data').textContent);
 const byId = new Map(bank.map(q => [q.id, q]));
 const storageKey = 'jsi-tests-v2';
-const variants = {A:'Podstawy jakości',B:'Proces i SQA',C:'TQM i modele',D:'Metryki i dojrzałość',E:'Jakość w Agile',random:'Test losowy'};
+const variants = {A:'Podstawy jakości',B:'Proces i SQA',C:'TQM i modele',D:'Metryki i dojrzałość',E:'Jakość w Agile',F:'Tylko otwarte',random:'Test losowy'};
 const slots = [['single',1,5],['multi',2,3],['open',2,2],['open',5,3]];
 const $ = id => document.getElementById(id);
 const esc = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function shuffled(items) { const a = [...items]; for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];} return a; }
 function makeTest(variant) {
- const items = variant === 'random' ? slots.flatMap(([type,points,n]) => shuffled(bank.filter(q => q.type===type && q.points===points)).slice(0,n)) : bank.filter(q => q.variant.includes(variant));
+ const items = variant === 'random' ? slots.flatMap(([type,points,n]) => shuffled(bank.filter(q => q.variant!=='F' && q.type===type && q.points===points)).slice(0,n)) : bank.filter(q => q.variant.includes(variant));
  return {version:2,variant,ids:items.map(q=>q.id),answers:{},orders:Object.fromEntries(items.filter(q=>q.type!=='open').map(q=>[q.id,shuffled([0,1,2,3])])),rubric:{},reviewed:{},submitted:false};
 }
 function validState(s) {
  if(!s || s.version!==2 || !Object.hasOwn(variants,s.variant) || typeof s.submitted!=='boolean' || !Array.isArray(s.ids) || s.ids.length!==13 || new Set(s.ids).size!==13 || s.ids.some(id=>!byId.has(id))) return false;
  if(s.variant!=='random' && s.ids.some(id=>!byId.get(id).variant.includes(s.variant))) return false;
- if(!slots.every(([type,points,n])=>s.ids.filter(id=>byId.get(id).type===type && byId.get(id).points===points).length===n)) return false;
+ if(s.variant==='random' && s.ids.some(id=>byId.get(id).variant==='F')) return false;
+ const expectedSlots=s.variant==='F'?[['open',1,5],['open',2,5],['open',5,3]]:slots;
+ if(!expectedSlots.every(([type,points,n])=>s.ids.filter(id=>byId.get(id).type===type && byId.get(id).points===points).length===n)) return false;
  if(!['answers','orders','rubric','reviewed'].every(k=>s[k] && typeof s[k]==='object' && !Array.isArray(s[k]))) return false;
  return s.ids.every(id=>{const q=byId.get(id),a=s.answers[id],r=s.rubric[id],o=s.orders[id];
   if(a!==undefined && (q.type==='open' ? typeof a!=='string' || a.length>12000 : !Array.isArray(a) || new Set(a).size!==a.length || a.some(x=>!Number.isInteger(x)||x<0||x>3) || (q.type==='single'&&a.length>1))) return false;
@@ -1348,7 +1564,7 @@ function summary(s) {
  const qs=s.ids.map(id=>byId.get(id));
  const closed=qs.filter(q=>q.type!=='open'),open=qs.filter(q=>q.type==='open');
  const pending=open.filter(q=>answered(q,s)&&!s.reviewed[q.id]);
- return {auto:closed.reduce((n,q)=>n+earned(q,s),0),manual:open.reduce((n,q)=>n+earned(q,s),0),pending,answered:qs.filter(q=>answered(q,s)).length,reviewed:open.length-pending.length};
+ return {auto:closed.reduce((n,q)=>n+earned(q,s),0),manual:open.reduce((n,q)=>n+earned(q,s),0),autoMax:closed.reduce((n,q)=>n+q.points,0),manualMax:open.reduce((n,q)=>n+q.points,0),openCount:open.length,pending,answered:qs.filter(q=>answered(q,s)).length,reviewed:open.length-pending.length};
 }
 let storageOk=true, restoreWarning='', state=null, pendingAction=null;
 try { const saved=localStorage.getItem(storageKey); if(saved){const parsed=JSON.parse(saved); if(validState(parsed)) state=parsed; else restoreWarning='Poprzedni zapis ma nieprawidłowy format. Możesz rozpocząć nowy test.';} }
@@ -1377,7 +1593,7 @@ function showExam(){
 function sourceText(q){return 'Pytanie '+q.originalId+' z naszej bazy 62 pytań · brzmienie 1:1 · wzorzec z fiszek „W skrócie”.';}
 function questionMarkup(q,index){
  const a=state.answers[q.id];
- const type=q.type==='single'?'Jedna odpowiedź':q.type==='multi'?'Wiele odpowiedzi':q.points===2?'Krótka odpowiedź':'Zadanie otwarte';
+ const type=q.type==='single'?'Jedna odpowiedź':q.type==='multi'?'Wiele odpowiedzi':q.points<=2?'Krótka odpowiedź':'Zadanie otwarte';
  let input='';
  if(q.type==='open') input=`<label class="answer-label" for="answer-${q.id}">Twoja odpowiedź</label><textarea ${state.submitted?'hidden':''} class="${q.points===5?'long':''}" id="answer-${q.id}" data-answer="${q.id}" maxlength="12000" placeholder="Napisz własnymi słowami…">${esc(a||'')}</textarea>${state.submitted?`<div class="answer-copy">${esc(a||'Brak odpowiedzi.')}</div>`:`<div class="print-answer" id="print-${q.id}">${esc(a||'')}</div>`}`;
  else input=`<fieldset><legend class="sr-only">${esc(q.question)}</legend>${state.orders[q.id].map((option,letter)=>{
@@ -1402,13 +1618,13 @@ function renderProgress(){
 function renderResult(){
  $('result').hidden=!state.submitted;if(!state.submitted)return;
  const s=summary(state),total=s.auto+s.manual,complete=!s.pending.length;
- $('result').innerHTML=`<h2 id="result-title" tabindex="-1">${complete?'Twój wynik':'ABCD sprawdzone. Teraz otwarte.'}</h2><div class="result-main"><div class="score">${total} <span>/ 30 pkt</span></div><span class="small">${complete?`${Math.round(total/30*100)}% · wynik po samoocenie`:'Zdobyte punkty · wynik jeszcze niepełny'}</span></div><div class="result-grid"><div><span class="small">ABCD · automatycznie</span><strong>${s.auto} / 11 pkt</strong></div><div><span class="small">Otwarte · ${s.reviewed} z 5 ocenionych</span><strong>${s.manual} / 19 pkt</strong></div></div><p>${complete?'Przejrzyj odpowiedzi z niepełną punktacją. Pytania w nawigacji pokazują, do czego warto wrócić.':`Pozostało do oceny: ${s.pending.length}. Puste odpowiedzi otrzymały 0 pkt. Zaznacz kryteria przy pozostałych i zatwierdź punkty.`}</p>${!complete?'<div class="actions"><button class="lime" data-next="">Przejdź do otwartych ↓</button></div>':''}`;
+ $('result').innerHTML=`<h2 id="result-title" tabindex="-1">${complete?'Twój wynik':s.autoMax?'ABCD sprawdzone. Teraz otwarte.':'Oceń odpowiedzi otwarte.'}</h2><div class="result-main"><div class="score">${total} <span>/ 30 pkt</span></div><span class="small">${complete?`${Math.round(total/30*100)}% · wynik po samoocenie`:'Zdobyte punkty · wynik jeszcze niepełny'}</span></div><div class="result-grid">${s.autoMax?`<div><span class="small">ABCD · automatycznie</span><strong>${s.auto} / ${s.autoMax} pkt</strong></div>`:''}<div><span class="small">Otwarte · ${s.reviewed} z ${s.openCount} ocenionych</span><strong>${s.manual} / ${s.manualMax} pkt</strong></div></div><p>${complete?'Przejrzyj odpowiedzi z niepełną punktacją. Pytania w nawigacji pokazują, do czego warto wrócić.':`Pozostało do oceny: ${s.pending.length}. Puste odpowiedzi otrzymały 0 pkt. Zaznacz kryteria przy pozostałych i zatwierdź punkty.`}</p>${!complete?'<div class="actions"><button class="lime" data-next="">Przejdź do otwartych ↓</button></div>':''}`;
 }
 function finish(){
  if(state.submitted)return;
  const submit=()=>{state.submitted=true;for(const id of state.ids){const q=byId.get(id);if(q.type==='open'){state.rubric[id]=Array(q.points).fill(false);state.reviewed[id]=!answered(q,state);}}save();showExam();$('result-title').focus();};
  const missing=13-summary(state).answered;
- ask('Oddać test?',missing?`Liczba pytań bez odpowiedzi: ${missing}. Otrzymają 0 pkt. Po oddaniu odpowiedzi zostaną zablokowane i zobaczysz klucz.`:'Po oddaniu odpowiedzi zostaną zablokowane. Zobaczysz wynik ABCD i kryteria samooceny pytań otwartych.',submit,'Oddaj i sprawdź');
+ ask('Oddać test?',missing?`Liczba pytań bez odpowiedzi: ${missing}. Otrzymają 0 pkt. Po oddaniu odpowiedzi zostaną zablokowane i zobaczysz klucz.`:'Po oddaniu odpowiedzi zostaną zablokowane. Zobaczysz wzorce odpowiedzi, punktację i kryteria samooceny.',submit,'Oddaj i sprawdź');
 }
 function nextPending(after){const ids=summary(state).pending.map(q=>q.id);if(!ids.length){$('result-title').focus();$('result').scrollIntoView();return;}const pos=state.ids.indexOf(after),id=ids.find(x=>state.ids.indexOf(x)>pos)||ids[0];$('q-'+id).scrollIntoView();$('feedback-'+id).querySelector('input:not(:disabled)')?.focus({preventScroll:true});}
 $('questions').addEventListener('input',event=>{
